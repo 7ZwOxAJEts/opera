@@ -5,7 +5,7 @@
     --amg-danger: #882121;
     --bs-tertiary-bg: rgba(219, 219, 219, 0.54);
     --bs-body-font-size: 11pt;
-    /* --input-font-size: 8pt; */
+    --input-font-size: 8pt; 
     
 }
 
@@ -46,7 +46,7 @@ a:hover {
 }
 
 .input-group-text {
-    font-size: 9pt;
+    font-size: 8pt;
 }
 
 .form-control {
@@ -122,12 +122,19 @@ a:hover {
     font-size: 9pt;
 }
 
+.w-10 {
+    width: 10% !important;
+}
+
 .form-select-sm {
     font-size: 8pt;
 }
 
 .input-group-sm>.btn, .input-group-sm>.form-control, .input-group-sm>.form-select, .input-group-sm>.input-group-text {
-    font-size: 9pt;
+    font-size: 8pt;
 }
 
-
+.bg-primary {
+    background-color: var(--amg-primary) !important;
+    color: white !important;
+}
