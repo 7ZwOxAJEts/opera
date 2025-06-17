@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main Menu</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+   
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
+            height: calc(100vh - 85px); /* Full viewport height */
+        }
+        .grid-item {
+            position: relative;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            padding: 1px;
+            transition: transform 0.7s ease, filter 0.3s ease;
+            filter: brightness(75%);
+        }
+        .grid-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(40%);
+        }
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24pt;
+        }
+        .grid-item:hover .centered-text {
+            opacity: 1;
+        }
+        a, a:hover {
+            color: white !important;
+            font-weight: normal !important;
+        }
+
+        /* First row */
+        .row-1-col-1 { grid-column: span 6; }
+        .row-1-col-2 { grid-column: span 6; }
+        
+        /* Second row */
+        .row-2-col-1 { grid-column: span 4; }
+        .row-2-col-2 { grid-column: span 4; }
+        .row-2-col-3 { grid-column: span 4; }
+
+        /* Third row */
+        .row-3-col-1 { grid-column: span 4; }
+        .row-3-col-2 { grid-column: span 4; }
+        .row-3-col-3 { grid-column: span 4; }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.html" class="text-white fs-3">
+            <img src="assets/img/AMG.png" alt="" width="100px" height="auto">
+        </a>
+        <div class="ms-auto">Asset Management Group</div>
+    </div>
+
+    <div class="container-fluid p-0"> <p></p>
+        <div class="grid-container">
+            <!-- First Row -->
+            <a href="Contractor_Monitor.html" class="grid-item row-1-col-1">
+                <img src="assets/img/Contractor Monitor.jpg" alt="">
+                <div class="centered-text">Contractor Monitor</div>
+            </a>
+            <a href="Contractor_Management.html" class="grid-item row-1-col-2">
+                <img src="assets/img/Contractor management.jpg" alt="">
+                <div class="centered-text">Contractor Management</div>
+            </a>
+            
+            <!-- Second Row -->
+            <a href="Cancellation_Report.html" class="grid-item row-2-col-1">
+                <img src="https://placehold.co/200x200/gray/gray" alt="">
+                <div class="centered-text">Cancellation Report</div>
+            </a>
+            <a href="035ReportsMenu.html" class="grid-item row-2-col-2">
+                <img src="assets/img/Management Rep.jpg" alt="">
+                <div class="centered-text">Management Reports</div>
+            </a>
+            <a href="029ShutteringInvoiceSummary.html" class="grid-item row-2-col-3">
+                <img src="assets/img/Shuttering Monitor.png" alt="">
+                <div class="centered-text">Shuttering Monitor</div>
+            </a>
+            
+            <!-- Third Row -->
+            <a href="005CompanyMenu.html" class="grid-item row-3-col-1">
+                <img src="https://placehold.co/200x200/gray/gray" alt="">
+                <div class="centered-text">Company Database</div>
+            </a>
+            <a href="003UserMenu.html" class="grid-item row-3-col-2">
+                <img src="https://placehold.co/200x200/gray/gray" alt="">
+                <div class="centered-text">User Database</div>
+            </a>
+            <a href="007DBMenu.html" class="grid-item row-3-col-3">
+                <img src="https://placehold.co/200x200/gray/gray" alt="">
+                <div class="centered-text">Database Setup</div>
+            </a>
+        </div>
+    </div>
+
+
+<!-- Bootstrap JS bundle (optional if you need JS features) -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

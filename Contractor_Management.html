@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contractor Dashboard</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="assets/css/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet">
+
+  <script src="assets/js/apexcharts.min.js"></script>
+
+    <style>
+      .card {
+        box-shadow: 0 8px 16px rgba(14, 46, 71, 0.15),
+          0 4px 8px rgba(14, 46, 71, 0.1);
+        border-radius: 0.75rem;
+        /* smoother rounded corners */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      .card:hover {
+        box-shadow: 0 12px 24px rgba(14, 46, 71, 0.3);
+        transform: translateY(-5px);
+      }
+    
+      .card-header {
+        font-weight: 700;
+      }
+    
+      .stat-box {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .stat-box:hover {
+        transform: translateY(-3px);
+      }
+    
+      .stat-box .icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 0.5rem;
+      }
+    
+      .stat-value {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #333;
+      }
+    
+      .stat-label {
+        font-size: 0.9rem;
+        color: #888;
+      }
+    
+      .chart-card {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+    
+      .chart-body {
+        flex: 1;
+        padding: 0.5rem;
+      }
+    
+      .chart-body>div {
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+
+  <div class="container-fluid banner">
+        <a href="002MainMenu.html" class="text-white fs-3">
+            <img src="assets/img/AMG.png" alt="" width="100px" height="auto">
+        </a>
+        <div class="ms-auto">Asset Management Group</div>
+    </div>
+
+<div class="container-fluid p-3">
+
+    <!-- Select Input Group -->
+    <div class="row mb-3">
+        <div class="col-lg-4 mx-auto">
+            <div class="input-group">
+                <span class="input-group-text">Select Contractor:</span>
+                <select class="form-select form-select-sm">
+                    <option value="">-- Select --</option>
+                    <option value="contractor1">Contractor 1</option>
+                    <option value="contractor2">Contractor 2</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stat Tiles -->
+    <div class="row text-center mb-4">
+        <div class="col-lg-4">
+            <div class="stat-box">
+                <div class="icon bg-primary text-white">
+                    <i class="bi bi-cash-stack"></i>
+                </div>
+                <div class="stat-value">£16,316.37</div>
+                <div class="stat-label">Cost (May-25)</div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="stat-box">
+                <div class="icon bg-success text-white">
+                    <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <div class="stat-value">£20,783</div>
+                <div class="stat-label">Re-Charge (May-25)</div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="stat-box">
+                <div class="icon bg-warning text-dark">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="stat-value">£4,467</div>
+                <div class="stat-label">Difference (May-25)</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Chart Grid -->
+    <div class="row g-3">
+
+        <div class="col-md-12">
+            <div class="card chart-card">
+                <div class="card-header text-center">Allocations & Returns (2025)</div>
+                <div class="card-body chart-body">
+                    <div id="chart2"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card chart-card">
+                <div class="card-header text-center">Status Breakdown (May-25)</div>
+                <div class="card-body chart-body">
+                    <div id="chart5"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card chart-card">
+                <div class="card-header text-center">Quote Authorisation Overview (May-25)</div>
+                <div class="card-body chart-body">
+                    <div id="authChart"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<script>
+  // Chart 2: Bar chart - FIXED height
+  new ApexCharts(document.querySelector("#chart2"), {
+    chart: {
+      type: 'bar',
+      height: '100%'
+    },
+    series: [
+      {
+        name: 'Allocated',
+        data: [12, 10, 8, 6, 14, 9]
+      },
+      {
+        name: 'Returned',
+        data: [5, 6, 3, 2, 4, 5]
+      },
+      {
+        name: 'Cancelled Without Charge',
+        data: [12, 10, 8, 6, 14, 9]
+      },
+      {
+        name: 'Cancelled With Charge',
+        data: [5, 6, 3, 2, 4, 1]
+      },
+      {
+        name: 'In Possession',
+        data: [5, 6, 3, 2, 4, 1]
+      }
+    ],
+    xaxis: {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    legend: { position: 'top' },
+    plotOptions: {
+      bar: {
+        columnWidth: '50%',
+      }
+    },
+    dataLabels: {
+      enabled: false
+    }
+  }).render();
+
+
+  new ApexCharts(document.querySelector("#chart5"), {
+  chart: {
+    type: 'bar',
+    height: '100%'
+  },
+  series: [{
+    name: 'Count',
+    data: [22, 0, 0, 2, 19]
+  }],
+  xaxis: {
+    categories: [
+      'Allocated',
+      'Returned',
+      'Cancelled Without Charge',
+      'Cancelled With Charge',
+      'In Possession'
+    ]
+  },
+  colors: ['#337ab7'],
+  plotOptions: {
+    bar: {
+      horizontal: true,
+      barHeight: '70%',
+      borderRadius: 1
+    }
+  },
+  dataLabels: {
+    enabled: true
+  },
+  tooltip: {
+    y: {
+      formatter: val => val.toString()
+    }
+  }
+}).render();
+
+const requested = 16;
+const authorised = 7;
+const notAuthorised = requested - authorised;
+const authPercent = ((authorised / requested) * 100).toFixed(1);
+
+new ApexCharts(document.querySelector("#authChart"), {
+  chart: {
+    type: 'donut',
+    height: '100%'
+  },
+  series: [authorised, notAuthorised],
+  labels: ['Authorised', 'Not Authorised'],
+  colors: ['#3A8DDE', 'gray'],
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '75%',
+        labels: {
+          show: true,
+          name: {
+            show: true,
+            fontSize: '12px',
+            color: '#0E2E47'
+          },
+          value: {
+            show: true,
+            fontSize: '12px',
+            color: '#0E2E47',
+            formatter: function(val, opts) {
+              // Show only the number inside slices (no %)
+              return opts.w.globals.series[opts.seriesIndex];
+            }
+          },
+          total: {
+            show: true,
+            label: 'Authorised',
+            fontSize: '16px',
+            fontWeight: 600,
+            color: '#0E2E47',
+            formatter: function() {
+              return `${authorised} (${authPercent}%)`;
+            }
+          }
+        }
+      }
+    }
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function(val, opts) {
+      // Show only the number on slices
+      return opts.w.globals.series[opts.seriesIndex];
+    },
+    style: {
+      fontSize: '13px',
+      colors: ['white']
+    },
+    dropShadow: {
+      enabled: false
+    }
+  },
+  legend: {
+    position: 'bottom'
+  }
+}).render();
+
+</script>
+
+</body>
+</html>

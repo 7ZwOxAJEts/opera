@@ -1,0 +1,148 @@
+:root {
+    --amg-primary: #0E2E47;
+    --amg-primary-lighter: rgba(53, 95, 145, 0.766);
+    --amg-secondary: #337ab7;
+    --amg-danger: #882121;
+    --bs-tertiary-bg: rgba(219, 219, 219, 0.54);
+    --bs-body-font-size: 11pt;
+    --input-font-size: 8pt; 
+    
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+.table-hover>tbody>tr:hover>* {
+    background-color: #3379b73a;
+}
+
+.table>tbody>tr>td {
+    vertical-align: middle;
+}
+
+a:not(.btn){
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: var(--amg-secondary);
+}
+
+.banner {
+    background-color: var(--amg-primary); /* Change to your desired banner color */
+    color: white;
+    height: 85px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center; /* Vertically center */
+    padding-right: 50px; /* Space to the right edge */
+    border-bottom: var(--amg-secondary) 4px solid;
+}
+
+.banner-text {
+    margin-left: auto; /* Pushes the text to the right */
+}
+
+.input-group-text {
+    font-size: 8pt;
+}
+
+.form-control {
+    font-size: var(--input-font-size);
+}
+
+.btn {
+    --bs-btn-font-size: 10pt;
+}
+
+.btn-sm {
+    --bs-btn-font-size: 10pt;
+}
+
+.btn-lg {
+    --bs-btn-font-size: 14pt;
+}
+
+.btn-primary {
+    background-color: var(--amg-primary);
+    border: var(--amg-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--amg-secondary);
+    border: var(--amg-primary);
+    color: white;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    background-color: var(--amg-primary-lighter);
+}
+
+.btn-secondary {
+    background-color: var(--amg-secondary);
+    border: var(--amg-secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--amg-primary);
+    border: var(--amg-secondary);
+    color: white;
+}
+
+.btn-danger {
+    background-color: var(--amg-danger);
+    border: var(--amg-danger);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: red;
+    border: var(--amg-primary);
+}
+
+.card-header {
+    background-color: var(--amg-primary) !important;
+    color: white !important;
+    border-bottom: var(--amg-secondary) 4px solid;
+}
+
+.shadow {
+    box-shadow: 0 0 3px #333 !important;
+}
+
+.fs-8 {
+    font-size: 8pt;
+}
+
+.fs-9 {
+    font-size: 9pt;
+}
+
+.w-10 {
+    width: 10% !important;
+}
+
+.w-15 {
+    width: 15% !important;
+}
+
+.w-20 {
+    width: 20% !important;
+}
+
+.form-select-sm {
+    font-size: 8pt;
+}
+
+.input-group-sm>.btn, .input-group-sm>.form-control, .input-group-sm>.form-select, .input-group-sm>.input-group-text {
+    font-size: 8pt;
+}
+
+.bg-primary {
+    background-color: var(--amg-primary) !important;
+    color: white !important;
+}
