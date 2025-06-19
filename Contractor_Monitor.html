@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js"></script>
+
 </head>
 
 <body>
@@ -300,9 +303,9 @@
                         <div class="mb-3">
                             <label for="" class="form-label">Job Date Between</label>
                             <div class="d-flex justify-content-between">
-                            <input type="date" name="" id="" class="form-control form-control-sm me-2">
-                               <span class="m-auto">-</span>
-                            <input type="date" name="" id="" class="form-control form-control-sm ms-2">
+                                <input type="text" class="datepicker form-control form-control-sm" name="" id="" class="form-control form-control-sm">
+                                    <span class="my-auto mx-2">-</span>
+                                <input type="text" name="" id="" class="datepicker form-control form-control-sm">
                         </div>
                         </div>
                         
@@ -326,6 +329,11 @@
     </div>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        flatpickr(".datepicker");
+    </script>
+
 </body>
 
 </html>
