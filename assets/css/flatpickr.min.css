@@ -383,7 +383,7 @@
 }
 .flatpickr-current-month .flatpickr-monthDropdown-months {
   appearance: menulist;
-  background: #0E2E47;
+  background: transparent;
   border: none;
   border-radius: 0;
   box-sizing: border-box;
@@ -412,7 +412,8 @@
   background: rgba(0,0,0,0.05);
 }
 .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month {
-  background-color: #0E2E47;
+  background-color: white;
+  color: #484848;
   outline: none;
   padding: 0;
 }
