@@ -1,58 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        .bg {
-            background-image: url('https://www.amgopera.co.uk//images/bg.jpg'); /* Replace with your image URL */
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .login-box {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 25px 50px 50px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Index</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 2em;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      padding: 0.75em 1em;
+      margin-bottom: 0.5em;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    li:hover {
+      transform: scale(1.02);
+    }
+    a {
+      text-decoration: none;
+      color: #007acc;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .error {
+      color: red;
+      margin-top: 1em;
+    }
+  </style>
 </head>
-
 <body>
+  <h1>📄 Available Pages</h1>
+  <ul id="file-list">
+    <li>Loading pages...</li>
+  </ul>
+  <div class="error" id="error"></div>
 
-    <div class="bg d-flex justify-content-center align-items-center">
-        <div class="login-box col-lg-4">
-            <div class="text-center mb-3">
-                <img src="https://www.amgopera.co.uk/images/logo.gif" alt="" height="auto" width="100px">
-            </div>
-            <h4 class="text-center mb-3">AMG OPERA</h4>
-            <form>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control form-control-sm" id="username" placeholder="" required>
-                    <label for="username">Username</label>
-                  </div>
-                  <div class="form-floating mb-4">
-                    <input type="password" class="form-control form-control-sm" id="password" placeholder="" required>
-                    <label for="password">Password</label>
-                  </div>
-                <button type="submit" class="btn btn-lg btn-primary w-100">Login</button>
-            </form>
-        </div>
-    </div>
+  <script>
+    const username = '7zwoxajets';
+    const repo = 'opera';
 
+    fetch(`https://api.github.com/repos/${username}/${repo}/contents/`)
+      .then(response => {
+        if (!response.ok) throw new Error("GitHub API request failed");
+        return response.json();
+      })
+      .then(data => {
+        const list = document.getElementById('file-list');
+        list.innerHTML = ''; // Clear loading text
+        const htmlFiles = data.filter(item =>
+          item.name.endsWith('.html') && item.name !== 'index.html'
+        );
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+        if (htmlFiles.length === 0) {
+          list.innerHTML = '<li>No HTML pages found.</li>';
+        } else {
+          htmlFiles.forEach(file => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="${file.name}">${file.name}</a>`;
+            list.appendChild(li);
+          });
+        }
+      })
+      .catch(error => {
+        document.getElementById('error').textContent = "❌ Failed to load file list from GitHub.";
+        console.error(error);
+      });
+  </script>
 </body>
-
 </html>
