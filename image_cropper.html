@@ -7,9 +7,8 @@
     <title>Image Cropper</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="https://unpkg.com/cropperjs@1.5.13/dist/cropper.min.css">
-    
+    <link rel="stylesheet" href="assets/css/cropper.min.css">
+
     <style>
         #imageContainer {
             display: flex;
@@ -60,11 +59,11 @@
 
     </div>
 
-<script src="https://unpkg.com/cropperjs@1.5.13/dist/cropper.min.js"></script>
+    <script src="assets/js/cropper.min.js"></script>
 
-<script>
-    
-    document.getElementById('uploadButton').addEventListener('click', function () {
+    <script>
+
+        document.getElementById('uploadButton').addEventListener('click', function () {
             const uploadButton = this;
             uploadButton.disabled = true;
 
@@ -155,17 +154,17 @@
                     });
                     wrapper.appendChild(rotateRightButton);
 
-                  /*  const reset = document.createElement('button');
-                    reset.textContent = 'Reset';
-                    reset.className = 'btn btn-secondary';
-                    reset.addEventListener('click', function () {
-                        const cropper = cropperInstances.get(img.id);
-                        if (cropper) {
-                            cropper.reset();
-                        }
-                    });
-                    wrapper.appendChild(reset);
-                    */
+                    /*  const reset = document.createElement('button');
+                      reset.textContent = 'Reset';
+                      reset.className = 'btn btn-secondary';
+                      reset.addEventListener('click', function () {
+                          const cropper = cropperInstances.get(img.id);
+                          if (cropper) {
+                              cropper.reset();
+                          }
+                      });
+                      wrapper.appendChild(reset);
+                      */
                     const downloadButton = document.createElement('button');
                     downloadButton.textContent = 'Download';
                     downloadButton.className = 'download-button btn btn-danger';
@@ -292,8 +291,8 @@
                 });
         });
 
-</script>
-    
+    </script>
+
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
