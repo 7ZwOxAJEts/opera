@@ -1,3 +1,5 @@
+@import url('../css/bootstrap-icons-1.13.1/bootstrap-icons.min.css');
+
 :root {
     --amg-primary: #0E2E47;
     --amg-primary-lighter: rgba(53, 95, 145, 0.766);
@@ -55,6 +57,17 @@ a:hover {
 
 .btn {
     --bs-btn-font-size: 10pt;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.10);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-sm {
@@ -75,6 +88,17 @@ a:hover {
     background-color: var(--amg-secondary);
     border: var(--amg-primary);
     color: white;
+}
+
+.btn-outline-primary {
+    color: var(--amg-secondary);
+    border-color: var(--amg-secondary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--amg-secondary);
+    color: white;
+    border-color: var(--amg-primary);
 }
 
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
@@ -145,4 +169,48 @@ a:hover {
 .bg-primary {
     background-color: var(--amg-primary) !important;
     color: white !important;
+}
+
+.submit-icon::after {
+    content: "\F134";
+    font-family: "bootstrap-icons";
+    display: inline-block;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-variant: normal;
+    font-style: normal;
+    margin-left: 0.5em;
+}
+
+.back-icon::before {
+    content: "\F12A";
+    font-family: "bootstrap-icons";
+    display: inline-block;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-variant: normal;
+    font-style: normal;
+    margin-right: 0.5em;
+}
+
+.edit-icon::before {
+    content: "\F4CB";
+    font-family: "bootstrap-icons";
+    display: inline-block;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-variant: normal;
+    font-style: normal;
+    margin-right: 0.5em;
+}
+
+.delete-icon::before {
+    content: "\F78B";
+    font-family: "bootstrap-icons";
+    display: inline-block;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-variant: normal;
+    font-style: normal;
+    margin-right: 0.5em;
 }

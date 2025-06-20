@@ -7,7 +7,6 @@
     <title></title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="assets/css/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet">
     <style>
         table th, td {
             vertical-align: middle;
@@ -56,11 +55,11 @@
 
                         <div class="d-flex justify-content-between mb-3">
     
-                            <a href="006AddJobPageOut.aspx" class="btn btn-secondary fs-8 w-25">ADD NEW JOB</a>
+                            <a href="006AddJobPageOut.aspx" class="btn btn-secondary submit-icon fs-8 w-25">ADD NEW JOB</a>
 
-                            <a href="" class="btn btn-danger fs-8">DELETE THINGS</a>
+                            <a href="050DeleteThings.aspx" class="btn btn-danger delete-icon fs-8">DELETE THINGS</a>
     
-                            <a href="" class="btn btn-primary fs-8">BACK TO MENU</a>
+                            <a href="" class="btn btn-primary back-icon fs-8">BACK TO MENU</a>
     
                         </div>
     
@@ -70,8 +69,8 @@
                                 <option value="">Please Select...</option>
                             </select>
                         </div>
-    
-                        <div class="row">
+                            
+                        <div class="row mb-2">
     
                             <div class="input-group w-50 col-6">
                                 <span class="input-group-text" style="width: 75px;">Contact:</span>
@@ -85,6 +84,31 @@
                                 <a href="tel:01483 484 768" class="form-control form-control-sm">01483 484 768</a>
                             </div>
     
+                        </div>
+
+                        <hr>
+
+                        <div class="input-group mb-2">
+                            <span class="input-group-text" style="width: 95px;">Asset Manager:</span>
+                            <select name="" id="" class="form-select form-select-sm" required>
+                                <option value="">Please Select...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="row">
+                        
+                            <div class="input-group w-50 col-6">
+                                <span class="input-group-text" style="width: 95px;">Contact:</span>
+                                <select name="" id="" class="form-select form-select-sm" required>
+                                    <option value="">Please Select...</option>
+                                </select>
+                            </div>
+                        
+                            <div class="input-group w-50 col-6">
+                                <span class="input-group-text" style="width: 115px;">Asset Manager Ref:</span>
+                                <input type="text" class="form-control form-control-sm fw-bold" value="CZM197636">
+                            </div>
+                        
                         </div>
     
                         <hr>
@@ -117,6 +141,11 @@
                         <div class="input-group mb-1">
                             <span class="input-group-text" style="width: 75px;">Address:</span>
                             <input type="text" class="form-control form-control-sm" value="">
+
+                            <a href="http://maps.google.co.uk/maps?" class="btn btn-sm btn-outline-primary w-15 fs-9">
+                                <i class="bi bi-geo-alt-fill"></i> Map
+                            </a>
+
                         </div>
     
                         <div class="row">
@@ -150,7 +179,9 @@
                             </div>
     
                             <div class="w-50 mt-2">
-                                <a href="" class="btn btn-sm btn-primary fs-8 w-100">POSTCODE LOOKUP</a>
+                                <a href="" class="btn btn-sm btn-primary fs-8 w-100">
+                                    POSTCODE LOOKUP <i class="bi bi-eye fs-9"></i>
+                                </a>
                             </div>
     
                         </div>
@@ -202,7 +233,7 @@
                         <hr>
     
                         <div class="text-center">
-                            <button class="btn btn-sm btn-primary col-6">SUBMIT</button>
+                            <button class="btn btn-primary col-6 submit-icon">SUBMIT</button>
                         </div>
     
                         <br>
@@ -229,12 +260,12 @@
                         <table class="table table-borderless align-middle mb-2">
                             <tbody>
                                 <tr>
-                                    <td width="20%"><strong>Case Handler:</strong> </td>
-                                    <td width="20%"><strong>Job Type:</strong> </td>
-                                    <td width="12%"><strong>Date/Time:</strong></td>
+                                    <td width="15%"><strong>Case Handler:</strong> </td>
+                                    <td width="15%"><strong>Job Type:</strong> </td>
+                                    <td width="10%"><strong>Date/Time:</strong></td>
                                     <td width="10%"><strong>Job Status:</strong></td>
-                                    <td width="7%"><strong>Days:</strong></td>
-                                    <td width="18%"><strong>Contractor:</strong></td>
+                                    <td width="6%"><strong>Days:</strong></td>
+                                    <td width="15%"><strong>Contractor:</strong></td>
                                 </tr>
                                 <tr class="border-bottom">
                                     <td>
@@ -247,7 +278,7 @@
                                         20/05/2025 11:10
                                     </td>
                                     <td>
-                                        <span class="badge bg-secondary">Allocated</span>
+                                        <span class="badge bg-success">In Possession</span>
                                     </td>
                                     <td>
                                         <i class="bi bi-calendar2-check"></i> 5
@@ -259,8 +290,8 @@
                             </tbody>
                         </table>
                         <div class="d-flex justify-content-between">
-                            <button class="btn btn-sm btn-secondary fs-8 w-15">EDIT</button>
-                            <button class="btn btn-sm btn-danger fs-8 w-15">REMOVE JOB</button>
+                            <a href="006EditStandardJobOut.aspx?" class="btn btn-sm btn-secondary edit-icon fs-8 w-15">EDIT</a>
+                            <a href="006JobRemoveIn.aspx?" class="btn btn-sm btn-danger delete-icon fs-8 w-15">REMOVE JOB</a>
                         </div>
                     </div>
                 </div>
@@ -304,8 +335,8 @@
                             </tbody>
                         </table>
                         <div class="d-flex justify-content-between">
-                            <button class="btn btn-sm btn-secondary fs-8 w-15">EDIT</button>
-                            <button class="btn btn-sm btn-danger fs-8 w-15">REMOVE JOB</button>
+                            <a href="006EditStandardJobOut.aspx?" class="btn btn-sm btn-secondary edit-icon fs-8 w-15">EDIT</a>
+                            <a href="006JobRemoveIn.aspx?" class="btn btn-sm btn-danger delete-icon fs-8 w-15">REMOVE JOB</a>
                         </div>
                     </div>
                 </div>
@@ -349,8 +380,8 @@
                             </tbody>
                         </table>
                         <div class="d-flex justify-content-between">
-                            <button class="btn btn-sm btn-secondary fs-8 w-15">EDIT</button>
-                            <button class="btn btn-sm btn-danger fs-8 w-15">REMOVE JOB</button>
+                            <a href="006EditStandardJobOut.aspx?" class="btn btn-sm btn-secondary edit-icon fs-8 w-15">EDIT</a>
+                            <a href="006JobRemoveIn.aspx?" class="btn btn-sm btn-danger delete-icon fs-8 w-15">REMOVE JOB</a>
                         </div>
                     </div>
                 </div>
