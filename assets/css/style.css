@@ -7,7 +7,7 @@
     --amg-danger: #882121;
     --bs-tertiary-bg: rgba(219, 219, 219, 0.54);
     --bs-body-font-size: 11pt;
-    --input-font-size: 8pt; 
+    --input-font-size: 9pt; 
     
 }
 
@@ -159,11 +159,11 @@ a:hover {
 }
 
 .form-select-sm {
-    font-size: 8pt;
+    font-size: 9pt;
 }
 
 .input-group-sm>.btn, .input-group-sm>.form-control, .input-group-sm>.form-select, .input-group-sm>.input-group-text {
-    font-size: 8pt;
+    font-size: 9pt;
 }
 
 .bg-primary {
