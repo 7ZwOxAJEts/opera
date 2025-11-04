@@ -32,13 +32,19 @@
             transform: scale(1.1);
             filter: brightness(40%);
         }
+
         .centered-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 24pt;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 90%; 
         }
+        
         .grid-item:hover .centered-text {
             opacity: 1;
         }

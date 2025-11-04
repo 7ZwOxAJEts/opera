@@ -20,7 +20,8 @@ body {
     background-color: #3379b73a;
 }
 
-.table>tbody>tr>td {
+td,
+th {
     vertical-align: middle;
 }
 
@@ -169,6 +170,17 @@ a:hover {
 .bg-primary {
     background-color: var(--amg-primary) !important;
     color: white !important;
+}
+
+.section-banner {
+    background-color: var(--amg-primary); /* Change to your desired banner color */
+    color: white;
+    height: 35px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center; /* Vertically center */
+    padding-left: 5px; /* Space to the left edge */
+    margin-bottom: 5px;
+    border-bottom: var(--amg-secondary) 4px solid;
 }
 
 .submit-icon::after {
