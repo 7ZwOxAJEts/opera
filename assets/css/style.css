@@ -1,3 +1,8 @@
+ /*
+    Custom CSS Stylesheet
+    Last Updated: 10/11/2025
+ */
+
 @import url('../css/bootstrap-icons-1.13.1/bootstrap-icons.min.css');
 
 :root {
@@ -6,9 +11,8 @@
     --amg-secondary: #337ab7;
     --amg-danger: #882121;
     --bs-tertiary-bg: rgba(219, 219, 219, 0.54);
-    --bs-body-font-size: 11pt;
-    --input-font-size: 9pt; 
-    
+    --bs-body-font-size: 12px;
+    --input-font-size: 12px;
 }
 
 body {
@@ -26,15 +30,31 @@ th {
 }
 
 a:not(.btn){
-    color: black;
-    text-decoration: none;
+    color: var(--amg-primary);
+    text-decoration: underline;
     font-weight: bold;
 }
 a:hover {
     color: var(--amg-secondary);
+    text-decoration: none;
+}
+
+#navlinks {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navlinks > a:not(.btn) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-right: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
 }
 
 .banner {
+    position: relative;
     background-color: var(--amg-primary); /* Change to your desired banner color */
     color: white;
     height: 85px; /* Adjust the height as needed */
@@ -42,9 +62,25 @@ a:hover {
     align-items: center; /* Vertically center */
     padding-right: 50px; /* Space to the right edge */
     border-bottom: var(--amg-secondary) 4px solid;
+    font-size: 14px;
 }
 
-.banner-text {
+#banner_logo {
+    width: 100px;
+    height: auto;
+    color: white;
+}
+
+#banner_caseref_address {
+    position: absolute;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#banner_assetmanagementgroup {
     margin-left: auto; /* Pushes the text to the right */
 }
 
@@ -52,7 +88,7 @@ a:hover {
     font-size: 8pt;
 }
 
-.form-control {
+.form-control-sm {
     font-size: var(--input-font-size);
 }
 
@@ -69,6 +105,11 @@ a:hover {
 .btn:active {
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-xs {
+    --bs-btn-font-size: 11px;
+    padding: 0.20rem 1.5rem !important;
 }
 
 .btn-sm {
@@ -133,6 +174,7 @@ a:hover {
     background-color: var(--amg-primary) !important;
     color: white !important;
     border-bottom: var(--amg-secondary) 4px solid;
+    font-size: 14px;
 }
 
 .shadow {
@@ -140,11 +182,19 @@ a:hover {
 }
 
 .fs-8 {
-    font-size: 8pt;
+    font-size: 8px;
 }
 
-.fs-9 {
-    font-size: 9pt;
+ .fs-10 {
+    font-size: 10px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-13 {
+    font-size: 13px;
 }
 
 .w-10 {
@@ -160,11 +210,11 @@ a:hover {
 }
 
 .form-select-sm {
-    font-size: 9pt;
+    font-size: var(--input-font-size);
 }
 
 .input-group-sm>.btn, .input-group-sm>.form-control, .input-group-sm>.form-select, .input-group-sm>.input-group-text {
-    font-size: 9pt;
+    font-size: var(--input-font-size);
 }
 
 .bg-primary {
@@ -175,12 +225,11 @@ a:hover {
 .section-banner {
     background-color: var(--amg-primary); /* Change to your desired banner color */
     color: white;
-    height: 35px; /* Adjust the height as needed */
-    display: flex;
-    align-items: center; /* Vertically center */
-    padding-left: 5px; /* Space to the left edge */
+    display: grid;
+    align-items: center;
+    padding-left: 7px;
     margin-bottom: 5px;
-    border-bottom: var(--amg-secondary) 4px solid;
+    border-bottom: var(--amg-secondary) 2px solid;
 }
 
 .submit-icon::after {

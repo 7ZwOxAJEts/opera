@@ -7,35 +7,31 @@
     <title></title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        table th, td {
-            vertical-align: middle;
-        }
-    </style>
 </head>
 
 <body>
 
-<div class="container-fluid banner position-relative text-white p-3">
-
-    <a href="002MainMenu.html" class="text-white fs-3">
-        <img src="assets/img/AMG.png" alt="" width="100px" height="auto">
-    </a>
-
-    <div class="ms-auto">Asset Management Group</div>
-
-    <div class="position-absolute bottom-0 end-0 start-0 text-center mb-2">
-        AMGM/275407 - <strong>18 Henry Street (Flat 2 - GFF), Liverpool, L1 5BS</strong>
+    <div class="container-fluid banner">
+    
+        <a href="002MainMenu.html" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo">
+        </a>
+    
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    
+        <div id="banner_caseref_address">
+            AMGM/275407 -
+            <strong> 18 Henry Street (Flat 2 - GFF), Liverpool, L1 5BS </strong>
+        </div>
+    
     </div>
 
-</div>
-
-    <div class="d-flex justify-content-center align-items-center mt-3 fs-9">
-        <a href="" class="px-3 border-end text-decoration-none">Comms</a>
-        <a href="" class="px-3 border-end text-decoration-none">Direct Comms</a>
-        <a href="" class="px-3 border-end text-decoration-none">Talk Sheet</a>
-        <a href="" class="px-3 border-end text-decoration-none">Audit</a>
-        <a href="" class="px-3 text-decoration-none">Invoice History</a>
+    <div id="navlinks">
+        <a href="">Comms</a>
+        <a href="">Direct Comms</a>
+        <a href="">Talk Sheet</a>
+        <a href="">Audit</a>
+        <a href="">Invoice History</a>
     </div>
 
     <form action="">
@@ -43,7 +39,7 @@
     <div class="container-fluid">
         <div class="row p-3">
     
-            <div class="col-xxl-4 mt-2 fs-9">
+            <div class="col-xxl-4 mt-2 fs-12">
     
                 <div class="card shadow">
 
@@ -55,11 +51,11 @@
 
                         <div class="d-flex justify-content-between mb-3">
     
-                            <a href="006AddJobPageOut.aspx" class="btn btn-secondary submit-icon fs-8 w-25">ADD NEW JOB</a>
+                            <a href="006AddJobPageOut.aspx" class="btn btn-secondary submit-icon fs-10 w-25">ADD NEW JOB</a>
 
-                            <a href="050DeleteThings.aspx" class="btn btn-danger delete-icon fs-8">DELETE THINGS</a>
+                            <a href="050DeleteThings.aspx" class="btn btn-danger delete-icon fs-10">DELETE THINGS</a>
     
-                            <a href="" class="btn btn-primary back-icon fs-8">BACK TO MENU</a>
+                            <a href="" class="btn btn-primary back-icon fs-10">BACK TO MENU</a>
     
                         </div>
     
@@ -142,7 +138,7 @@
                             <span class="input-group-text" style="width: 75px;">Address:</span>
                             <input type="text" class="form-control form-control-sm" value="">
 
-                            <a href="http://maps.google.co.uk/maps?" class="btn btn-sm btn-outline-primary w-15 fs-9" target="_blank">
+                            <a href="http://maps.google.co.uk/maps?" class="btn btn-sm btn-outline-primary w-15 fs-12" target="_blank">
                                 <i class="bi bi-geo-alt-fill"></i> Map
                             </a>
 
@@ -179,8 +175,8 @@
                             </div>
     
                             <div class="w-50 mt-2">
-                                <a href="" class="btn btn-sm btn-primary fs-8 w-100">
-                                    POSTCODE LOOKUP <i class="bi bi-eye fs-9"></i>
+                                <a href="" class="btn btn-sm btn-primary fs-10 w-100">
+                                    POSTCODE LOOKUP <i class="bi bi-eye fs-12"></i>
                                 </a>
                             </div>
     
@@ -249,7 +245,7 @@
     
             </div>
     
-            <div class="col-xxl-8 mt-2 fs-9">
+            <div class="col-xxl-8 mt-2 fs-12">
     
                 <div class="card shadow mb-3">
                     <div class="card-header d-flex justify-content-between">
@@ -290,8 +286,8 @@
                             </tbody>
                         </table>
                         <div class="d-flex justify-content-between">
-                            <a href="006EditStandardJobOut.aspx?" class="btn btn-sm btn-secondary edit-icon fs-8 w-15">EDIT</a>
-                            <a href="006JobRemoveIn.aspx?" class="btn btn-sm btn-danger delete-icon fs-8 w-15">REMOVE JOB</a>
+                            <a href="006EditStandardJobOut.aspx?" class="btn btn-sm btn-secondary edit-icon fs-10 w-15">EDIT</a>
+                            <a href="006JobRemoveIn.aspx?" class="btn btn-sm btn-danger delete-icon fs-10 w-15">REMOVE JOB</a>
                         </div>
                     </div>
                 </div>
@@ -335,8 +331,8 @@
                             </tbody>
                         </table>
                         <div class="d-flex justify-content-between">
-                            <a href="006EditStandardJobOut.aspx?" class="btn btn-sm btn-secondary edit-icon fs-8 w-15">EDIT</a>
-                            <a href="006JobRemoveIn.aspx?" class="btn btn-sm btn-danger delete-icon fs-8 w-15">REMOVE JOB</a>
+                            <a href="006EditStandardJobOut.aspx?" class="btn btn-sm btn-secondary edit-icon fs-10 w-15">EDIT</a>
+                            <a href="006JobRemoveIn.aspx?" class="btn btn-sm btn-danger delete-icon fs-10 w-15">REMOVE JOB</a>
                         </div>
                     </div>
                 </div>
@@ -380,8 +376,8 @@
                             </tbody>
                         </table>
                         <div class="d-flex justify-content-between">
-                            <a href="006EditStandardJobOut.aspx?" class="btn btn-sm btn-secondary edit-icon fs-8 w-15">EDIT</a>
-                            <a href="006JobRemoveIn.aspx?" class="btn btn-sm btn-danger delete-icon fs-8 w-15">REMOVE JOB</a>
+                            <a href="006EditStandardJobOut.aspx?" class="btn btn-sm btn-secondary edit-icon fs-10 w-15">EDIT</a>
+                            <a href="006JobRemoveIn.aspx?" class="btn btn-sm btn-danger delete-icon fs-10 w-15">REMOVE JOB</a>
                         </div>
                     </div>
                 </div>

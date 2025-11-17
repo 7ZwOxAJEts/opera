@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     flatpickr(".datepicker", { dateFormat: "Y-m-d" });
     flatpickr(".timepicker", {
       enableTime: true,
+      defaultHour: "00",
+      defaultMinute: "0",
       noCalendar: true,
       dateFormat: "H:i",
       time_24hr: true,

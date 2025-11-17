@@ -11,17 +11,17 @@
     <style>
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
-            height: calc(100vh - 85px); /* Full viewport height */
+            grid-template-columns: repeat(12, 1fr);
+            height: calc(100vh - 85px);
         }
-    
+
         .grid-item {
             position: relative;
             text-align: center;
             color: white;
             overflow: hidden;
         }
-    
+
         .grid-item img {
             width: 100%;
             height: 100%;
@@ -30,12 +30,12 @@
             transition: transform 0.7s ease, filter 0.3s ease;
             filter: brightness(75%);
         }
-    
+
         .grid-item:hover img {
             transform: scale(1.1);
             filter: brightness(40%);
         }
-    
+
         .centered-text {
             position: absolute;
             top: 50%;
@@ -45,44 +45,72 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 90%; 
+            max-width: 90%;
         }
-    
+
         .grid-item:hover .centered-text {
             opacity: 1;
         }
-    
+
         a,
         a:hover {
             color: white !important;
             font-weight: normal !important;
         }
-    
-       /* First row */
-       .row-1-col-1 { grid-column: span 4; }
-        .row-1-col-2 { grid-column: span 4; }
-        .row-1-col-3 { grid-column: span 4; }
-        
+
+        /* First row */
+        .row-1-col-1 {
+            grid-column: span 4;
+        }
+
+        .row-1-col-2 {
+            grid-column: span 4;
+        }
+
+        .row-1-col-3 {
+            grid-column: span 4;
+        }
+
         /* Second row */
-        .row-2-col-1 { grid-column: span 4; }
-        .row-2-col-2 { grid-column: span 4; }
-        .row-2-col-3 { grid-column: span 4; }
+        .row-2-col-1 {
+            grid-column: span 4;
+        }
+
+        .row-2-col-2 {
+            grid-column: span 4;
+        }
+
+        .row-2-col-3 {
+            grid-column: span 4;
+        }
 
         /* Third row */
-        .row-3-col-1 { grid-column: span 4; }
-        .row-3-col-2 { grid-column: span 4; }
-        .row-3-col-3 { grid-column: span 4; }
+        .row-3-col-1 {
+            grid-column: span 4;
+        }
+
+        .row-3-col-2 {
+            grid-column: span 4;
+        }
+
+        .row-3-col-3 {
+            grid-column: span 4;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="container-fluid banner">
-        <a href="002MainMenu.html" class="text-white fs-3">
-            <img src="assets/img/AMG.png" alt="" width="100px" height="auto">
+
+        <a href="002MainMenu.html" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo">
         </a>
-        <div class="ms-auto">Asset Management Group</div>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
     </div>
+
 
     <div class="container-fluid p-0">
 
@@ -90,43 +118,43 @@
 
             <!-- First Row -->
             <a href="014JobStatusSummaryOut.html" class="grid-item row-1-col-1">
-                <img src="assets/img/My Jobs.jpg" alt="">
+                <img src="assets/img/my_jobs.jpg" alt="">
                 <div class="centered-text">
                     My Jobs [(Job Count)]
                 </div>
             </a>
 
             <a href="Today_Possessions.html" class="grid-item row-1-col-2">
-                <img src="assets/img/Todays Possessions.jpeg" alt="">
+                <img src="assets/img/todays_possessions.jpeg" alt="">
                 <div class="centered-text">
                     Today&apos;s Possessions [(Job Count)]
                 </div>
             </a>
 
             <a href="Today_Jobs.html" class="grid-item row-1-col-3">
-                <img src="assets/img/Todays Jobs.png" alt="">
+                <img src="assets/img/todays_jobs.png" alt="">
                 <div class="centered-text">
-                    Todays Jobs [(Job Count)]
+                    Today&apos;s Jobs [(Job Count)]
                 </div>
             </a>
 
             <!-- Second Row -->
             <a href="055ImportJobSearch.html" class="grid-item row-2-col-1">
-                <img src="assets/img/New Instruction.jpg" alt="">
+                <img src="assets/img/new_instruction.jpg" alt="">
                 <div class="centered-text">
                     New Instructions [(Job Count)]
                 </div>
             </a>
 
             <a href="Unallocated.html" class="grid-item row-2-col-2">
-                <img src="https://placehold.co/200x200/gray/gray" alt="">
+                <img src="assets/img/unallocated_jobs.jpg" alt="">
                 <div class="centered-text">
                     Unallocated Jobs [(Job Count)]
                 </div>
             </a>
 
             <a href="014PropertySearchOut.html" class="grid-item row-2-col-3">
-                <img src="assets/img/Property Search.jpg" alt="">
+                <img src="assets/img/property_search.jpg" alt="">
                 <div class="centered-text">
                     Property Search
                 </div>
@@ -139,14 +167,14 @@
                     Returned Jobs [(Job Count)]
                 </div>
             </a>
-            
+
             <a href="Awaiting_Acceptance.html" class="grid-item row-3-col-2">
                 <img src="assets/img/await_acceptance.png" alt="">
                 <div class="centered-text">
                     Awaiting Acceptance [(Job Count)]
                 </div>
             </a>
-            
+
             <a href="menu2.html" class="grid-item row-3-col-3">
                 <img src="https://placehold.co/200x200/gray/gray" alt="">
                 <div class="centered-text">

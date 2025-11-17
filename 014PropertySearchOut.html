@@ -15,10 +15,13 @@
     <form action="">
 
     <div class="container-fluid banner">
-        <a href="002MainMenu.html" class="text-white fs-3">
-            <img src="assets/img/AMG.png" alt="" width="100px" height="auto">
+    
+        <a href="002MainMenu.html" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo">
         </a>
-        <div class="ms-auto">Asset Management Group</div>
+    
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    
     </div>
 
     <div class="container col-lg-5 mt-5">
@@ -34,27 +37,26 @@
                     <div class="col-lg-6">
 
                         <div class="input-group">
-                            <span class="input-group-text" id="input-group-left-example">Search For</span>
+                            <span class="input-group-text" id="">Search For</span>
                             <!-- 
                                 Allow search with full job ref. i.e. 267270/1E and 267270.
                             -->
-                            <input type="text" class="form-control" placeholder="Search..." required>
+                            <input type="text" class="form-control form-control-sm" placeholder="Search..." required>
                         </div>
-                        
+
                     </div>
 
                     <div class="col-lg-6">
-
+                        
                         <div class="input-group">
-                            <span class="input-group-text" id="input-group-left-example">Criteria</span>
-                            <select name="" id="" class="form-select form-control" required>
-                                <option value=""></option>
+                            <span class="input-group-text" id="">Criteria</span>
+                            <select name="" id="" class="form-select form-select-sm" required>
+                                <option value="">-- Please Select... --</option>
                             </select>
                         </div>
                         
                     </div>
 
-                    
                 </div>
 
                 <div class="d-flex justify-content-between mb-3">
@@ -62,9 +64,9 @@
                     <button type="submit" class="btn btn-sm btn-primary submit-icon w-25">Search</button>
                 </div>
 
-                <table class="table table-hover fs-9">
+                <table class="table table-hover">
                     <thead>
-                        <th colspan="2" class="text-center card-header">
+                        <th colspan="2" class="text-center card-header fs-10">
                             Recently Viewed Properties
                         </th>
                     </thead>

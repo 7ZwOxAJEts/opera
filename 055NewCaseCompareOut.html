@@ -14,13 +14,13 @@
 
 <body>
 
-    <div class="container-fluid banner position-relative text-white p-3">
-
-        <a href="002MainMenu.html" class="text-white fs-3">
-            <img src="assets/img/AMG.png" alt="" width="100px" height="auto">
+    <div class="container-fluid banner">
+    
+        <a href="002MainMenu.html" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo">
         </a>
-
-        <div class="ms-auto">Asset Management Group</div>
+    
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
 
     </div>
 
@@ -32,23 +32,53 @@
             </div>
             <div class="card-body">
 
-                <div class="row fs-8">
+                <div class="row mb-3">
 
-                    <div class="col-lg-6">
-                        <p class="section-banner">Import Case Details:</p>
+                <div class="d-flex justify-content-around">
+                    <a href="" class="btn btn-sm back-icon btn-primary w-25">Back</a>
+                    <a href="" class="btn btn-sm back-icon btn-danger w-25">Main Menu</a>
+                    <button type="submit" class="btn btn-sm submit-icon btn-success w-25">
+                        Create Case
+                    </button>
+                </div>
 
-                        <table class="table table-secondary table-bordered">
+                </div>
+
+                <div class="row fs-10">
+
+                    <div class="col-lg-12">
+                        <p class="section-banner p-2">Import Case Details:</p>
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #0E2E47;">
+                                    <th></th>
+                                    <th>Imported Details</th>
+                                    <th>OPERA Case Details</th>
+                                </tr>
+                            </thead>
                             <tbody>
                                 <tr>
-                                    <th style="width: 30%;">
-                                        Client:
-                                    </th>
-                                    <td style="width: 70%;">
-                                        BOSUnysis
+                                    <th style="width: 20%;">Similar Addresses Found:</th>
+                                    <td></td>
+                                    <td>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value="">-- Please Select --</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="bg-white"></td>
+                                    <th style="width: 20%;">
+                                        Client:
+                                    </th>
+                                    <td style="width: 30%;">
+                                        BOSUnysis
+                                    </td>
+                                    <td style="width: 30%;">
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value="">-- Please Select --</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>
@@ -56,6 +86,9 @@
                                     </th>
                                     <td>
                                         13-21 High Street
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
                                     </td>
                                 </tr>
                                 <tr>
@@ -65,6 +98,9 @@
                                     <td>
 
                                     </td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>
@@ -72,6 +108,9 @@
                                     </th>
                                     <td>
 
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
                                     </td>
                                 </tr>
                                 <tr>
@@ -81,6 +120,9 @@
                                     <td>
                                         Guildford
                                     </td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>
@@ -88,6 +130,9 @@
                                     </th>
                                     <td>
                                         Surrey
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
                                     </td>
                                 </tr>
                                 <tr>
@@ -97,9 +142,9 @@
                                     <td>
                                         GU1 3DG
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="bg-white"></td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>
@@ -107,6 +152,9 @@
                                     </th>
                                     <td>
                                         Mr. Walter White
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
                                     </td>
                                 </tr>
                                 <tr>
@@ -116,6 +164,9 @@
                                     <td>
                                         Mrs. Skyler White
                                     </td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>
@@ -123,6 +174,9 @@
                                     </th>
                                     <td>
                                         55667788
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
                                     </td>
                                 </tr>
                                 <tr>
@@ -132,9 +186,9 @@
                                     <td>
                                         CW55667788
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="bg-white"></td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>
@@ -142,6 +196,9 @@
                                     </th>
                                     <td>
                                         SL998877
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
                                     </td>
                                 </tr>
                                 <tr>
@@ -151,13 +208,23 @@
                                     <td>
                                         John Smith Esq.
                                     </td>
+                                    <td>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value="">-- Please Select --</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>
                                         Eviction Type:
                                     </th>
                                     <td>
-
+                                        E
+                                    </td>
+                                    <td>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value="">-- Please Select --</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
@@ -167,6 +234,10 @@
                                     <td>
                                         Leasehold
                                     </td>
+                                    <td>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value="">-- Please Select --</option>
+                                        </select>
                                 </tr>
                                 <tr>
                                     <th>
@@ -175,13 +246,35 @@
                                     <td>
                                         15/10/2025
                                     </td>
+                                    <td class="d-flex justify-content-between">
+                                        <input type="text" value="" class="datepicker form-control form-control-sm w-50">
+                                        <strong class="align-self-center mx-3 fs-12">:</strong>
+                                        <input type="text" value="" class="timepicker form-control form-control-sm w-50">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>
                                         Asset Manager:
                                     </th>
                                     <td>
-                                        AMG
+                                        AMG Guildford
+                                    </td>
+                                    <td>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value="">-- Please Select --</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Estate Agent:</th>
+                                    <td>
+                                        ABC Estate Agents
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <a href="" style="white-space: nowrap;">Estate Agent</a>
+                                            <input type="text" name="" id="" class="form-control form-control-sm" readonly>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -190,6 +283,9 @@
                                     </th>
                                     <td>
                                         ABC Estate Agents, 1 High Street, Guildford, GU1 3DG, 01483 123456
+                                    </td>
+                                    <td>
+                                        <textarea name="" id="" class="form-control form-control-sm" rows="2"></textarea>
                                     </td>
                                 </tr>
                                 <tr>
@@ -203,12 +299,16 @@
                                         architecto tempora earum voluptate amet quasi corporis saepe. Cumque dicta nemo nisi, exercitationem earum obcaecati
                                         necessitatibus nulla.
                                     </td>
+                                    <td>
+                                        <textarea name="" id="" class="form-control form-control-sm" rows="3"></textarea>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 d-none">
+
                         <p class="section-banner">OPERA Case Details:</p>
                     
                         <table class="table table-success table-sm">
@@ -227,10 +327,8 @@
                                     <th style="width: 30%;">
                                         Client:
                                     </th>
-                                    <td style="width: 70%;">
-                                        <select name="" id="" class="form-select form-select-sm">
-                                            <option value=""></option>
-                                        </select>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm">
                                     </td>
                                 </tr>
                                 <tr>
@@ -356,7 +454,7 @@
                                     </th>
                                     <td class="d-flex justify-content-between">
                                         <input type="date" value="" class="datepicker form-control form-control-sm w-50">
-                                        <strong class="align-self-center mx-3 fs-9">:</strong>
+                                        <strong class="align-self-center mx-3 fs-12">:</strong>
                                         <input type="time" value="" class="timepicker form-control form-control-sm w-50">
                                     </td>
                                 </tr>
@@ -410,7 +508,7 @@
 
                     <div class="d-flex justify-content-around">
                         <a href="" class="btn btn-sm back-icon btn-primary w-25">Back</a>
-                        <span class=""></span>
+                        <a href="" class="btn btn-sm back-icon btn-danger w-25">Main Menu</a>
                         <button type="submit" class="btn btn-sm submit-icon btn-success w-25">
                             Create Case
                         </button>
