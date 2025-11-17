@@ -244,6 +244,17 @@ a:hover {
     margin-left: 0.5em;
 }
 
+.update-icon::after {
+    content: "\F1BE";
+    font-family: "bootstrap-icons";
+    display: inline-block;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-variant: normal;
+    font-style: normal;
+    margin-left: 0.5em;
+}
+
 .back-icon::before {
     content: "\F12A";
     font-family: "bootstrap-icons";
