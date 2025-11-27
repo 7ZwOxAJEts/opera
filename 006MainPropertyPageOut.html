@@ -19,9 +19,8 @@
 
         <div id="banner_assetmanagementgroup">Asset Management Group</div>
 
-        <div id="banner_caseref_address">
-            AMGM/275407 -
-            <strong> 18 Henry Street (Flat 2 - GFF), Liverpool, L1 5BS </strong>
+        <div id="banner_caseref_address">   
+            AMGM/[Case ID] - <strong> [Address] </strong>
         </div>
 
     </div>
@@ -60,14 +59,18 @@
 
                             </div>
 
-                            <div class="input-group mb-2">
-                                <span class="input-group-text" style="width: 75px;">Client:</span>
-                                <select name="" id="" class="form-select form-select-sm" required>
-                                    <option value="">-- Select --</option>
-                                </select>
-                            </div>
-
                             <div class="row mb-2">
+
+                                <div class="col-md-12 mb-1 mb-lg-0">
+
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text" style="width: 75px;">Client:</span>
+                                        <select name="" id="" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+
+                                </div>
 
                                 <div class="col-md-6 mb-1 mb-lg-0">
 
@@ -93,19 +96,23 @@
 
                             <hr>
 
-                            <div class="input-group mb-1 mb-lg-2">
-                                <span class="input-group-text" style="width: 95px;">Asset Manager:</span>
-                                <select name="" id="" class="form-select form-select-sm" required>
-                                    <option value="">-- Select --</option>
-                                </select>
-                            </div>
-
                             <div class="row mb-1 mb-lg-0">
+
+                                <div class="col-md-12">
+
+                                    <div class="input-group mb-1 mb-lg-2">
+                                        <span class="input-group-text" style="width: 95px;">Asset Manager:</span>
+                                        <select name="" id="" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+
+                                </div>
 
                                 <div class="col-md-6 mb-1 mb-lg-0">
 
                                     <div class="input-group mb-1 mb-lg-0">
-                                        <span class="input-group-text" style="width: 95px;">Contact:</span>
+                                        <span class="input-group-text">Contact:</span>
                                         <select name="" id="" class="form-select form-select-sm" required>
                                             <option value="">-- Select --</option>
                                         </select>
@@ -115,7 +122,7 @@
 
                                 <div class="col-md-6 mb-1 mb-lg-0">
                                     <div class="input-group">
-                                        <span class="input-group-text" style="width: 115px;">Asset Manager Ref:</span>
+                                        <span class="input-group-text">AM Ref:</span>
                                         <input type="text" class="form-control form-control-sm fw-bold" value="CZM197636">
                                     </div>
                                 </div>
@@ -282,27 +289,31 @@
 
                             <div class="table-responsive">
                                 <table class="table table-borderless mb-2">
-                                    <tbody>
+                                    <thead>
                                         <tr>
-                                            <td width="15%"><strong>Case Handler:</strong> </td>
-                                            <td width="15%"><strong>Job Type:</strong> </td>
-                                            <td width="10%"><strong>Date/Time:</strong></td>
-                                            <td width="10%"><strong>Job Status:</strong></td>
-                                            <td width="6%"><strong>Days:</strong></td>
-                                            <td width="15%"><strong>Contractor:</strong></td>
+                                            <th width="15%">Case Handler: </th>
+                                            <th width="15%">Job Type: </th>
+                                            <th width="10%">Date/Time:</th>
+                                            <th width="15%" class="text-center">
+                                                Job Status:
+                                            </th>
+                                            <th width="6%">Days:</th>
+                                            <th width="15%">Contractor:</th>
                                         </tr>
+                                    </thead>
+                                    <tbody>
                                         <tr class="border-bottom">
                                             <td>
-                                                Mr. Smith
+                                                Jack Chandler
                                             </td>
                                             <td>
-                                                Repossession - Eviction
+                                                Quotation
                                             </td>
                                             <td>
                                                 20/05/2025 11:10
                                             </td>
-                                            <td>
-                                                <span class="badge bg-success">In Possession</span>
+                                            <td class="text-center">
+                                                <span class="badge bg-secondary">Quote with Client</span>
                                             </td>
                                             <td>
                                                 <i class="bi bi-calendar2-check"></i> 5
@@ -337,18 +348,23 @@
 
                             <div class="table-responsive">
                                 <table class="table table-borderless mb-2">
-                                    <tbody>
+                                    <thead>
                                         <tr>
-                                            <td width="15%"><strong>Case Handler:</strong> </td>
-                                            <td width="15%"><strong>Job Type:</strong> </td>
-                                            <td width="10%"><strong>Date/Time:</strong></td>
-                                            <td width="10%"><strong>Job Status:</strong></td>
-                                            <td width="6%"><strong>Days:</strong></td>
-                                            <td width="15%"><strong>Contractor:</strong></td>
+                                            <th width="15%">Case Handler: </th>
+                                            <th width="15%">Job Type: </th>
+                                            <th width="10%">Date/Time:</th>
+                                            <th width="15%" class="text-center">
+                                                Job Status:
+                                            </th>
+                                            <th width="6%">Days:</th>
+                                            <th width="15%">Contractor:</th>
                                         </tr>
+                                    </thead>
+                                    <tbody>
+                                        
                                         <tr class="border-bottom">
                                             <td>
-                                                Mr. Smith
+                                                Jack Chandler
                                             </td>
                                             <td>
                                                 Repossession - Eviction
@@ -356,8 +372,8 @@
                                             <td>
                                                 20/05/2025 11:10
                                             </td>
-                                            <td>
-                                                <span class="badge bg-secondary">Allocated</span>
+                                            <td class="text-center">
+                                                <span class="badge bg-danger bg-opacity-75">Cancelled Without Charge</span>
                                             </td>
                                             <td>
                                                 <i class="bi bi-calendar2-check"></i> 5
@@ -390,18 +406,22 @@
                         </div>
                         <div class="card-body">
                             <table class="table table-borderless mb-2">
-                                <tbody>
+                                <thead>
                                     <tr>
-                                        <td width="15%"><strong>Case Handler:</strong> </td>
-                                        <td width="15%"><strong>Job Type:</strong> </td>
-                                        <td width="10%"><strong>Date/Time:</strong></td>
-                                        <td width="10%"><strong>Job Status:</strong></td>
-                                        <td width="6%"><strong>Days:</strong></td>
-                                        <td width="15%"><strong>Contractor:</strong></td>
+                                        <th width="15%">Case Handler: </th>
+                                        <th width="15%">Job Type: </th>
+                                        <th width="10%">Date/Time:</th>
+                                        <th width="15%" class="text-center">
+                                            Job Status:
+                                        </th>
+                                        <th width="6%">Days:</th>
+                                        <th width="15%">Contractor:</th>
                                     </tr>
+                                </thead>
+                                <tbody>
                                     <tr class="border-bottom">
                                         <td>
-                                            Mr. Smith
+                                            Jack Chandler
                                         </td>
                                         <td>
                                             Repossession - Eviction
@@ -409,8 +429,8 @@
                                         <td>
                                             20/05/2025 11:10
                                         </td>
-                                        <td>
-                                            <span class="badge bg-success">Delivered</span>
+                                        <td class="text-center">
+                                            <span class="badge bg-success">In Possession</span>
                                         </td>
                                         <td>
                                             <i class="bi bi-calendar2-check"></i> 15
