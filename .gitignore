@@ -1,0 +1,3 @@
+# Exclude files with .old and .tbc extensions
+*.old
+*.tbc
