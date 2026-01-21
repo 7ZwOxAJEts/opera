@@ -4,17 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Job Search</title>
+    <title>Cancellation Report</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body>
 
     <div class="container-fluid banner">
-        <a href="002MainMenu.html" class="text-white">
-            <img id="banner_logo" src="assets/img/AMG.png" alt="">
+        <a href="002MainMenu.html">
+            <img src="assets/img/AMG.png" alt="Menu" id="banner_logo">
         </a>
         <div id="banner_assetmanagementgroup">Asset Management Group</div>
     </div>
@@ -23,7 +22,7 @@
 
         <div class="card shadow">
             <div class="card-header text-center">
-                Awaiting Acceptance
+               Cancellation Report: Repossessions
             </div>
             <div class="card-body">
 
@@ -32,34 +31,42 @@
                 </p>
 
                 <div class="table-responsive">
-
+                                
                     <table class="table table-responsive table-striped table-hover">
                         <thead>
                             <th>Job No.</th>
                             <th>Type</th>
                             <th>Date</th>
                             <th>Status</th>
-                            <th>Lender</th>
-                            <th>Asset Manager</th>
-                            <th>Contractor</th>
-                            <th>Address</th>
+                            <th>
+                                <a href="014JobSearchIn.aspx?vField=6&amp;vSort=1">Lender</a>
+                            </th>
+                            <th>
+                                <a href="014JobSearchIn.aspx?vField=6&amp;vSort=4">Asset Manager</a>
+                            </th>
+                            <th>
+                                <a href="014JobSearchIn.aspx?vField=6&amp;vSort=2">Contractor</a>
+                            </th>
+                            <th>
+                                <a href="014JobSearchIn.aspx?vField=6&amp;vSort=3">Address</a>
+                            </th>
                             <th>Hold</th>
                             <th>Days</th>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="">267771/2S</a>
+                                    <a href="">183923/11GM</a>
                                 </td>
-                                <td>Shuttering</td>
-                                <td>29/04/2024</td>
-                                <td>Shuttering Initial (Allocated)</td>
-                                <td>Pepper (UK) Ltd</td>
+                                <td>Repossession - Eviction</td>
+                                <td>-</td>
+                                <td>Cancelled</td>
+                                <td>LBG - Halifax</td>
                                 <td>AMG Guildford</td>
-                                <td>Clearway Environmental Services (UK) Ltd</td>
+                                <td>Test Contractor</td>
                                 <td>
                                     <a href="">
-                                        24 Cowper Grove, Leeds, LS8 5DG
+                                        13-21 High Street, Guildford, Surrey, GU1 3DG
                                     </a>
                                 </td>
                                 <td>-</td>
@@ -69,11 +76,11 @@
                     </table>
 
                 </div>
-
             </div>
         </div>
-
     </div>
+
+
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
