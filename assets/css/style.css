@@ -55,12 +55,12 @@ a:hover {
 
 .banner {
     position: relative;
-    background-color: var(--amg-primary); /* Change to your desired banner color */
+    background-color: var(--amg-primary);
     color: white;
-    height: 85px; /* Adjust the height as needed */
+    height: 85px;
     display: flex;
-    align-items: center; /* Vertically center */
-    padding-right: 50px; /* Space to the right edge */
+    align-items: center;
+    padding-right: 50px;
     border-bottom: var(--amg-secondary) 4px solid;
     font-size: 14px;
 }
@@ -81,7 +81,7 @@ a:hover {
 }
 
 #banner_assetmanagementgroup {
-    margin-left: auto; /* Pushes the text to the right */
+    margin-left: auto;
 }
 
 .input-group-text {
@@ -94,6 +94,9 @@ a:hover {
 
 .btn {
     --bs-btn-font-size: 10pt;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -255,6 +258,17 @@ a:hover {
     margin-left: 0.5em;
 }
 
+.add-icon::after {
+    content: "\F4FA";
+    font-family: "bootstrap-icons";
+    display: inline-block;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-variant: normal;
+    font-style: normal;
+    margin-left: 0.5em;
+}
+
 .back-icon::before {
     content: "\F12A";
     font-family: "bootstrap-icons";
@@ -286,4 +300,15 @@ a:hover {
     font-variant: normal;
     font-style: normal;
     margin-right: 0.5em;
+}
+
+.search-icon::after {
+    content: "\F52A";
+    font-family: "bootstrap-icons";
+    display: inline-block;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-variant: normal;
+    font-style: normal;
+    margin-left: 0.5em;
 }
