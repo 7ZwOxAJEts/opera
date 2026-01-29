@@ -320,7 +320,7 @@
                             <div class="row">
             
                                 <div class="col-12 d-flex justify-content-center">
-                                    <button class="btn btn-primary submit-icon col-md-12">SUBMIT</button>
+                                    <button class="btn btn-primary submit-icon col-12">SUBMIT</button>
                                 </div>
             
                             </div>
@@ -380,7 +380,7 @@
                                 </div>
 
                                 <div class="col-md-2">
-                                    <a href="" class="btn btn-sm btn-primary back-icon w-100">
+                                    <a href="" class="btn btn-sm btn-primary back-icon col-12">
                                         BACK
                                     </a>
                                 </div>
@@ -592,6 +592,30 @@
                                                             <input name="ElecSerial" type="text" id="ElecSerial" style="color:#FF0000;" value="15P015973" size="15" class="form-control form-control-sm">
                                                         </td>
                                                     </tr>
+                                                    <!-- NEW ADDITION Oil off with water -->
+                                                    <tr>
+                                                        <td width="21%">Water Off</td>
+                                                        <td width="18%">
+                                                            <select name="WaterOff" class="form-select form-select-sm w-auto">
+                                                                <option value="N/A" selected>N/A</option>
+                                                                <option value="Yes" style="color:#FF0000;">Yes</option>
+                                                                <option value="No" style="color:#FF0000;">No</option>
+                                                            </select>
+                                                        </td>
+                                                        <td width="17%">Read</td>
+                                                        <td width="44%">
+                                                            <input type="text" name="WaterRead" size="15" value="" style="color:#FF0000;" class="form-control form-control-sm">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>Serial No:</td>
+                                                        <td>
+                                                            <input name="WaterSerial" type="text" id="WaterSerial" style="color:#FF0000;" value="" size="15" class="form-control form-control-sm">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- NEW ADDITION Oil off with water -->
                                                     <tr>
                                                         <td width="21%">Oil Off</td>
                                                         <td width="18%">
@@ -604,12 +628,6 @@
                                                         <td width="17%">Read</td>
                                                         <td width="44%">
                                                             <input type="text" name="OilRead" size="15" value="" style="color:#FF0000;" class="form-control form-control-sm">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="3">Water Meter Reading (if applicable) </td>
-                                                        <td width="44%">
-                                                            <input type="text" name="WaterRead" size="15" value="" style="color:#FF0000;" class="form-control form-control-sm">
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -1082,7 +1100,7 @@
                                                         </td>
                                                         <td>
                                                             AMGM Notes
-                                                            <textarea name="AMGMNotes" cols="50" rows="5" class="form-control form-control-sm" style="color:#FF0000;">The property is a semi-detached house in poor condition with 3 bedrooms, 1 bathroom, 1 WC, 1 reception room, a loft which has not been converted, a conservatory, front garden and driveway and rear yard under a quarter of an acre and a garage. LCDD completed as the property is fully furnished as lived in. The property is generally rundown throughout and requires decorating. No damage reported and lots of chattels remain. All services are off and the systems have been drained besides the electrics which have been left on due to the volume of perishables as authorised by Ava. The cylinder has also not been drained as the contractor could not get the top of the tank off as this was bending and would have potentially broken if he had continued. This will need to be reassessed in the future. The gas reading is 11145 and serial is L1259906990M. The electric reading is 0054972 and serial is 15P015973. 8 locks have been changed. 5 over pack for costs of £175+vat. 8x paint have been removed for £40+vat. 7x tyres have been secured on site as these are massive and will need to be quoted for. There was a male and a female on site, they left without any issues, and took three dogs, a rabbit and a bearded dragon with them, they want to return for belongings. There is a Range Rover EX57 VKK on the drive and a Ford Transit YB53 MFY also. Notices have been placed. There is a caravan in the garden with no registration plate. There are no alarms. There are no for sale or sold boards and 6 bins remain on site. Due to the repossession not going ahead until 13:45 once the customer had removed all animals there will be an hour and a half waiting time charged at £75+vat There were two animal handlers in attendance who confirmed there were no animals remaining on site once the customer had removed some other than one rabbit in a hutch in the garden which the neighbour will be feeding/looking after. The costs for their attendance and some waiting time are £525+vat. Invoice to follow for £1140+vat.</textarea>
+                                                            <textarea name="AMGMNotes" cols="50" rows="5" class="form-control form-control-sm" style="color:#FF0000;"></textarea>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -1101,6 +1119,7 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            
                         </form>
 
                     </div>
@@ -1112,7 +1131,8 @@
         </div>
 
 
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 
 </html>
