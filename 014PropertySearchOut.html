@@ -16,8 +16,8 @@
 
     <div class="container-fluid banner">
     
-        <a href="002MainMenu.html" id="banner_logo" class="">
-            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo">
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
         </a>
     
         <div id="banner_assetmanagementgroup">Asset Management Group</div>
@@ -50,8 +50,14 @@
                         
                         <div class="input-group">
                             <span class="input-group-text" id="">Criteria</span>
-                            <select name="" id="" class="form-select form-select-sm" required>
-                                <option value="">-- Please Select... --</option>
+                            <select name="vField" id="vField" class="form-select form-select-sm" required>
+                                <option value="X06ID">AMGM ID</option>
+                                <option value="X06BUILDING">Building</option>
+                                <option value="X06STREET">Street</option>
+                                <option value="X06TOWN">Town</option>
+                                <option value="X06POSTCODE">Postcode</option>
+                                <option value="X06ACCOUNTREF">Account No.</option>
+                                <option value="X06CLIENTREF">Source Ref</option>
                             </select>
                         </div>
                         
@@ -62,7 +68,7 @@
                 <div class="row g-3 mb-3">
                     
                     <div class="col-6 col-md-6">
-                        <a href="002MainMenu.html" class="btn btn-sm btn-primary back-icon col-10 col-lg-6">Back</a>
+                        <a href="002MainMenu.aspx" class="btn btn-sm btn-primary back-icon col-10 col-lg-6">Back</a>
                     </div>
                     <div class="col-6 col-md-6 text-end">
                         <button type="submit" class="btn btn-sm btn-primary search-icon col-10 col-lg-6">Search</button>
