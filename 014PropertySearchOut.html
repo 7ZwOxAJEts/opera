@@ -8,11 +8,20 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <script>
+        function handleLink(thelink) {
+            if (window.opener != null) {
+                window.opener.location = thelink;
+                window.close();
+            } else {
+                window.location = thelink;
+            }
+        }
+    </script>
+
 </head>
 
 <body>
-
-    <form action="">
 
     <div class="container-fluid banner">
     
@@ -25,6 +34,8 @@
     </div>
 
     <div class="container col-lg-5 mt-5">
+
+    <form name="form1" method="post" action="014PropertySearchIn.aspx">
 
         <div class="card shadow">
             <div class="card-header text-center">
@@ -84,79 +95,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
-                            </td>
-                            <td>
-                                13-21 High Street, Guildford, GU1 3DG
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
-                            </td>
-                            <td>
-                                13-21 High Street, Guildford, GU1 3DG
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
-                            </td>
-                            <td>
-                                13-21 High Street, Guildford, GU1 3DG
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
-                            </td>
-                            <td>
-                                13-21 High Street, Guildford, GU1 3DG
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
-                            </td>
-                            <td>
-                                13-21 High Street, Guildford, GU1 3DG
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
-                            </td>
-                            <td>
-                                13-21 High Street, Guildford, GU1 3DG
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
-                            </td>
-                            <td>
-                                13-21 High Street, Guildford, GU1 3DG
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
-                            </td>
-                            <td>
-                                13-21 High Street, Guildford, GU1 3DG
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
-                            </td>
-                            <td>
-                                13-21 High Street, Guildford, GU1 3DG
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="handleLink('')";>AMGM/267270</a>
+                                <a href="#" onclick="handleLink('006MainPropertyPageOut.aspx?vID=')";>AMGM/267270</a>
                             </td>
                             <td>
                                 13-21 High Street, Guildford, GU1 3DG
@@ -171,12 +110,13 @@
 
             </div>
         </div>
+    
+    </form>
         
     </div>
     
-</form>
-
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
