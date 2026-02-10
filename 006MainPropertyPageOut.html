@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Main Property Page</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -51,49 +51,27 @@
 
                             <div class="card-body">
 
-                            <div class="row g-3 mb-2">
-                            
-                                <div class="col-12 col-sm-4">
-                                    <a href="006AddJobPageOut.aspx" class="btn btn-sm btn-secondary add-icon col-12">
-                                        Add New Job
-                                    </a>
+                                <div class="row g-3 mb-2">
+                                
+                                    <div class="col-12 col-sm-4">
+                                        <a href="006AddJobPageOut.aspx" class="btn btn-sm btn-secondary add-icon col-12">
+                                            Add New Job
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-12 col-sm-4">
+                                        <a href="050DeleteThings.aspx" class="btn btn-sm btn-danger delete-icon col-12">
+                                            Delete Things
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-12 col-sm-4">
+                                        <a href="002MainMenu.aspx" class="btn btn-sm btn-success back-icon col-12">
+                                            Back to Menu
+                                        </a>
+                                    </div>
+                                
                                 </div>
-                            
-                                <div class="col-12 col-sm-4">
-                                    <a href="050DeleteThings.aspx" class="btn btn-sm btn-danger delete-icon col-12">
-                                        Delete Things
-                                    </a>
-                                </div>
-                            
-                                <div class="col-12 col-sm-4">
-                                    <a href="002MainMenu.aspx" class="btn btn-sm btn-success back-icon col-12">
-                                        Back to Menu
-                                    </a>
-                                </div>
-                            
-                            </div>
-
-                            <div class="row g-3 mb-2">
-
-                                <div class="col-12 col-sm-6 col-lg-4">
-                                    <a href="006AddJobPageOut.aspx" class="btn btn-sm btn-secondary add-icon col-12">
-                                        Add New Job
-                                    </a>
-                                </div>
-                            
-                                <div class="col-12 col-sm-6 col-lg-4">
-                                    <a href="050DeleteThings.aspx" class="btn btn-sm btn-danger delete-icon col-12">
-                                        Delete Things
-                                    </a>
-                                </div>
-                            
-                                <div class="col-12 col-lg-4">
-                                    <a href="002MainMenu.aspx" class="btn btn-sm btn-success back-icon col-12">
-                                        Back to Menu
-                                    </a>
-                                </div>
-
-                            </div>
 
 
                                 <div class="row gy-1">
@@ -342,11 +320,11 @@
                                 <hr class="m-2">
 
                                 <div class="row">
-
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <button class="btn btn-primary submit-icon col-md-12">SUBMIT</button>
+                                
+                                    <div class="col-12">
+                                        <button class="btn btn-primary submit-icon col-12">SUBMIT</button>
                                     </div>
-
+                                
                                 </div>
 
                                 <div class="row mt-2">
@@ -371,179 +349,74 @@
 
                 <div class="col-lg-8">
 
-                    <div class="card shadow mb-3">
-                        <div class="card-header d-flex justify-content-between">
-                            <span> 271987/1E </span>
-                            <span> Created: dd/mm/yyyy </span>
-                        </div>
-                        <div class="card-body">
+                    <!-- Card for each job -->
 
-                            <div class="table-responsive">
-                                <table class="table table-borderless mb-2">
-                                    <thead>
-                                        <tr>
-                                            <th width="15%">Case Handler: </th>
-                                            <th width="15%">Job Type: </th>
-                                            <th width="10%">Date/Time:</th>
-                                            <th width="15%" class="text-center">Job Status:</th>
-                                            <th width="6%">Days:</th>
-                                            <th width="15%">Contractor:</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="border-bottom">
-                                            <td>
-                                                Jack Chandler
-                                            </td>
-                                            <td>
-                                                Quotation
-                                            </td>
-                                            <td>
-                                                20/05/2025 11:10
-                                            </td>
-                                            <td class="text-center">
-                                                <span class="badge bg-secondary">Quote with Client</span>
-                                            </td>
-                                            <td>
-                                                <i class="bi bi-calendar2-check"></i> 5
-                                            </td>
-                                            <td>
-                                                Lorem ipsum dolor
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="card shadow mb-3">
+                            <div class="card-header d-flex justify-content-between">
+                                <span> 271987/1E </span>
+                                <span> Created: dd/mm/yyyy </span>
                             </div>
+                            <div class="card-body">
 
-                            <div class="row">
-                                <div class="col">
-                                    <a href="006EditStandardJobOut.aspx?" class="btn btn-xs btn-secondary edit-icon col-6 col-lg-4">EDIT</a>
+                                <div class="table-responsive">
+                                    <table class="table table-borderless mb-2">
+                                        <thead>
+                                            <tr>
+                                                <th width="15%">Case Handler: </th>
+                                                <th width="15%">Job Type: </th>
+                                                <th width="10%">Date/Time:</th>
+                                                <th width="15%" class="text-center">Job Status:</th>
+                                                <th width="6%">Days:</th>
+                                                <th width="15%">Contractor:</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-bottom">
+                                                <td>
+                                                    Jack Chandler
+                                                </td>
+                                                <td>
+                                                    Quotation
+                                                </td>
+                                                <td>
+                                                    20/05/2025 11:10
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="badge bg-secondary">Quote with Client</span>
+                                                </td>
+                                                <td>
+                                                    <i class="bi bi-calendar2-check"></i> 5
+                                                </td>
+                                                <td>
+                                                    Lorem ipsum dolor
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="col text-end">
-                                    <a href="006JobRemoveIn.aspx?" class="btn btn-xs btn-danger delete-icon col col-lg-4">REMOVE JOB</a>
+
+                                <div class="row d-flex justify-content-between">
+
+                                    <div class="col-5 col-md-2">
+                                        <a href="006EditStandardJobOut.aspx?" class="btn btn-xs btn-secondary edit-icon col-12">EDIT</a>
+                                    </div>
+
+                                    <div class="col-5 col-md-2">
+                                        <a href="006JobRemoveIn.aspx?" class="btn btn-xs btn-danger delete-icon col-12">REMOVE JOB</a>
+                                    </div>
+
                                 </div>
-                            </div>
 
-                        </div>
-
-                    </div>
-
-                    <div class="card shadow mb-3">
-                        <div class="card-header d-flex justify-content-between">
-                            <span> 271987/1E </span>
-                            <span> Created: dd/mm/yyyy </span>
-                        </div>
-                        <div class="card-body">
-
-                            <div class="table-responsive">
-                                <table class="table table-borderless mb-2">
-                                    <thead>
-                                        <tr>
-                                            <th width="15%">Case Handler:</th>
-                                            <th width="15%">Job Type:</th>
-                                            <th width="10%">Date/Time:</th>
-                                            <th width="15%" class="text-center">Job Status:</th>
-                                            <th width="6%">Days:</th>
-                                            <th width="15%">Contractor:</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="border-bottom">
-                                            <td>
-                                                Jack Chandler
-                                            </td>
-                                            <td>
-                                                Repossession - Eviction
-                                            </td>
-                                            <td>
-                                                20/05/2025 11:10
-                                            </td>
-                                            <td class="text-center">
-                                                <span class="badge bg-danger bg-opacity-75">Cancelled Without Charge</span>
-                                            </td>
-                                            <td>
-                                                <i class="bi bi-calendar2-check"></i> 5
-                                            </td>
-                                            <td>
-                                                Lorem ipsum dolor
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class="row">
-                                <div class="col">
-                                    <a href="006EditStandardJobOut.aspx?" class="btn btn-xs btn-secondary edit-icon col-6 col-lg-4">EDIT</a>
-                                </div>
-                                <div class="col text-end">
-                                    <a href="006JobRemoveIn.aspx?" class="btn btn-xs btn-danger delete-icon col-6 col-lg-4">REMOVE JOB</a>
-                                </div>
                             </div>
 
                         </div>
 
-                    </div>
-
-                    <div class="card shadow mb-3">
-                        <div class="card-header d-flex justify-content-between">
-                            <span> 271987/1E </span>
-                            <span> Created: dd/mm/yyyy </span>
-                        </div>
-                        <div class="card-body">
-                            <table class="table table-borderless mb-2">
-                                <thead>
-                                    <tr>
-                                        <th width="15%">Case Handler: </th>
-                                        <th width="15%">Job Type: </th>
-                                        <th width="10%">Date/Time:</th>
-                                        <th width="15%" class="text-center">Job Status:</th>
-                                        <th width="6%">Days:</th>
-                                        <th width="15%">Contractor:</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border-bottom">
-                                        <td>
-                                            Jack Chandler
-                                        </td>
-                                        <td>
-                                            Repossession - Eviction
-                                        </td>
-                                        <td>
-                                            20/05/2025 11:10
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="badge bg-success">In Possession</span>
-                                        </td>
-                                        <td>
-                                            <i class="bi bi-calendar2-check"></i> 15
-                                        </td>
-                                        <td>
-                                            Lorem ipsum dolor
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <div class="row">
-
-                                <div class="col">
-                                    <a href="006EditStandardJobOut.aspx?" class="btn btn-xs btn-secondary edit-icon col-6 col-lg-4">EDIT</a>
-                                </div>
-
-                                <div class="col text-end">
-                                    <a href="006JobRemoveIn.aspx?" class="btn btn-xs btn-danger delete-icon col-6 col-lg-4">REMOVE JOB</a>
-                                </div>
-                                
-                            </div>
-
-                        </div>
-                    </div>
+                    <!-- Card for each job -->
 
                 </div>
 
             </div>
+
         </div>
 
     </form>
