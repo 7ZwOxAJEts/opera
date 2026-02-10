@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Import New Case</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -24,315 +24,328 @@
 
     </div>
 
-    <div class="container col-xxl-6 mt-3">
+    <form name="form1" method="post" action="055NewCaseCompareOut.aspx">
 
-        <div class="card shadow">
-            <div class="card-header text-center">
-                New Case Creation
+        <div class="container col-xxl-6 mt-3">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    New Case Creation
+                </div>
+                <div class="card-body">
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <a href="055ImportJobSearch.aspx" class="btn btn-sm back-icon btn-primary col-12">Back</a>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <a href="002MainMenu.aspx" class="btn btn-sm back-icon btn-danger col-12">Main Menu</a>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <button type="submit" class="btn btn-sm btn-success submit-icon col-12" onclick="document.form1.action='055NewCaseCompareIn.aspx';">
+                                Create Case
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+
+                            <p class="section-banner p-2">Import Case Details:</p>
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid #0E2E47;">
+                                        <th colspan="2">Imported Details</th>
+                                        <th>OPERA Case Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th style="width: 20%;">
+                                            Client:
+                                        </th>
+                                        <td style="width: 30%;">
+                                            BOSUnysis
+                                        </td>
+                                        <td style="width: 30%;">
+                                            <select name="" id="" class="form-select form-select-sm">
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="width: 20%;">Similar Addresses Found:</th>
+                                        <td></td>
+                                        <td>
+                                            <select name="" id="" class="form-select form-select-sm">
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Address 1:
+                                        </th>
+                                        <td>
+                                            13-21 High Street
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Address 2:
+                                        </th>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Address 3:
+                                        </th>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Town:
+                                        </th>
+                                        <td>
+                                            Guildford
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            County:
+                                        </th>
+                                        <td>
+                                            Surrey
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Postcode:
+                                        </th>
+                                        <td>
+                                            GU1 3DG
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Customer 1:
+                                        </th>
+                                        <td>
+                                            Mr. Walter White
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Customer 2:
+                                        </th>
+                                        <td>
+                                            Mrs. Skyler White
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Account No:
+                                        </th>
+                                        <td>
+                                            55667788
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Client Ref:
+                                        </th>
+                                        <td>
+                                            CW55667788
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Solicitor Ref:
+                                        </th>
+                                        <td>
+                                            SL998877
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Litigating Solicitor:
+                                        </th>
+                                        <td>
+                                            John Smith Esq.
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="form-select form-select-sm">
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Eviction Type:
+                                        </th>
+                                        <td>
+                                            E
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="form-select form-select-sm">
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Title:
+                                        </th>
+                                        <td>
+                                            Leasehold
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="form-select form-select-sm">
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Possession Date:
+                                        </th>
+                                        <td>
+                                            15/10/2025
+                                        </td>
+                                        <td class="d-flex justify-content-between">
+
+                                            <input type="text" value="" class="datepicker form-control form-control-sm w-50">
+                                            <strong class="align-self-center mx-3 fs-12">:</strong>
+                                            <input type="text" value="" class="timepicker form-control form-control-sm w-50">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Asset Manager:
+                                        </th>
+                                        <td>
+                                            AMG Guildford
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="form-select form-select-sm">
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Estate Agent:</th>
+                                        <td>
+                                            ABC Estate Agents
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-4">
+                                                <a href="" style="white-space: nowrap;">Estate Agent</a>
+                                                <input type="text" name="" id="" class="form-control form-control-sm" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Estate Agent Details:
+                                        </th>
+                                        <td>
+                                            ABC Estate Agents, 1 High Street, Guildford, GU1 3DG, 01483 123456
+                                        </td>
+                                        <td>
+                                            <textarea name="" id="" class="form-control form-control-sm" rows="2"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Additional Info:
+                                        </th>
+                                        <td>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque. In consequuntur eaque voluptatem similique
+                                            veritatis necessitatibus id mollitia, quisquam esse dolorum officiis accusantium ipsum soluta blanditiis autem dicta?
+                                            Necessitatibus quam adipisci accusantium eum culpa omnis totam quibusdam dolore ipsum, ipsam commodi doloribus
+                                            architecto tempora earum voluptate amet quasi corporis saepe. Cumque dicta nemo nisi, exercitationem earum obcaecati
+                                            necessitatibus nulla.
+                                        </td>
+                                        <td>
+                                            <textarea name="" id="" class="form-control form-control-sm" rows="5"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-4">
+                            <a href="055ImportJobSearch.aspx" class="btn btn-sm back-icon btn-primary col-12">Back</a>
+                        </div>
+
+                        <div class="col-4">
+                            <a href="002MainMenu.aspx" class="btn btn-sm back-icon btn-danger col-12">Main Menu</a>
+                        </div>
+
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-sm btn-success submit-icon col-12" onclick="document.form1.action='055NewCaseCompareIn.aspx';">
+                                Create Case
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-            <div class="card-body">
 
-                <div class="row mb-3">
-                    <div class="col-4">
-                        <a href="" class="btn btn-sm back-icon btn-primary w-100">Back</a>
-                    </div>
-                    <div class="col-4">
-                        <a href="" class="btn btn-sm back-icon btn-danger w-100">Main Menu</a>
-                    </div>
-                    <div class="col-4">
-                        <button type="submit" class="btn btn-sm submit-icon btn-success w-100">
-                            Create Case
-                        </button>
-                    </div>
-                </div>
-
-
-                <div class="row">
-
-                    <div class="col-lg-12">
-
-                        <p class="section-banner p-2">Import Case Details:</p>
-
-                        <table class="table table-striped">
-                            <thead>
-                                <tr style="border-bottom: 2px solid #0E2E47;">
-                                    <th colspan="2">Imported Details</th>
-                                    <th>OPERA Case Details</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th style="width: 20%;">
-                                        Client:
-                                    </th>
-                                    <td style="width: 30%;">
-                                        BOSUnysis
-                                    </td>
-                                    <td style="width: 30%;">
-                                        <select name="" id="" class="form-select form-select-sm">
-                                            <option value="">-- Please Select --</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th style="width: 20%;">Similar Addresses Found:</th>
-                                    <td></td>
-                                    <td>
-                                        <select name="" id="" class="form-select form-select-sm">
-                                            <option value="">-- Please Select --</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Address 1:
-                                    </th>
-                                    <td>
-                                        13-21 High Street
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Address 2:
-                                    </th>
-                                    <td>
-
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Address 3:
-                                    </th>
-                                    <td>
-
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Town:
-                                    </th>
-                                    <td>
-                                        Guildford
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        County:
-                                    </th>
-                                    <td>
-                                        Surrey
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Postcode:
-                                    </th>
-                                    <td>
-                                        GU1 3DG
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Customer 1:
-                                    </th>
-                                    <td>
-                                        Mr. Walter White
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Customer 2:
-                                    </th>
-                                    <td>
-                                        Mrs. Skyler White
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Account No:
-                                    </th>
-                                    <td>
-                                        55667788
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Client Ref:
-                                    </th>
-                                    <td>
-                                        CW55667788
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Solicitor Ref:
-                                    </th>
-                                    <td>
-                                        SL998877
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="" value="" class="form-control form-control-sm">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Litigating Solicitor:
-                                    </th>
-                                    <td>
-                                        John Smith Esq.
-                                    </td>
-                                    <td>
-                                        <select name="" id="" class="form-select form-select-sm">
-                                            <option value="">-- Please Select --</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Eviction Type:
-                                    </th>
-                                    <td>
-                                        E
-                                    </td>
-                                    <td>
-                                        <select name="" id="" class="form-select form-select-sm">
-                                            <option value="">-- Please Select --</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Title:
-                                    </th>
-                                    <td>
-                                        Leasehold
-                                    </td>
-                                    <td>
-                                        <select name="" id="" class="form-select form-select-sm">
-                                            <option value="">-- Please Select --</option>
-                                        </select>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Possession Date:
-                                    </th>
-                                    <td>
-                                        15/10/2025
-                                    </td>
-                                    <td class="d-flex justify-content-between">
-                                        <input type="text" value="" class="datepicker form-control form-control-sm w-50">
-                                        <strong class="align-self-center mx-3 fs-12">:</strong>
-                                        <input type="text" value="" class="timepicker form-control form-control-sm w-50">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Asset Manager:
-                                    </th>
-                                    <td>
-                                        AMG Guildford
-                                    </td>
-                                    <td>
-                                        <select name="" id="" class="form-select form-select-sm">
-                                            <option value="">-- Please Select --</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Estate Agent:</th>
-                                    <td>
-                                        ABC Estate Agents
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-4">
-                                            <a href="" style="white-space: nowrap;">Estate Agent</a>
-                                            <input type="text" name="" id="" class="form-control form-control-sm" readonly>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Estate Agent Details:
-                                    </th>
-                                    <td>
-                                        ABC Estate Agents, 1 High Street, Guildford, GU1 3DG, 01483 123456
-                                    </td>
-                                    <td>
-                                        <textarea name="" id="" class="form-control form-control-sm" rows="2"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Additional Info:
-                                    </th>
-                                    <td>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque. In consequuntur eaque voluptatem similique
-                                        veritatis necessitatibus id mollitia, quisquam esse dolorum officiis accusantium ipsum soluta blanditiis autem dicta?
-                                        Necessitatibus quam adipisci accusantium eum culpa omnis totam quibusdam dolore ipsum, ipsam commodi doloribus
-                                        architecto tempora earum voluptate amet quasi corporis saepe. Cumque dicta nemo nisi, exercitationem earum obcaecati
-                                        necessitatibus nulla.
-                                    </td>
-                                    <td>
-                                        <textarea name="" id="" class="form-control form-control-sm" rows="5"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-4">
-                        <a href="" class="btn btn-sm back-icon btn-primary w-100">Back</a>
-                    </div>
-                    <div class="col-4">
-                        <a href="" class="btn btn-sm back-icon btn-danger w-100">Main Menu</a>
-                    </div>
-                    <div class="col-4">
-                        <button type="submit" class="btn btn-sm submit-icon btn-success w-100">
-                            Create Case
-                        </button>
-                    </div>
-                </div>
-
-            </div>
         </div>
-    </div>
 
-
+    </form>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 
 </html>
