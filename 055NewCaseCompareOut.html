@@ -34,7 +34,7 @@
                 </div>
                 <div class="card-body">
 
-                    <div class="row g-3 mb-3">
+                    <div class="row g-3 mb-2">
 
                         <div class="col-12 col-sm-4">
                             <a href="055ImportJobSearch.aspx" class="btn btn-sm back-icon btn-primary col-12">Back</a>
@@ -45,13 +45,12 @@
                         </div>
 
                         <div class="col-12 col-sm-4">
-                            <button type="submit" class="btn btn-sm btn-success submit-icon col-12" onclick="document.form1.action='055NewCaseCompareIn.aspx';">
+                            <button type="submit" class="btn btn-sm submit-icon btn-success col-12" onclick="document.form1.action='055NewCaseCompareIn.aspx';">
                                 Create Case
                             </button>
                         </div>
 
                     </div>
-
 
                     <div class="row">
 
@@ -68,23 +67,23 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th style="width: 20%;">
+                                        <th style="width: 30%;">
                                             Client:
                                         </th>
                                         <td style="width: 30%;">
                                             BOSUnysis
                                         </td>
                                         <td style="width: 30%;">
-                                            <select name="" id="" class="form-select form-select-sm">
+                                            <select name="vClient" id="vClient" class="form-select form-select-sm" onchange="form.submit();">
                                                 <option value="">-- Please Select --</option>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th style="width: 20%;">Similar Addresses Found:</th>
+                                        <th>Similar Addresses Found:</th>
                                         <td></td>
                                         <td>
-                                            <select name="" id="" class="form-select form-select-sm">
+                                            <select name="vOperaID" id="vOperaID" class="form-select form-select-sm">
                                                 <option value="">-- Please Select --</option>
                                             </select>
                                         </td>
@@ -97,7 +96,7 @@
                                             13-21 High Street
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vAddress1" id="vAddress1" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -108,7 +107,7 @@
 
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vAddress2" id="vAddress2" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -119,7 +118,7 @@
 
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vAddress3" id="vAddress3" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -130,7 +129,7 @@
                                             Guildford
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vAddress4" id="vAddress4" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -141,7 +140,7 @@
                                             Surrey
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vAddress5" id="vAddress5" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -152,7 +151,7 @@
                                             GU1 3DG
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vPostcode" id="vPostcode" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -163,7 +162,7 @@
                                             Mr. Walter White
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vBorrower1" id="vBorrower1" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -174,7 +173,7 @@
                                             Mrs. Skyler White
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vBorrower2" id="vBorrower2" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -185,7 +184,7 @@
                                             55667788
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vAccountNo" id="vAccountNo" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -196,7 +195,7 @@
                                             CW55667788
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vClientRef" id="vClientRef" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -207,7 +206,7 @@
                                             SL998877
                                         </td>
                                         <td>
-                                            <input type="text" name="" id="" value="" class="form-control form-control-sm">
+                                            <input type="text" name="vSolRef" id="vSolRef" value="" class="form-control form-control-sm">
                                         </td>
                                     </tr>
                                     <tr>
@@ -218,20 +217,20 @@
                                             John Smith Esq.
                                         </td>
                                         <td>
-                                            <select name="" id="" class="form-select form-select-sm">
+                                            <select name="vLitigSolName" id="vLitigSolName" class="form-select form-select-sm">
                                                 <option value="">-- Please Select --</option>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>
-                                            Eviction Type:
+                                            Possession Type:
                                         </th>
                                         <td>
                                             E
                                         </td>
                                         <td>
-                                            <select name="" id="" class="form-select form-select-sm">
+                                            <select name="vRepoType" id="vRepoType" class="form-select form-select-sm">
                                                 <option value="">-- Please Select --</option>
                                             </select>
                                         </td>
@@ -244,22 +243,22 @@
                                             Leasehold
                                         </td>
                                         <td>
-                                            <select name="" id="" class="form-select form-select-sm">
+                                            <select name="" id="" class="form-select form-select-sm form-control-sm">
                                                 <option value="">-- Please Select --</option>
                                             </select>
                                     </tr>
                                     <tr>
                                         <th>
-                                            Possession Date:
+                                            Possession Date &amp; Time:
                                         </th>
                                         <td>
                                             15/10/2025
                                         </td>
                                         <td class="d-flex justify-content-between">
 
-                                            <input type="text" value="" class="datepicker form-control form-control-sm w-50">
+                                            <input type="text" name="vPossDate" id="vPossDate" value="" class="datepicker form-control form-control-sm w-50">
                                             <strong class="align-self-center mx-3 fs-12">:</strong>
-                                            <input type="text" value="" class="timepicker form-control form-control-sm w-50">
+                                            <input type="text" name="vPossTime" id="vPossTime" value="" class="timepicker form-control form-control-sm w-50">
 
                                         </td>
                                     </tr>
@@ -271,7 +270,7 @@
                                             AMG Guildford
                                         </td>
                                         <td>
-                                            <select name="" id="" class="form-select form-select-sm">
+                                            <select name="vContractorName" id="vContractorName" class="form-select form-select-sm">
                                                 <option value="">-- Please Select --</option>
                                             </select>
                                         </td>
@@ -283,8 +282,8 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center gap-4">
-                                                <a href="" style="white-space: nowrap;">Estate Agent</a>
-                                                <input type="text" name="" id="" class="form-control form-control-sm" readonly>
+                                                <a href="005CompanySearchOutPop.aspx?vID=&vType=2&vTarget=form1.vAgentID&vTarget2=form1.vAgentName&vClientSelect=&vCoverage=" style="white-space: nowrap;">Estate Agent</a>
+                                                <input type="text" name="vAgentName" id="vAgentName" class="form-control form-control-sm" readonly>
                                             </div>
                                         </td>
                                     </tr>
@@ -296,7 +295,7 @@
                                             ABC Estate Agents, 1 High Street, Guildford, GU1 3DG, 01483 123456
                                         </td>
                                         <td>
-                                            <textarea name="" id="" class="form-control form-control-sm" rows="2"></textarea>
+                                            <textarea name="vEADetails" id="vEADetails" class="form-control form-control-sm" rows="2"></textarea>
                                         </td>
                                     </tr>
                                     <tr>
@@ -311,11 +310,12 @@
                                             necessitatibus nulla.
                                         </td>
                                         <td>
-                                            <textarea name="" id="" class="form-control form-control-sm" rows="5"></textarea>
+                                            <textarea name="vAdditionalInfo" id="vAdditionalInfo" class="form-control form-control-sm" rows="5"></textarea>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+
                         </div>
 
                     </div>

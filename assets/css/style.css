@@ -1,6 +1,6 @@
  /*
     Custom CSS Stylesheet
-    Last Updated: 29/01/2026
+    Last Updated: 10/02/2026
  */
 
 @import url('../css/bootstrap-icons-1.13.1/bootstrap-icons.min.css');
@@ -172,6 +172,12 @@ a:hover {
 .btn-danger:hover {
     background-color: red;
     border: var(--amg-primary);
+}
+
+.btn-success {
+    background-color: #198754;
+    border: #198754;
+    color: white;
 }
 
 .card-header {
