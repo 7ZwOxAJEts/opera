@@ -33,15 +33,13 @@
         <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
     </div>
 
-    <form action="">
-
         <div class="container-fluid">
 
             <div class="row">
 
                 <div class="col-lg-4"> <!--Property Details-->
 
-                    <form action="">
+                <form action="propdetailsin.aspx" method="post">
 
                         <div class="card shadow">
 
@@ -343,7 +341,7 @@
                             </div> <!--Card Body-->
                         </div>
 
-                    </form>
+                </form>
 
                 </div> <!--Property Details-->
 
@@ -382,7 +380,7 @@
                                                     20/05/2025 11:10
                                                 </td>
                                                 <td class="text-center">
-                                                    <span class="badge bg-secondary">Quote with Client</span>
+                                                    <span class="badge bg-success">Quote with Client</span>
                                                 </td>
                                                 <td>
                                                     <i class="bi bi-calendar2-check"></i> 5
@@ -402,7 +400,7 @@
                                     </div>
 
                                     <div class="col-5 col-md-2">
-                                        <a href="006JobRemoveIn.aspx?" class="btn btn-xs btn-danger delete-icon col-12">REMOVE JOB</a>
+                                        <a href="006JobRemoveIn.aspx?" class="btn btn-xs btn-danger delete-icon col-12" onclick="return confirm('Are you sure you want to delete this job?');">REMOVE JOB</a>
                                     </div>
 
                                 </div>
