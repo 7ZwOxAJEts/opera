@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Company Search</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <form name="companysearch" method="post" action="005CompanySearchOut.aspx">
+
+        <div class="container col-lg-4 mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Company Search
+                </div>
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Name</span>
+                                <input type="text" name="vName" id="vName" value="" class="form-control form-control-sm">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Type</span>
+                                <select name="vType" id="vType" class="form-select form-select-sm">
+                                    <option value="" selected>Please select...</option>
+                                    <option value="1"> Client</option>
+                                    <option value="2"> Estate Agent</option>
+                                    <option value="3"> Solicitor</option>
+                                    <option value="20"> Contractor</option>
+                                    <option value="21"> Asset Manager</option>
+                                    <option value="999"> AMGM</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Town</span>
+                                <input name="vTown" type="text" size="12" value="" class="form-control form-control-sm">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Postcode</span>
+                                <input name="vPostcode" type="text" size="12" value="" class="form-control form-control-sm">
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex justify-content-between">
+
+                            <a href="002MainMenu.aspx" class="btn btn-sm btn-secondary back-icon col-4 col-lg-3">Back</a>
+                            <button type="submit" class="btn btn-sm btn-primary submit-icon col-4 col-lg-3">Search</button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RESULTS SECTION -->
+                     <form name="companylist" action="005GroupDeactivate.aspx" method="POST">
+
+                        <div class="row mt-4">
+
+                            <div class="col-12">
+
+                                <p class="card-header text-center p-1 fs-13">Results</p>
+
+                                <table class="table table-bordered table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="005EditCompanyOut.aspx?vSelect=506947725958616453715353563242474a434b2f79413d3d">Andrew Lodge</a>
+                                            </td>
+                                            <td class="text-center w-25 fs-13">
+                                                <input type="checkbox" name="selectedCompany" value="20165" class="form-check-input">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-12 d-flex flex-column flex-md-row d-md-flex justify-content-md-between">
+                                <a href="005CompanyMenu.aspx" class="btn btn-sm btn-secondary back-icon col-md-3">Back</a>
+                                <button type="submit" class="btn btn-sm btn-danger submit-icon col-md-3">De-Activate</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                    <!-- RESULTS SECTION -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

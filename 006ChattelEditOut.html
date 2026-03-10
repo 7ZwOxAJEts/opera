@@ -40,670 +40,602 @@
         <div class="row">
 
             <div class="col-lg-4"> <!--Property Details-->
-            
-                <form action="">
-            
+
+                <form action="propdetailsin.aspx" method="post">
+
                     <div class="card shadow">
-            
+
                         <div class="card-header text-center">
                             Property Details - AMGM/[Case ID]
                         </div>
-            
+
                         <div class="card-body">
-            
+
                             <div class="row g-3 mb-2">
-                            
+
                                 <div class="col-12 col-sm-4">
                                     <a href="006AddJobPageOut.aspx" class="btn btn-sm btn-secondary add-icon col-12">
                                         Add New Job
                                     </a>
                                 </div>
-                            
+
                                 <div class="col-12 col-sm-4">
                                     <a href="050DeleteThings.aspx" class="btn btn-sm btn-danger delete-icon col-12">
                                         Delete Things
                                     </a>
                                 </div>
-                            
+
                                 <div class="col-12 col-sm-4">
                                     <a href="002MainMenu.aspx" class="btn btn-sm btn-success back-icon col-12">
                                         Back to Menu
                                     </a>
                                 </div>
-                            
+
                             </div>
-            
+
                             <div class="row gy-1">
-            
+
                                 <div class="col-md-12">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">Client:</span>
                                         <select name="vClient" id="vClient" class="form-select form-select-sm" required>
                                             <option value="">-- Select --</option>
                                         </select>
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">Contact:</span>
-                                        <select name="vClientContact" id="vClientContact" class="form-select form-select-sm" required="">
+                                        <select name="vClientContact" id="vClientContact" class="form-select form-select-sm">
                                             <option value="">-- Select --</option>
+                                            <option value="">Confirmations & Reports (All Clients)</option>
                                         </select>
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">Tel:</span>
                                         <a href="tel:" class="form-control form-control-sm">
                                             [Tel]
                                         </a>
                                     </div>
-            
+
                                 </div>
-            
+
                             </div>
-            
+
                             <hr>
-            
+
                             <div class="row gy-2">
-            
+
                                 <div class="col-md-12">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 95px;">Asset Manager:</span>
-                                        <select name="vInsSource" id="vInsSource" class="form-select form-select-sm" required>
+                                        <select name="vInsSource" id="vInsSource" class="form-select form-select-sm">
                                             <option value="">-- Select --</option>
                                         </select>
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 95px;">Contact:</span>
-                                        <select name="vInsSourceContact" id="vInsSourceContact" class="form-select form-select-sm" required>
+                                        <select name="vInsSourceContact" id="vInsSourceContact" class="form-select form-select-sm">
                                             <option value="">-- Select --</option>
+                                            <option value="">Confirmations & Reports (All Clients)</option>
                                         </select>
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 115px;">Asset Manager Ref:</span>
                                         <input name="vTessaRef" id="vTessaRef" type="text" class="form-control form-control-sm fw-bold" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                             </div>
-            
+
                             <hr>
-            
+
                             <div class="row gy-1">
-            
+
                                 <div class="col-md-12">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">Solictor:</span>
-                                        <select name="vSolicitor" id="vSolicitor" class="form-select form-select-sm" required>
+                                        <select name="vSolicitor" id="vSolicitor" class="form-select form-select-sm">
                                             <option value="">-- Select --</option>
+                                            <option value="">Confirmations & Reports (All Clients)</option>
                                         </select>
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">Contact:</span>
-                                        <select name="" id="" class="form-select form-select-sm" required>
+                                        <select name="" id="" class="form-select form-select-sm">
                                             <option value="">-- Select --</option>
+
                                         </select>
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">Tel:</span>
                                         <a href="tel:" class="form-control form-control-sm">
                                             [Tel]
                                         </a>
                                     </div>
-            
+
                                 </div>
-            
+
                             </div>
-            
+
                             <hr>
-            
+
                             <div class="row gy-1">
-            
+
                                 <div class="col-md-12">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">Address:</span>
                                         <input name="vAddress1" id="vAddress1" type="text" class="form-control form-control-sm" value="">
-            
+
                                         <a href="http://maps.google.co.uk/maps?" class="btn btn-xs border fs-12" target="_blank">
                                             Map
                                             <i class="bi bi-geo-alt-fill"></i>
                                         </a>
-            
+
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <input name="vAddress2" id="vAddress2" type="text" class="form-control form-control-sm" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <input name="vAddress3" id="vAddress3" type="text" class="form-control form-control-sm" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">Town:</span>
                                         <input name="vAddress4" id="vAddress4" type="text" class="form-control form-control-sm" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">County:</span>
                                         <input name="vAddress5" id="vAddress5" type="text" class="form-control form-control-sm" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">Postcode:</span>
                                         <input name="vAddress6" id="vAddress6" type="text" class="form-control form-control-sm" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6 mt-2">
                                     <a href="" class="btn btn-sm btn-primary search-icon fs-10 col-12">
                                         POSTCODE LOOKUP
                                     </a>
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 75px;">High Risk:</span>
                                         <input type="checkbox" name="vHighRisk" id="vHighRisk" value="" class="ms-2">
                                     </div>
-            
+
                                 </div>
-            
+
                             </div>
-            
+
                             <hr>
-            
+
                             <div class="row gy-1">
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 85px;">Source Ref:</span>
                                         <input name="vClientRef" id="vClientRef" type="text" class="form-control form-control-sm" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text" style="width: 85px;">Account No.:</span>
                                         <input name="vAccountRef" id="vAccountRef" type="text" class="form-control form-control-sm" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group mb-1">
                                         <span class="input-group-text" style="width: 85px;">Customer 1:</span>
                                         <input name="vBorrower1" id="vBorrower1" type="text" class="form-control form-control-sm" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-6">
-            
+
                                     <div class="input-group mb-1">
                                         <span class="input-group-text" style="width: 85px;">Customer 2:</span>
                                         <input name="vBorrower2" id="vBorrower2" type="text" class="form-control form-control-sm" value="">
                                     </div>
-            
+
                                 </div>
-            
+
                                 <div class="col-md-12">
-            
+
                                     <div class="input-group">
                                         <span class="input-group-text">Important Information:</span>
                                         <textarea name="vImportantInfo" id="vImportantInfo" class="form-control form-control-sm"></textarea>
                                     </div>
-            
+
                                 </div>
-            
+
                             </div>
-            
+
                             <hr class="m-2">
-            
+
                             <div class="row">
-                            
+
                                 <div class="col-12">
                                     <button class="btn btn-primary submit-icon col-12">SUBMIT</button>
                                 </div>
-                            
+
                             </div>
-            
+
                             <div class="row mt-2">
-            
+
                                 <div class="col-md-12">
-            
+
                                     <div class="input-group mb-3">
                                         <a href="" class="input-group-text">Keyholder:</a>
                                         <input type="text" class="form-control form-control-sm" value="[Keybolding EA] - Tel: [Keyholder Tel] , Postcode: [Keyholder Postcode]" readonly>
                                     </div>
-            
+
                                 </div>
-            
+
                             </div>
-            
+
                         </div> <!--Card Body-->
                     </div>
-            
+
                 </form>
-            
+
             </div> <!--Property Details-->
 
 
             <div class="col-lg-8">
 
-                <div class="card shadow mb-3">
-                    <div class="card-header d-flex justify-content-between">
-                        <span> 271987/1E </span>
-                        <span> Delivered (05/11/2025 11:54:45) </span>
-                    </div>
-                    <div class="card-body">
+                <form name="vJobDetails" method="post" action="006ChattelEditIn.aspx">
 
-                        <div class="row mb-2">
-
-                            <div class="col-md-5">
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" style="width: 100px;">Job Type:</span>
-                                    <select name="vJobType" id="vJobType" class="form-select form-select-sm" required="">
-                                        <option value="">-- Select --</option>
-                                    </select>
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-5">
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text">Chattel List Checked</span>
-                                    <input type="checkbox" name="vAssessmentChecked" id="vAssessmentChecked" value="" class="ms-3">
-                                    <span class="my-auto ms-3">03/11/2025 - LEE</span>
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-2">
-                                <a href="" class="btn btn-sm btn-primary back-icon w-100">
-                                    BACK
-                                </a>
-                            </div>
-
+                    <div class="card shadow mb-3">
+                        <div class="card-header d-flex justify-content-between">
+                            <span> 271987/1E </span>
+                            <span> Delivered (05/11/2025 11:54:45) </span>
                         </div>
+                        <div class="card-body">
 
-                        <div class="row">
+                            <div class="row mb-2">
 
-                            <div class="col-md-6">
+                                <div class="col-md-5">
 
-                                <p class="section-banner p-2">Chattels</p>
-
-                                <div class="table-responsive">
-
-                                    <table class="table table-sm table-borderless">
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    Item
-                                                </th>
-                                                <th>
-                                                    Location
-                                                </th>
-                                                <th>
-                                                    Condition
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <input type="text" name="vDesc1" id="vDesc1" size="50" maxlength="255" class="form-control form-control-sm w-auto">
-                                                </td>
-                                                <td>
-                                                    <select name="vLocation1" class="form-select form-select-sm w-auto">
-                                                        <option value=" "> </option>
-
-                                                        <option value="1">Porch</option>
-
-                                                        <option value="2">Hall</option>
-
-                                                        <option value="3">Living Room</option>
-
-                                                        <option value="4">Dining Room</option>
-
-                                                        <option value="5">Conservatory</option>
-
-                                                        <option value="6">Kitchen</option>
-
-                                                        <option value="7">Utility Room</option>
-
-                                                        <option value="8">Study</option>
-
-                                                        <option value="9">Cellar</option>
-
-                                                        <option value="10">Stairs</option>
-
-                                                        <option value="11">Landing</option>
-
-                                                        <option value="12">Bedroom 1</option>
-
-                                                        <option value="13">Bedroom 2</option>
-
-                                                        <option value="14">Bedroom 3</option>
-
-                                                        <option value="15">Bedroom 4</option>
-
-                                                        <option value="16">Bedroom 5</option>
-
-                                                        <option value="17">Bathroom</option>
-
-                                                        <option value="18">Bathroom 2</option>
-
-                                                        <option value="19">Balcony</option>
-
-                                                        <option value="20">Loft</option>
-
-                                                        <option value="21">Garage</option>
-
-                                                        <option value="22">Outbuilding</option>
-
-                                                        <option value="23">Shed</option>
-
-                                                        <option value="24">Garden</option>
-
-                                                        <option value="25">Yard</option>
-
-                                                        <option value="26">Throughout</option>
-
-                                                        <option value="27">Other</option>
-
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <select name="vCondition1" class="form-select form-select-sm w-auto">
-                                                        <option value=" "> </option>
-                                                        <option value="3">Good</option>
-                                                        <option value="4" selected="">Poor</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="text" name="vDesc1" id="vDesc1" size="50" maxlength="255" class="form-control form-control-sm w-auto">
-                                                </td>
-                                                <td>
-                                                    <select name="vLocation1" class="form-select form-select-sm w-auto">
-                                                        <option value=" "> </option>
-
-                                                        <option value="1">Porch</option>
-
-                                                        <option value="2">Hall</option>
-
-                                                        <option value="3">Living Room</option>
-
-                                                        <option value="4">Dining Room</option>
-
-                                                        <option value="5">Conservatory</option>
-
-                                                        <option value="6">Kitchen</option>
-
-                                                        <option value="7">Utility Room</option>
-
-                                                        <option value="8">Study</option>
-
-                                                        <option value="9">Cellar</option>
-
-                                                        <option value="10">Stairs</option>
-
-                                                        <option value="11">Landing</option>
-
-                                                        <option value="12">Bedroom 1</option>
-
-                                                        <option value="13">Bedroom 2</option>
-
-                                                        <option value="14">Bedroom 3</option>
-
-                                                        <option value="15">Bedroom 4</option>
-
-                                                        <option value="16">Bedroom 5</option>
-
-                                                        <option value="17">Bathroom</option>
-
-                                                        <option value="18">Bathroom 2</option>
-
-                                                        <option value="19">Balcony</option>
-
-                                                        <option value="20">Loft</option>
-
-                                                        <option value="21">Garage</option>
-
-                                                        <option value="22">Outbuilding</option>
-
-                                                        <option value="23">Shed</option>
-
-                                                        <option value="24">Garden</option>
-
-                                                        <option value="25">Yard</option>
-
-                                                        <option value="26">Throughout</option>
-
-                                                        <option value="27">Other</option>
-
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <select name="vCondition1" class="form-select form-select-sm w-auto">
-                                                        <option value=" "> </option>
-                                                        <option value="3">Good</option>
-                                                        <option value="4" selected="">Poor</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="text" name="vDesc1" id="vDesc1" size="50" maxlength="255" class="form-control form-control-sm w-auto">
-                                                </td>
-                                                <td>
-                                                    <select name="vLocation1" class="form-select form-select-sm w-auto">
-                                                        <option value=" "> </option>
-
-                                                        <option value="1">Porch</option>
-
-                                                        <option value="2">Hall</option>
-
-                                                        <option value="3">Living Room</option>
-
-                                                        <option value="4">Dining Room</option>
-
-                                                        <option value="5">Conservatory</option>
-
-                                                        <option value="6">Kitchen</option>
-
-                                                        <option value="7">Utility Room</option>
-
-                                                        <option value="8">Study</option>
-
-                                                        <option value="9">Cellar</option>
-
-                                                        <option value="10">Stairs</option>
-
-                                                        <option value="11">Landing</option>
-
-                                                        <option value="12">Bedroom 1</option>
-
-                                                        <option value="13">Bedroom 2</option>
-
-                                                        <option value="14">Bedroom 3</option>
-
-                                                        <option value="15">Bedroom 4</option>
-
-                                                        <option value="16">Bedroom 5</option>
-
-                                                        <option value="17">Bathroom</option>
-
-                                                        <option value="18">Bathroom 2</option>
-
-                                                        <option value="19">Balcony</option>
-
-                                                        <option value="20">Loft</option>
-
-                                                        <option value="21">Garage</option>
-
-                                                        <option value="22">Outbuilding</option>
-
-                                                        <option value="23">Shed</option>
-
-                                                        <option value="24">Garden</option>
-
-                                                        <option value="25">Yard</option>
-
-                                                        <option value="26">Throughout</option>
-
-                                                        <option value="27">Other</option>
-
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <select name="vCondition1" class="form-select form-select-sm w-auto">
-                                                        <option value=" "> </option>
-                                                        <option value="3">Good</option>
-                                                        <option value="4" selected="">Poor</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="text" name="vDesc1" id="vDesc1" size="50" maxlength="255" class="form-control form-control-sm w-auto">
-                                                </td>
-                                                <td>
-                                                    <select name="vLocation1" class="form-select form-select-sm w-auto">
-                                                        <option value=" "> </option>
-
-                                                        <option value="1">Porch</option>
-
-                                                        <option value="2">Hall</option>
-
-                                                        <option value="3">Living Room</option>
-
-                                                        <option value="4">Dining Room</option>
-
-                                                        <option value="5">Conservatory</option>
-
-                                                        <option value="6">Kitchen</option>
-
-                                                        <option value="7">Utility Room</option>
-
-                                                        <option value="8">Study</option>
-
-                                                        <option value="9">Cellar</option>
-
-                                                        <option value="10">Stairs</option>
-
-                                                        <option value="11">Landing</option>
-
-                                                        <option value="12">Bedroom 1</option>
-
-                                                        <option value="13">Bedroom 2</option>
-
-                                                        <option value="14">Bedroom 3</option>
-
-                                                        <option value="15">Bedroom 4</option>
-
-                                                        <option value="16">Bedroom 5</option>
-
-                                                        <option value="17">Bathroom</option>
-
-                                                        <option value="18">Bathroom 2</option>
-
-                                                        <option value="19">Balcony</option>
-
-                                                        <option value="20">Loft</option>
-
-                                                        <option value="21">Garage</option>
-
-                                                        <option value="22">Outbuilding</option>
-
-                                                        <option value="23">Shed</option>
-
-                                                        <option value="24">Garden</option>
-
-                                                        <option value="25">Yard</option>
-
-                                                        <option value="26">Throughout</option>
-
-                                                        <option value="27">Other</option>
-
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <select name="vCondition1" class="form-select form-select-sm w-auto">
-                                                        <option value=" "> </option>
-                                                        <option value="3">Good</option>
-                                                        <option value="4" selected="">Poor</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" style="width: 100px;">Job Type:</span>
+                                        <select name="vJobType" id="vJobType" class="form-select form-select-sm" required="">
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
 
                                 </div>
 
-                                <div class="text-end">
+                                <div class="col-md-5">
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Chattel List Checked</span>
+                                        <input type="checkbox" name="vAssessmentChecked" id="vAssessmentChecked" value="" class="ms-3">
+                                        <span class="my-auto ms-3">03/11/2025 - LEE</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="006EditStandardJobOut.aspx?vID=" class="btn btn-sm btn-primary back-icon w-100">
+                                        BACK
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+
+                                    <p class="section-banner p-2">Chattels</p>
+
+                                    <div class="table-responsive">
+
+                                        <table class="table table-sm table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Item
+                                                    </th>
+                                                    <th>
+                                                        Location
+                                                    </th>
+                                                    <th>
+                                                        Condition
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="vDesc1" id="vDesc1" size="50" maxlength="255" class="form-control form-control-sm w-auto">
+                                                    </td>
+                                                    <td>
+                                                        <select name="vLocation1" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Porch</option>
+
+                                                            <option value="2">Hall</option>
+
+                                                            <option value="3">Living Room</option>
+
+                                                            <option value="4">Dining Room</option>
+
+                                                            <option value="5">Conservatory</option>
+
+                                                            <option value="6">Kitchen</option>
+
+                                                            <option value="7">Utility Room</option>
+
+                                                            <option value="8">Study</option>
+
+                                                            <option value="9">Cellar</option>
+
+                                                            <option value="10">Stairs</option>
+
+                                                            <option value="11">Landing</option>
+
+                                                            <option value="12">Bedroom 1</option>
+
+                                                            <option value="13">Bedroom 2</option>
+
+                                                            <option value="14">Bedroom 3</option>
+
+                                                            <option value="15">Bedroom 4</option>
+
+                                                            <option value="16">Bedroom 5</option>
+
+                                                            <option value="17">Bathroom</option>
+
+                                                            <option value="18">Bathroom 2</option>
+
+                                                            <option value="19">Balcony</option>
+
+                                                            <option value="20">Loft</option>
+
+                                                            <option value="21">Garage</option>
+
+                                                            <option value="22">Outbuilding</option>
+
+                                                            <option value="23">Shed</option>
+
+                                                            <option value="24">Garden</option>
+
+                                                            <option value="25">Yard</option>
+
+                                                            <option value="26">Throughout</option>
+
+                                                            <option value="27">Other</option>
+
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select name="vCondition1" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+                                                            <option value="3">Good</option>
+                                                            <option value="4" selected="">Poor</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="vDesc1" id="vDesc1" size="50" maxlength="255" class="form-control form-control-sm w-auto">
+                                                    </td>
+                                                    <td>
+                                                        <select name="vLocation1" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Porch</option>
+
+                                                            <option value="2">Hall</option>
+
+                                                            <option value="3">Living Room</option>
+
+                                                            <option value="4">Dining Room</option>
+
+                                                            <option value="5">Conservatory</option>
+
+                                                            <option value="6">Kitchen</option>
+
+                                                            <option value="7">Utility Room</option>
+
+                                                            <option value="8">Study</option>
+
+                                                            <option value="9">Cellar</option>
+
+                                                            <option value="10">Stairs</option>
+
+                                                            <option value="11">Landing</option>
+
+                                                            <option value="12">Bedroom 1</option>
+
+                                                            <option value="13">Bedroom 2</option>
+
+                                                            <option value="14">Bedroom 3</option>
+
+                                                            <option value="15">Bedroom 4</option>
+
+                                                            <option value="16">Bedroom 5</option>
+
+                                                            <option value="17">Bathroom</option>
+
+                                                            <option value="18">Bathroom 2</option>
+
+                                                            <option value="19">Balcony</option>
+
+                                                            <option value="20">Loft</option>
+
+                                                            <option value="21">Garage</option>
+
+                                                            <option value="22">Outbuilding</option>
+
+                                                            <option value="23">Shed</option>
+
+                                                            <option value="24">Garden</option>
+
+                                                            <option value="25">Yard</option>
+
+                                                            <option value="26">Throughout</option>
+
+                                                            <option value="27">Other</option>
+
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select name="vCondition1" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+                                                            <option value="3">Good</option>
+                                                            <option value="4" selected="">Poor</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="vDesc1" id="vDesc1" size="50" maxlength="255" class="form-control form-control-sm w-auto">
+                                                    </td>
+                                                    <td>
+                                                        <select name="vLocation1" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Porch</option>
+
+                                                            <option value="2">Hall</option>
+
+                                                            <option value="3">Living Room</option>
+
+                                                            <option value="4">Dining Room</option>
+
+                                                            <option value="5">Conservatory</option>
+
+                                                            <option value="6">Kitchen</option>
+
+                                                            <option value="7">Utility Room</option>
+
+                                                            <option value="8">Study</option>
+
+                                                            <option value="9">Cellar</option>
+
+                                                            <option value="10">Stairs</option>
+
+                                                            <option value="11">Landing</option>
+
+                                                            <option value="12">Bedroom 1</option>
+
+                                                            <option value="13">Bedroom 2</option>
+
+                                                            <option value="14">Bedroom 3</option>
+
+                                                            <option value="15">Bedroom 4</option>
+
+                                                            <option value="16">Bedroom 5</option>
+
+                                                            <option value="17">Bathroom</option>
+
+                                                            <option value="18">Bathroom 2</option>
+
+                                                            <option value="19">Balcony</option>
+
+                                                            <option value="20">Loft</option>
+
+                                                            <option value="21">Garage</option>
+
+                                                            <option value="22">Outbuilding</option>
+
+                                                            <option value="23">Shed</option>
+
+                                                            <option value="24">Garden</option>
+
+                                                            <option value="25">Yard</option>
+
+                                                            <option value="26">Throughout</option>
+
+                                                            <option value="27">Other</option>
+
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select name="vCondition1" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+                                                            <option value="3">Good</option>
+                                                            <option value="4" selected="">Poor</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
 
                                     <button type="submit" class="btn btn-sm btn-success submit-icon col-12">
                                         SUBMIT
@@ -711,154 +643,233 @@
 
                                 </div>
 
-                            </div>
+                </form>
 
-                            <div class="col-md-6">
+                <div class="col-md-6">
 
-                                <p class="section-banner p-2 mt-3 mt-lg-0">Chattel List</p>
+                    <p class="section-banner p-2 mt-3 mt-lg-0">Chattel List</p>
 
-                                <div class="table-responsive">
+                    <div class="table-responsive">
 
-                                    <table class="table table-sm">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <table class="table table-sm table-borderless table-striped">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>
-                                                                    Condition
-                                                                </th>
-                                                                <th>Item</th>
-                                                                <th>
-                                                                    Location
-                                                                </th>
-                                                                <th class="text-center">
-                                                                    Edit
-                                                                </th>
-                                                                <th class="text-center">
-                                                                    Remove
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Poor</td>
-                                                                <td>coats,wood , shelves,cupboard,shoes,misc</td>
-                                                                <td>Porch</td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn.aspx?" class="btn btn-xs btn-warning">
-                                                                        EDIT
-                                                                    </a>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn" class="btn btn-xs btn-danger">
-                                                                        REMOVE
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
+                        <table class="table table-sm table-borderless table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Condition
+                                    </th>
+                                    <th>Item</th>
+                                    <th>
+                                        Location
+                                    </th>
+                                    <th class="text-center">
+                                        Remove
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Poor</td>
+                                    <td>coats,wood , shelves,cupboard,shoes,misc</td>
+                                    <td>Porch</td>
+                                    <td class="text-center">
+                                        <a href="006ChattelEditIn" class="btn btn-xs btn-danger delete-icon w-auto">
+                                            REMOVE
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                                                            <tr>
-                                                                <td>Poor</td>
-                                                                <td>table,dresser,pictures,rug</td>
-                                                                <td>Hall</td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn.aspx?" class="btn btn-xs btn-warning">
-                                                                        EDIT
-                                                                    </a>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn" class="btn btn-xs btn-danger">
-                                                                        REMOVE
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
+                    </div>
 
-                                                            <tr>
-                                                                <td>Poor</td>
-                                                                <td>tv, tv stand,sofas, ornaments, pictures,stools,coffee tables,lamp,misc</td>
-                                                                <td>Living Room</td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn.aspx?" class="btn btn-xs btn-warning">
-                                                                        EDIT
-                                                                    </a>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn" class="btn btn-xs btn-danger">
-                                                                        REMOVE
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
+                    <button type="button" class="btn btn-sm btn-warning edit-icon col-12" data-bs-toggle="modal" data-bs-target="#editlist">
+                        EDIT LISTS
+                    </button>
 
-                                                            <tr>
-                                                                <td>Poor</td>
-                                                                <td>sofas,vivarium,tools,lamps,misc</td>
-                                                                <td>Conservatory</td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn.aspx?" class="btn btn-xs btn-warning">
-                                                                        EDIT
-                                                                    </a>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn" class="btn btn-xs btn-danger">
-                                                                        REMOVE
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
+                    <!-- Edit Modal -->
+                    <form>
+                        <div class="modal modal-lg fade" id="editlist" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="editlist">
+                                            Edit Chattel Lists
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
 
-                                                            <tr>
-                                                                <td>Poor</td>
-                                                                <td>pots,psns,kitchenware,stools,pictures,misc</td>
-                                                                <td>Kitchen</td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn.aspx?" class="btn btn-xs btn-warning">
-                                                                        EDIT
-                                                                    </a>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn" class="btn btn-xs btn-danger">
-                                                                        REMOVE
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
+                                        <div class="table-responsive">
 
-                                                            <tr>
-                                                                <td>Poor</td>
-                                                                <td>bed,wardrobe,drawers,pictures,clothes,jewellery,misc</td>
-                                                                <td>Bedroom 1</td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn.aspx?" class="btn btn-xs btn-warning">
-                                                                        EDIT
-                                                                    </a>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn" class="btn btn-xs btn-danger">
-                                                                        REMOVE
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Poor</td>
-                                                                <td>bed,bedding,cage,clothes,drawers,dresser,misc</td>
-                                                                <td>Bedroom 2</td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn.aspx?" class="btn btn-xs btn-warning">
-                                                                        EDIT
-                                                                    </a>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="006ChattelEditIn" class="btn btn-xs btn-danger">
-                                                                        REMOVE
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
+                                            <table class="table table-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Item
+                                                        </th>
+                                                        <th>
+                                                            Location
+                                                        </th>
+                                                        <th>
+                                                            Condition
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" name="vDesc1" id="vDesc1" size="35" maxlength="255" class="form-control form-control-sm">
+                                                        </td>
+                                                        <td>
+                                                            <select name="vLocation1" class="form-select form-select-sm">
+                                                                <option value=" "> </option>
 
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                                <option value="1">Porch</option>
+
+                                                                <option value="2">Hall</option>
+
+                                                                <option value="3">Living Room</option>
+
+                                                                <option value="4">Dining Room</option>
+
+                                                                <option value="5">Conservatory</option>
+
+                                                                <option value="6">Kitchen</option>
+
+                                                                <option value="7">Utility Room</option>
+
+                                                                <option value="8">Study</option>
+
+                                                                <option value="9">Cellar</option>
+
+                                                                <option value="10">Stairs</option>
+
+                                                                <option value="11">Landing</option>
+
+                                                                <option value="12">Bedroom 1</option>
+
+                                                                <option value="13">Bedroom 2</option>
+
+                                                                <option value="14">Bedroom 3</option>
+
+                                                                <option value="15">Bedroom 4</option>
+
+                                                                <option value="16">Bedroom 5</option>
+
+                                                                <option value="17">Bathroom</option>
+
+                                                                <option value="18">Bathroom 2</option>
+
+                                                                <option value="19">Balcony</option>
+
+                                                                <option value="20">Loft</option>
+
+                                                                <option value="21">Garage</option>
+
+                                                                <option value="22">Outbuilding</option>
+
+                                                                <option value="23">Shed</option>
+
+                                                                <option value="24">Garden</option>
+
+                                                                <option value="25">Yard</option>
+
+                                                                <option value="26">Throughout</option>
+
+                                                                <option value="27">Other</option>
+
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="vCondition1" class="form-select form-select-sm">
+                                                                <option value=" "> </option>
+                                                                <option value="3">Good</option>
+                                                                <option value="4" selected="">Poor</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" name="vDesc1" id="vDesc1" size="35" maxlength="255" class="form-control form-control-sm">
+                                                        </td>
+                                                        <td>
+                                                            <select name="vLocation1" class="form-select form-select-sm">
+                                                                <option value=" "> </option>
+
+                                                                <option value="1">Porch</option>
+
+                                                                <option value="2">Hall</option>
+
+                                                                <option value="3">Living Room</option>
+
+                                                                <option value="4">Dining Room</option>
+
+                                                                <option value="5">Conservatory</option>
+
+                                                                <option value="6">Kitchen</option>
+
+                                                                <option value="7">Utility Room</option>
+
+                                                                <option value="8">Study</option>
+
+                                                                <option value="9">Cellar</option>
+
+                                                                <option value="10">Stairs</option>
+
+                                                                <option value="11">Landing</option>
+
+                                                                <option value="12">Bedroom 1</option>
+
+                                                                <option value="13">Bedroom 2</option>
+
+                                                                <option value="14">Bedroom 3</option>
+
+                                                                <option value="15">Bedroom 4</option>
+
+                                                                <option value="16">Bedroom 5</option>
+
+                                                                <option value="17">Bathroom</option>
+
+                                                                <option value="18">Bathroom 2</option>
+
+                                                                <option value="19">Balcony</option>
+
+                                                                <option value="20">Loft</option>
+
+                                                                <option value="21">Garage</option>
+
+                                                                <option value="22">Outbuilding</option>
+
+                                                                <option value="23">Shed</option>
+
+                                                                <option value="24">Garden</option>
+
+                                                                <option value="25">Yard</option>
+
+                                                                <option value="26">Throughout</option>
+
+                                                                <option value="27">Other</option>
+
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="vCondition1" class="form-select form-select-sm">
+                                                                <option value=" "> </option>
+                                                                <option value="3">Good</option>
+                                                                <option value="4" selected="">Poor</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="modal-footer d-flex justify-content-between">
+                                        <button type="button" class="btn btn-secondary back-icon col-sm-3" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success submit-icon col-sm-3">Save</button>
+                                    </div>
 
                                 </div>
 
@@ -866,16 +877,22 @@
 
                         </div>
 
-                    </div>
+                    </form>
 
                 </div>
-                </form>
 
             </div>
+
         </div>
 
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        
+    </div>
+
+    </div>
+
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Company Details</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <form name="form1" method="post" action="005EditCompanyIn.aspx">
+
+        <div class="container col-lg-5 mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Company Search
+                </div>
+                <div class="card-body">
+
+                    <div class="row gy-3">
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Name</span>
+                                <input type="text" name="x02name" id="x02name" value="" class="form-control form-control-sm">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Ref No.</span>
+                                <input type="text" name="x02refno" id="x02refno" value="" class="form-control form-control-sm">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Type</span>
+                                <select name="X02TYPE" id="X02TYPE" class="form-select form-select-sm" required>
+                                    <option value="">Please Select...</option>
+                                    <option value="1">Client</option>
+                                    <option value="2">Estate Agent</option>
+                                    <option value="3">Solicitor</option>
+                                    <option value="20">Contractor</option>
+                                    <option value="21">Asset Manager</option>
+                                    <option value="999">AMGM</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Corp Group</span>
+                                <select name="vCorpGroup" id="vCorpGroup" class="form-select form-select-sm">
+                                        <option value="-1">Please Select...</option>
+                                    
+                                        <option value="10">Arun Estates (AMPS)</option>
+                                    
+                                        <option value="11">BBG</option>
+                                    
+                                        <option value="12">Burchell Edwards (AMPS)</option>
+                                    
+                                        <option value="13">Chancellors</option>
+                                    
+                                        <option value="14">Connells / Sequence</option>
+                                    
+                                        <option value="15">Countrywide</option>
+                                    
+                                        <option value="16">Halifax</option>
+                                    
+                                        <option value="17">Independent</option>
+                                    
+                                        <option value="18">KFH (AMPS)</option>
+                                    
+                                        <option value="19">Legal &amp; General</option>
+                                    
+                                        <option value="20">Reeds Rains (AMPS)</option>
+                                    
+                                        <option value="21">SpicerHaart</option>
+                                    
+                                        <option value="22">Townends (AMPS)</option>
+                                    
+                                        <option value="23">Your Move</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                        <div class="row mt-4">
+
+                            <div class="col-12">
+
+                                <p class="card-header text-center p-1 fs-13">Details</p>
+
+                                <div class="row gy-2 mt-2 mb-3">
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Building</span>
+                                            <input type="text" name="x02building" id="x02building" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Phone 1</span>
+                                            <input type="text" name="x02phone1" id="x02phone1" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Street</span>
+                                            <input type="text" name="x02street" id="x02street" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Phone 2</span>
+                                            <input type="text" name="x02phone2" id="x02phone2" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">District</span>
+                                            <input type="text" name="x02district" id="x02district" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Phone 3</span>
+                                            <input type="text" name="x02phone3" id="x02phone3" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Town</span>
+                                            <input type="text" name="x02town" id="x02town" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">County</span>
+                                            <input type="text" name="x02County" id="x02County" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text"><a href="mailto:">Email</a></span>
+                                            <input type="text" name="x02email" id="x02email" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Website</span>
+                                            <input type="text" name="x02website" id="x02website" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Postcode</span>
+                                            <input type="text" name="x02Postcode" id="x02Postcode" value="" class="form-control form-control-sm">
+                                            <span class="input-group-text">
+                                                <a href="017PostCodeEditOut.aspx?vCompanyID=4d4337766a6f456877694956616c5867634a6c476c773d3d" target="_blank" rel="opener" class="my-auto">coverage</a>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Force Abbr to next row -->
+                                    <div class="w-100"></div>
+
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Abbr</span>
+                                            <input type="text" name="x02code" id="x02code" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-text" style="width: 120px;">
+                                                Group 0% VAT?
+                                            </div>
+                                            <input type="checkbox" name="vVAT" id="vVAT" value="" class="ms-3">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-text" style="width: 120px;">
+                                                Active?
+                                            </div>
+                                            <input type="checkbox" name="X02ACTIVE" id="X02ACTIVE" value="" class="ms-3">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                <p class="card-header text-center p-1 fs-13">Notes</p>
+
+                                <div class="row mt-2">
+
+                                    <div class="col-md-9">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Notes</span>
+                                            <input type="text" name="X02NOTES" id="X02NOTES" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <a href="021ContactsOut.aspx?vChosenID=4d4337766a6f456877694956616c5867634a6c476c773d3d" target="_blank" rel="opener" class="btn btn-sm btn-primary col-12">
+                                            Contacts
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-4">
+
+                            <div class="col-12 d-flex flex-column flex-md-row d-md-flex justify-content-md-between">
+                                <a href="005CompanyMenu.aspx" class="btn btn-sm btn-secondary back-icon col-md-3">Back</a>
+                                <a href="005EditCompanyOut.aspx?vSelect=" class="btn btn-sm btn-primary submit-icon col-md-3">View Next</a>
+                                <button type="submit" class="btn btn-sm btn-success submit-icon col-md-3">Submit</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+             
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
