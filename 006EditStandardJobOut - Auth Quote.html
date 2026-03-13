@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+        <div id="banner_caseref_address">
+            AMGM/[Case ID] - <strong> [Address] </strong>
+        </div>
+
+    </div>
+
+    <div id="navlinks">
+        <a href="99Comms.aspx" target="_blank">Comms</a>
+        <a href="FaxOut.aspx" target="_blank">Direct Comms</a>
+        <a href="010TalkSheetOut.aspx" target="_blank">Talk Sheet</a>
+        <a href="006JobAudit.aspx" target="_blank">Audit</a>
+        <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-lg-4"> <!--Property Details-->
+            
+                <form action="">
+            
+                    <div class="card shadow">
+            
+                        <div class="card-header text-center">
+                            Property Details - AMGM/[Case ID]
+                        </div>
+            
+                        <div class="card-body">
+            
+                            <div class="row g-3 mb-2">
+                            
+                                <div class="col-12 col-sm-4">
+                                    <a href="006AddJobPageOut.aspx" class="btn btn-sm btn-secondary add-icon col-12">
+                                        Add New Job
+                                    </a>
+                                </div>
+                            
+                                <div class="col-12 col-sm-4">
+                                    <a href="050DeleteThings.aspx" class="btn btn-sm btn-danger delete-icon col-12">
+                                        Delete Things
+                                    </a>
+                                </div>
+                            
+                                <div class="col-12 col-sm-4">
+                                    <a href="002MainMenu.aspx" class="btn btn-sm btn-success back-icon col-12">
+                                        Back to Menu
+                                    </a>
+                                </div>
+                            
+                            </div>
+            
+                            <div class="row gy-1">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Client:</span>
+                                        <select name="vClient" id="vClient" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Contact:</span>
+                                        <select name="vClientContact" id="vClientContact" class="form-select form-select-sm" required="">
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Tel:</span>
+                                        <a href="tel:" class="form-control form-control-sm">
+                                            [Tel]
+                                        </a>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr>
+            
+                            <div class="row gy-2">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 95px;">Asset Manager:</span>
+                                        <select name="vInsSource" id="vInsSource" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 95px;">Contact:</span>
+                                        <select name="vInsSourceContact" id="vInsSourceContact" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 115px;">Asset Manager Ref:</span>
+                                        <input name="vTessaRef" id="vTessaRef" type="text" class="form-control form-control-sm fw-bold" value="">
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr>
+            
+                            <div class="row gy-1">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Solictor:</span>
+                                        <select name="vSolicitor" id="vSolicitor" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Contact:</span>
+                                        <select name="" id="" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Tel:</span>
+                                        <a href="tel:" class="form-control form-control-sm">
+                                            [Tel]
+                                        </a>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr>
+            
+                            <div class="row gy-1">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Address:</span>
+                                        <input name="vAddress1" id="vAddress1" type="text" class="form-control form-control-sm" value="">
+            
+                                        <a href="http://maps.google.co.uk/maps?" class="btn btn-xs border fs-12" target="_blank">
+                                            Map
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                        </a>
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <input name="vAddress2" id="vAddress2" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <input name="vAddress3" id="vAddress3" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Town:</span>
+                                        <input name="vAddress4" id="vAddress4" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">County:</span>
+                                        <input name="vAddress5" id="vAddress5" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Postcode:</span>
+                                        <input name="vAddress6" id="vAddress6" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6 mt-2">
+                                    <a href="" class="btn btn-sm btn-primary search-icon fs-10 col-12">
+                                        POSTCODE LOOKUP
+                                    </a>
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">High Risk:</span>
+                                        <input type="checkbox" name="vHighRisk" id="vHighRisk" value="" class="ms-2">
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr>
+            
+                            <div class="row gy-1">
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 85px;">Source Ref:</span>
+                                        <input name="vClientRef" id="vClientRef" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 85px;">Account No.:</span>
+                                        <input name="vAccountRef" id="vAccountRef" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group mb-1">
+                                        <span class="input-group-text" style="width: 85px;">Customer 1:</span>
+                                        <input name="vBorrower1" id="vBorrower1" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group mb-1">
+                                        <span class="input-group-text" style="width: 85px;">Customer 2:</span>
+                                        <input name="vBorrower2" id="vBorrower2" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text">Important Information:</span>
+                                        <textarea name="vImportantInfo" id="vImportantInfo" class="form-control form-control-sm"></textarea>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr class="m-2">
+            
+                            <div class="row">
+                            
+                                <div class="col-12">
+                                    <button class="btn btn-primary submit-icon col-12">SUBMIT</button>
+                                </div>
+                            
+                            </div>
+            
+                            <div class="row mt-2">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group mb-3">
+                                        <a href="" class="input-group-text">Keyholder:</a>
+                                        <input type="text" class="form-control form-control-sm" value="[Keybolding EA] - Tel: [Keyholder Tel] , Postcode: [Keyholder Postcode]" readonly>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                        </div> <!--Card Body-->
+                    </div>
+            
+                </form>
+            
+            </div> <!--Property Details-->
+
+
+            <div class="col-lg-8">
+
+                <form>
+
+                    <div class="card shadow mb-3">
+                        <div class="card-header d-flex justify-content-between">
+                            <span> 271987/1E </span>
+                            <span> Delivered (05/11/2025 11:54:45) </span>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="row mb-2">
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 100px;">Job Type:</span>
+                                        <select name="" id="" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text">Instruction Source:</span>
+                                        <select name="" id="" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+
+                                <div class="col-md-5">
+
+                                    <p class="section-banner p-1 text-center">Job Setup</p>
+
+                                    <div class="row mb-3 mt-2">
+
+                                        <div class="col-md-6">
+
+                                            <div class="input-group">
+                                                <span class="input-group-text">Job Date:</span>
+                                                <input type="text" class="datepicker form-control form-control-sm" value="">
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <div class="input-group">
+                                                <span class="input-group-text">Job Time:</span>
+                                                <input type="text" class="timepicker form-control form-control-sm" value="">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-3">
+
+                                        <div class="col-md-8">
+
+                                            <div class="input-group">
+                                                <span class="input-group-text">Accepted:</span>
+                                                <div class="d-flex align-items-end ms-3">
+                                                    <div class="form-check form-check-inline mb-0">
+                                                        <input class="form-check-input" type="radio" name="accepted" id="acceptedYes" value="Yes">
+                                                        <label class="form-check-label mb-0" for="acceptedYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mb-0">
+                                                        <input class="form-check-input" type="radio" name="accepted" id="acceptedNo" value="No">
+                                                        <label class="form-check-label mb-0" for="acceptedNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-4 text-center my-auto">
+                                            <a href="" class="btn btn-xs btn-success fs-10">Offer to Contractor</a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-3">
+
+                                        <div class="col-md-8">
+                                            <div class="input-group">
+                                                <span class="input-group-text">Case Handler:</span>
+                                                <select name="" id="" class="form-select form-select-sm">
+                                                    <option value="">-- Select --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 text-center my-auto">
+
+                                            <!-- IF JOB CANCELLED - SHOW BUTTON -->
+                                            <a href="006StandardCommsIn.aspx?vID=686a663245472b4e367a6848545556455a6a646348773d3d&amp;vJobID=6b4d58457742316f6875564b655a355772336d2b6c673d3d&amp;vType=51"
+                                                target="_blank"
+                                                rel="opener"
+                                                class="btn btn-xs btn-danger fs-10">
+                                                Cancel Contractor
+                                            </a>
+                                            <!-- IF JOB CANCELLED - SHOW BUTTON -->
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-3">
+
+                                        <div class="col-md-8">
+
+                                            <div class="input-group">
+                                                <a href="" class="input-group-text" style="width:100px">Contractor:</a>
+                                                <input type="text" class="form-control form-control-sm" value="" readonly>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-4 text-center mt-1">
+
+                                            <a href="https://www.google.com/maps/d/u/0/edit?mid=1q_r_GBXqfWLlwnBWnEpVIVq73N-M0GU&amp;usp=sharing&amp;ll=53.95269721748908%2C-2.9392864999999944&amp;z=18"
+                                                target="_blank">
+                                                Contractor Map
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-3">
+
+                                        <div class="col-md-12">
+                                            <div class="input-group">
+                                                <span class="input-group-text">Instruction Notes:</span>
+                                                <textarea class="form-control form-control-sm" rows="3"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-3 g-1">
+                                        <button type="submit" class="btn btn-sm btn-secondary update-icon fs-12">
+                                            UPDATE JOB
+                                        </button>
+                                    </div>
+
+                                    <hr>
+
+                                    <p class="section-banner p-1 text-center">Job Status History</p>
+
+                                    <table class="table table-sm table-striped fs-10">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 20%;">
+
+                                                </td>
+                                                <td>
+                                                    Created
+                                                </td>
+                                                <td>
+                                                    05/11/2025 11:54:45
+                                                </td>
+                                                <td class="col-1">
+                                                    EB
+                                                </td>
+                                                <td style="width: 20%;">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+                                                </td>
+                                                <td>
+                                                    Offered
+                                                </td>
+                                                <td>
+                                                    05/11/2025 12:00:00
+                                                </td>
+                                                <td>
+                                                    EB
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+                                                </td>
+                                                <td>
+                                                    Allocated
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                            </tr>
+                                            <!-- HIDE IN POSSESSION ROW FOR NON REPO JOBS -->
+                                            <tr>
+                                                <td class="text-center">
+                                                    <input type="checkbox" name="vPosC" value="yes" onclick="document.vJobDetails.vPosQNotes.value = prompt('Possession Quick Notes', '');">
+                                                </td>
+                                                <td>
+                                                    In Possession
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td class="text-end">
+                                                    <button class="btn btn-xs btn-warning update-icon">
+                                                        UPDATE
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <!-- HIDE IN POSSESSION ROW FOR NON REPO JOBS -->
+                                            <tr>
+                                                <td>
+                                                    <input type="text" name="" id="" class="datepicker form-control form-control-sm">
+                                                </td>
+                                                <td>
+                                                    Works Complete
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td class="text-end">
+                                                    <button class="btn btn-xs btn-warning update-icon">
+                                                        UPDATE
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <input type="checkbox" name="" id="">
+                                                </td>
+                                                <td>
+                                                    Financials Complete
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td class="text-end">
+                                                    <button class="btn btn-xs btn-warning update-icon">
+                                                        UPDATE
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <input type="checkbox" name="" id="">
+                                                </td>
+                                                <td>
+                                                    Audits Complete
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td class="text-end">
+                                                    <button class="btn btn-xs btn-warning update-icon">
+                                                        UPDATE
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <input type="checkbox" name="" id="">
+                                                </td>
+                                                <td>
+                                                    Delivered
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td class="text-end">
+                                                    <button class="btn btn-xs btn-warning update-icon">
+                                                        UPDATE
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <input type="checkbox" name="" id="">
+                                                </td>
+                                                <td>
+                                                    On Hold
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td class="text-end">
+                                                    <button class="btn btn-xs btn-warning update-icon">
+                                                        UPDATE
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                                <div class="col-md-7">
+
+                                    <a href="" class="section-banner text-white text-center p-1 mb-4">Upload Photographs</a>
+
+                                    <hr>
+
+                                    <p class="section-banner p-1 text-center">Cancel</p>
+
+                                    <div class="row mb-3">
+
+                                        <div class="col-md-3">
+                                            <label class="input-group">
+                                                <span class="input-group-text">Cancel Job?</span>
+                                                <input type="checkbox" name="" id="" class="ms-3">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-md-auto">
+
+                                            <div class="input-group">
+                                                <span class="input-group-text">Charge:</span>
+                                                <div class="d-flex align-items-end ms-3">
+                                                    <div class="form-check form-check-inline mb-0">
+                                                        <input class="form-check-input" type="radio" name="vCancelCharge" id="WithCharge" value="Yes">
+                                                        <label class="form-check-label mb-0" for="WithCharge">With</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mb-0">
+                                                        <input class="form-check-input" type="radio" name="vCancelCharge" id="WithoutCharge" value="No">
+                                                        <label class="form-check-label mb-0" for="WithoutCharge">Without</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-4 flex-fill">
+                                            <div class="input-group">
+                                                <span class="input-group-text">Cancelled By:</span>
+                                                <input type="text" class="form-control form-control-sm" value="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-md-7 mb-2">
+                                            <div class="input-group">
+                                                <span class="input-group-text">Cancel Date &amp; Time:</span>
+                                                <input type="text" value="" class="datepicker form-control form-control-sm">
+                                                <strong class="align-self-center mx-3 fs-12">:</strong>
+                                                <input type="text" value="" class="timepicker form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 text-end">
+                                            <button type="submit" class="btn btn-xs btn-danger">
+                                                CANCEL <i class="bi bi-box-arrow-in-right"></i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                    <p class="section-banner p-1 text-center">Cancellation Charges</p>
+
+                                    <table class="table table-sm table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2s">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+
+                                                            <div class="input-group">
+                                                                <span class="input-group-text">Cancellation Cost:</span>
+                                                                <span class="input-group-text ms-3">&pound;</span>
+                                                                <input type="text" name="" id="" class="form-control form-control-sm" placeholder="0.00">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="input-group">
+                                                                <span class="input-group-text mx-3">Cancellation Sale:</span>
+                                                                <span class="input-group-text">&pound;</span>
+                                                                <input type="text" name="" id="" class="form-control form-control-sm" placeholder="0.00">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div class="row">
+
+                                                        <div class="col-md-6">
+                                                            <div class="input-group">
+                                                                <span class="input-group-text" style="width: 112px;">
+                                                                    Waiting Time:
+                                                                    <input type="checkbox" class="ms-3">
+                                                                </span>
+
+                                                                <span class="input-group-text ms-3">&pound;</span>
+                                                                <input type="text" name="" id="" class="form-control form-control-sm" placeholder="0.00">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="input-group">
+                                                                <span class="input-group-text mx-3">Waiting Time Sale:</span>
+                                                                <span class="input-group-text">&pound;</span>
+                                                                <input type="text" name="" id="" class="form-control form-control-sm" placeholder="0.00">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="d-flex justify-content-between">
+                                                <td>
+                                                    <button class="btn btn-xs btn-danger">UN-CANCEL</button>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-xs btn-warning update-icon">
+                                                        UPDATE
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <hr>
+
+                                    <a href="029InvoiceOut.aspx" class="section-banner text-white text-center p-1">
+                                        Invoice
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
