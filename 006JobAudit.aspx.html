@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Job Audit</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+        <div id="banner_caseref_address">
+            AMGM/[Case ID] - <strong> [Address] </strong>
+        </div>
+
+    </div>
+
+    <div id="navlinks">
+        <a href="99Comms.aspx" target="_blank">Comms</a>
+        <a href="FaxOut.aspx" target="_blank">Direct Comms</a>
+        <a href="010TalkSheetOut.aspx" target="_blank">Talk Sheet</a>
+        <a href="006JobAudit.aspx" target="_blank">Audit</a>
+        <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
+    </div>
+
+    <div class="container col-lg-5">
+
+        <form name="form1" method="post" action="006JobAudit.aspx">
+
+            <!-- Section 1: Instruction Checks -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="row fw-bold">
+                        <div class="col-md-6">Instruction Checks</div>
+                        <div class="col-md-3 text-center">Sign Off</div>
+                        <div class="col-md-3 text-center">Countersign</div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="row mb-2">
+
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vCheckTitlePlan" id="vCheckTitlePlan" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vCheckTitlePlan">Check Title Plan</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">dd</div>
+                        <div class="col-md-3 text-center">dd</div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vCheckRegister" id="vCheckRegister" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vCheckRegister">Check Register</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">dd</div>
+                        <div class="col-md-3 text-center">dd</div>
+
+                    </div>
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vCheckLease" id="vCheckLease" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vCheckLease">Check Lease</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">dd</div>
+                        <div class="col-md-3 text-center">dd</div>
+
+                    </div>
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vAddress" id="vAddress" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vAddress">Address & Postcode Check</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">dd</div>
+                        <div class="col-md-3 text-center">dd</div>
+
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control form-control-sm" name="vAddressNotes" id="vAddressNotes" rows="3" placeholder="Notes..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vOperaHistoryCheck" id="vOperaHistoryCheck" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vOperaHistoryCheck">OPERA History Check</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">dd</div>
+                        <div class="col-md-3 text-center">dd</div>
+
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control form-control-sm" name="vOperaHistoryCheckNotes" id="vOperaHistoryCheckNotes" rows="3" placeholder="Notes..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vFullSystemImportCheck" id="vFullSystemImportCheck" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vFullSystemImportCheck">Full System Import Check</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 text-center">dd</div>
+                        <div class="col-md-3 text-center">dd</div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 2: Possession Checks -->
+            <div class="card mb-4">
+                <div class="card-header bg-secondary text-white">
+                    <div class="row fw-bold">
+                        <div class="col-md-6">Possession Checks</div>
+                        <div class="col-md-3">Sign Off</div>
+                        <div class="col-md-3 text-md-end">Countersign</div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vHighRisk" id="vHighRisk" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vHighRisk">High risk Pre-possession audit complete</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control form-control-sm" name="vHighRiskNotes" id="vHighRiskNotes" rows="3" placeholder="Notes..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vContractorAttendance" id="vContractorAttendance" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vContractorAttendance">Contractor Attendance audit</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control form-control-sm" name="vContractorAttendanceNotes" id="vContractorAttendanceNotes" rows="3" placeholder="Notes..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vAuthority" id="vAuthority" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vAuthority">Authority to proceed</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control form-control-sm" name="vAuthorityNotes" id="vAuthorityNotes" rows="3" placeholder="Notes..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vOnSite" id="vOnSite" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vOnSite">On site Pre Possession audit completed</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control form-control-sm" name="vOnSiteNotes" id="vOnSiteNotes" rows="3" placeholder="Notes..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vOnSite2" id="vOnSite2" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vOnSite2">Additional On Site Pre-Possession Audit (where applicable) Completed</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control form-control-sm" name="vOnSiteNotes2" id="vOnSiteNotes2" rows="3" placeholder="Notes..."></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 3: Post-Possession Checks -->
+            <div class="card mb-4">
+                <div class="card-header bg-secondary text-white">
+                    <div class="row fw-bold">
+                        <div class="col-md-6">Post-Possession Checks</div>
+                        <div class="col-md-3 text-center">Sign Off</div>
+                        <div class="col-md-3 text-center">Countersign</div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vPropertyPossessionAudit" id="vPropertyPossessionAudit" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vPropertyPossessionAudit">Property Possesssion Audit</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control form-control-sm" name="vPropertyPossessionAuditNotes" id="vPropertyPossessionAuditNotes" rows="3" placeholder="Notes..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vAdditionalCost" id="vAdditionalCost" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vAdditionalCost">Additional Costs Justified</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control form-control-sm" name="vAdditionalCostNotes" id="vAdditionalCostNotes" rows="3" placeholder="Notes..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <div class="col-md-12 fs-6 my-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="vFullCase" id="vFullCase" value="'2026 09:34:34-03-20'">
+                                <label class="form-check-label fw-bold" for="vFullCase">Full Case Sign Off</label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-12 mt-3">
+                            <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-secondary back-icon col-md-3" onclick="window.close();">CLOSE</button>
+                                <button type="submit" name="submit" class="btn btn-success submit-icon col-md-3">SUBMIT</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

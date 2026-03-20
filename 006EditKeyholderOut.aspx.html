@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Keyholder Details</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 125px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+        <div id="banner_caseref_address">   
+            AMGM/[Case ID] - <strong> [Address] </strong>
+        </div>
+
+    </div>
+
+    <div id="navlinks">
+        <a href="99Comms.aspx" target="_blank">Comms</a>
+        <a href="FaxOut.aspx" target="_blank">Direct Comms</a>
+        <a href="010TalkSheetOut.aspx" target="_blank">Talk Sheet</a>
+        <a href="006JobAudit.aspx" target="_blank">Audit</a>
+        <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-lg-4"> <!--Property Details-->
+            
+                <form action="">
+            
+                    <div class="card shadow">
+            
+                        <div class="card-header text-center">
+                            Property Details - AMGM/[Case ID]
+                        </div>
+            
+                        <div class="card-body">
+            
+                            <div class="row g-3 mb-2">
+                            
+                                <div class="col-12 col-sm-4">
+                                    <a href="006AddJobPageOut.aspx" class="btn btn-sm btn-secondary add-icon col-12">
+                                        Add New Job
+                                    </a>
+                                </div>
+                            
+                                <div class="col-12 col-sm-4">
+                                    <a href="050DeleteThings.aspx" class="btn btn-sm btn-danger delete-icon col-12">
+                                        Delete Things
+                                    </a>
+                                </div>
+                            
+                                <div class="col-12 col-sm-4">
+                                    <a href="002MainMenu.aspx" class="btn btn-sm btn-success back-icon col-12">
+                                        Back to Menu
+                                    </a>
+                                </div>
+                            
+                            </div>
+            
+                            <div class="row gy-1">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Client:</span>
+                                        <select name="vClient" id="vClient" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Contact:</span>
+                                        <select name="vClientContact" id="vClientContact" class="form-select form-select-sm" required="">
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Tel:</span>
+                                        <a href="tel:" class="form-control form-control-sm">
+                                            [Tel]
+                                        </a>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr>
+            
+                            <div class="row gy-2">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 95px;">Asset Manager:</span>
+                                        <select name="vInsSource" id="vInsSource" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 95px;">Contact:</span>
+                                        <select name="vInsSourceContact" id="vInsSourceContact" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 115px;">Asset Manager Ref:</span>
+                                        <input name="vTessaRef" id="vTessaRef" type="text" class="form-control form-control-sm fw-bold" value="">
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr>
+            
+                            <div class="row gy-1">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Solictor:</span>
+                                        <select name="vSolicitor" id="vSolicitor" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Contact:</span>
+                                        <select name="" id="" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Tel:</span>
+                                        <a href="tel:" class="form-control form-control-sm">
+                                            [Tel]
+                                        </a>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr>
+            
+                            <div class="row gy-1">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Address:</span>
+                                        <input name="vAddress1" id="vAddress1" type="text" class="form-control form-control-sm" value="">
+            
+                                        <a href="http://maps.google.co.uk/maps?" class="btn btn-xs border fs-12" target="_blank">
+                                            Map
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                        </a>
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <input name="vAddress2" id="vAddress2" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <input name="vAddress3" id="vAddress3" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Town:</span>
+                                        <input name="vAddress4" id="vAddress4" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">County:</span>
+                                        <input name="vAddress5" id="vAddress5" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Postcode:</span>
+                                        <input name="vAddress6" id="vAddress6" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6 mt-2">
+                                    <a href="" class="btn btn-sm btn-primary search-icon fs-10 col-12">
+                                        POSTCODE LOOKUP
+                                    </a>
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">High Risk:</span>
+                                        <input type="checkbox" name="vHighRisk" id="vHighRisk" value="" class="ms-2">
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr>
+            
+                            <div class="row gy-1">
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 85px;">Source Ref:</span>
+                                        <input name="vClientRef" id="vClientRef" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 85px;">Account No.:</span>
+                                        <input name="vAccountRef" id="vAccountRef" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group mb-1">
+                                        <span class="input-group-text" style="width: 85px;">Customer 1:</span>
+                                        <input name="vBorrower1" id="vBorrower1" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-6">
+            
+                                    <div class="input-group mb-1">
+                                        <span class="input-group-text" style="width: 85px;">Customer 2:</span>
+                                        <input name="vBorrower2" id="vBorrower2" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group">
+                                        <span class="input-group-text">Important Information:</span>
+                                        <textarea name="vImportantInfo" id="vImportantInfo" class="form-control form-control-sm"></textarea>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                            <hr class="m-2">
+            
+                            <div class="row">
+                            
+                                <div class="col-12">
+                                    <button class="btn btn-primary submit-icon col-12">SUBMIT</button>
+                                </div>
+                            
+                            </div>
+            
+                            <div class="row mt-2">
+            
+                                <div class="col-md-12">
+            
+                                    <div class="input-group mb-3">
+                                        <a href="" class="input-group-text">Keyholder:</a>
+                                        <input type="text" class="form-control form-control-sm" value="[Keybolding EA] - Tel: [Keyholder Tel] , Postcode: [Keyholder Postcode]" readonly>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                        </div> <!--Card Body-->
+                    </div>
+            
+                </form>
+            
+            </div> <!--Property Details-->
+
+
+            <div class="col-lg-8">
+
+                <form name="form1" method="post" action="">
+
+                    <div class="card shadow mb-3">
+                        <div class="card-header d-flex justify-content-between">
+                            <span> Property Created 10/10/2025 10:24:48 by SH </span>
+                        </div>
+                        <div class="card-body">
+                            
+                            <div class="row g-3">
+
+                                <div class="col-md-5">
+                                    
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text me-2">Access via Agent</span>
+                                        <input type="checkbox" name="vAccessAgent" id="vAccessAgent">
+                                    </div>
+
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text">Estate Agent</span>
+                                        <input type="text" name="vAgentName" class="form-control form-control-sm" value="Scottish Property Centre" readonly>
+                                    </div>
+
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text">Address</span>
+                                        <input type="text" name="" class="form-control form-control-sm" value="157 Kilmarnock Road, Glasgow, G41 3JE" readonly>
+                                    </div>
+
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text">Tel</span>
+                                        <input type="text" name="textfield2" class="form-control form-control-sm" value="0141 649 7979" readonly>
+                                    </div>
+
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text">Email</span>
+                                        <input type="text" name="textfield23" class="form-control form-control-sm" value="" readonly>
+                                    </div>
+
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text">Website</span>
+                                        <input type="text" name="textfield24" class="form-control form-control-sm" value="" readonly>
+                                    </div>
+
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text">Contact</span>
+                                        <input type="text" id="vContact" name="vContact" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 offset-md-1">
+                                
+                                    <p class="card-header text-center p-1 fs-13">
+                                        Other Access / Special Entry Details
+                                    </p>
+
+                                    <textarea name="vSpecial" cols="80" rows="12s" class="form-control form-control-sm"></textarea>
+                                
+                                </div>
+                                
+                            </div>
+
+                            <div class="row mt-2">
+
+                               <div class="col-md-12 d-flex justify-content-between">
+
+                                    <a href="006MainPropertyPageOut.aspx?vID=744a57514d493275755470372f6469557a67304963773d3d" class="btn btn-sm btn-secondary back-icon col-md-2">BACK</a>
+                                    <button class="btn btn-sm btn-success submit-icon col-md-2">SUBMIT</button>
+
+
+                               </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

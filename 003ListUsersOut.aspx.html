@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User List</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <form name="userslist" method="post" action="003GroupDeactivate.aspx">
+
+        <div class="container col-lg-4 mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    User List
+                </div>
+                <div class="card-body">
+
+                    <p class="text-center">
+                        <a href="003ListUsersOut.aspx?vActiveOnly=True">Show active users only</a>
+                    </p>
+
+                        <div class="row mt-4">
+
+                            <div class="col-12">
+
+                                <p class="card-header text-center p-1 fs-13">Results</p>
+
+                                <table class="table table-bordered table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td width="75%">
+                                                <a href="003EditUserOut.aspx?vSelect=79635537325954336232476c6b6279717136695173673d3d">A M Property Maintenance Ltd (Contractor)</a>
+                                            </td>
+                                            <td width="25%" class="text-center w-25 fs-13">
+                                                <input type="checkbox" name="selectedUsers" value="222" class="form-check-input">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-12 d-flex flex-column flex-md-row d-md-flex justify-content-md-between">
+                                <a href="005CompanyMenu.aspx" class="btn btn-sm btn-secondary back-icon col-md-3">Back</a>
+                                <a href="003UserActivity.aspx" class="btn btn-sm btn-success search-icon col-md-3">Activity</a>
+                                <button type="submit" class="btn btn-sm btn-danger submit-icon col-md-3">De-Activate</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                    <!-- RESULTS SECTION -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Activity</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <form name="003UserActivity" method="post" action="003UserActivity.aspx">
+
+        <div class="container col-lg-7 mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Activity Search
+                </div>
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">User</span>
+                                <select name="vUserID" id="vUserID" class="form-select form-select-sm">
+                                    <option value="">Please Select</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Client</span>
+                                <select name="vClientID" id="vClientID" class="form-select form-select-sm">
+                                    <option value="">Please Select</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Date From</span>
+                                <input name="" type="text" size="12" value="" class="form-control form-control-sm datepicker">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Date To</span>
+                                <input name="" type="text" size="12" value="" class="form-control form-control-sm datepicker">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12 d-flex justify-content-between">
+
+                            <a href="002MainMenu.aspx" class="btn btn-sm btn-secondary back-icon col-lg-2">Back</a>
+                            <button type="submit" class="btn btn-sm btn-success search-icon col-lg-2">Search</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-4 mb-1">
+
+                        <div class="col-12">
+
+                            <p class="card-header text-center p-1 fs-13">Results</p>
+
+                            <div class="table-responsive">
+
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Username</th>
+                                            <th>Client</th>
+                                            <th>Login</th>
+                                            <th>Logout</th>
+                                            <th>Duration</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                
+                                            </td>
+                                            <td>
+                                                
+                                            </td>
+                                            <td>
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

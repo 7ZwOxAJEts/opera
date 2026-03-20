@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Search</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+
+    <div class="container col-lg-4 mt-5">
+
+        <div class="card shadow">
+            <div class="card-header text-center">
+                User Search
+            </div>
+            <div class="card-body">
+
+                <form name="usersearch" method="post" action="003UserSearchOut.aspx">
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Username</span>
+                                <input type="text" name="vUserName" id="vUserName" value="" class="form-control form-control-sm">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">First Name</span>
+                                <input type="text" name="vUserName" id="vUserName" value="" class="form-control form-control-sm">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Last Name</span>
+                                <input type="text" name="vLastName" id="vLastName" value="" class="form-control form-control-sm">
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 d-flex justify-content-between">
+
+                            <a href="003UserMenu.aspx" class="btn btn-sm btn-secondary back-icon col-4 col-lg-3">Back</a>
+                            <button type="submit" class="btn btn-sm btn-primary submit-icon col-4 col-lg-3">Search</button>
+
+                        </div>
+
+                    </div>
+                </form>
+
+                <!-- RESULTS SECTION -->
+                <form name="companylist" action="005GroupDeactivate.aspx" method="POST">
+
+                    <div class="row mt-4">
+
+                        <div class="col-12">
+
+                            <p class="card-header text-center p-1 fs-13">Results</p>
+
+                            <table class="table table-bordered table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="003EditUserOut.aspx">Jack Chandler (AMG Guildford)</a>
+                                        </td>
+                                        <td class="text-center w-25 fs-13">
+                                            <input type="checkbox" name="selectedUsers" value="" class="form-check-input">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-12 d-flex justify-content-between">
+                            <a href="003UserMenu.aspx" class="btn btn-sm btn-secondary back-icon col-4 col-lg-3">Back</a>
+                            <button type="submit" class="btn btn-sm btn-danger submit-icon col-4 col-lg-3">De-Activate</button>
+                        </div>
+
+                    </div>
+
+                </form>
+                <!-- RESULTS SECTION -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
