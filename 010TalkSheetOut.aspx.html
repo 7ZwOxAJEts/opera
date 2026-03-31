@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - TalkSheet</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+        <div id="banner_caseref_address">
+            AMGM/[Case ID] - <strong> [Address] </strong>
+        </div>
+
+    </div>
+
+    <div id="navlinks">
+        <a href="99Comms.aspx" target="_blank">Comms</a>
+        <a href="FaxOut.aspx" target="_blank">Direct Comms</a>
+        <a href="010TalkSheetOut.aspx" target="_blank">Talk Sheet</a>
+        <a href="006JobAudit.aspx" target="_blank">Audit</a>
+        <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
+    </div>
+
+    <div class="container col-lg-7 mt-2">
+
+        <form name="NoteForm" method="post" action="010TalkSheetIn.aspx">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Add Talksheet Note
+                </div>
+                <div class="card-body">
+                    <textarea name="" id="" class="form-control form-control-sm" rows="4" required></textarea>
+                    <button class="btn btn-success submit-icon col-12 mt-3">SUBMIT</button>
+                </div>
+            </div>
+
+        </form>
+
+        <div class="card shadow mt-4">
+            <div class="card-header text-center">
+                Talksheet Notes
+            </div>
+            <div class="card-body">
+
+                <div class="row justify-content-between g-2">
+
+                    <div class="col-8 col-md-6 col-lg-4">
+                        <input type="text" id="searchInput" class="form-control form-control-sm" placeholder="Search notes...">
+                    </div>
+
+                    <div class="col-4 col-md-3 col-lg-2">
+                        <a href="#" onclick="window.close()" class="btn btn-sm btn-secondary back-icon col-12">CLOSE</a>
+                    </div>
+
+                </div>
+
+                <table class="table table-striped table-hover border my-3">
+                    <thead class="table-head-primary">
+                        <tr>
+                            <th style="width: 50%;">Note.</th>
+                            <th style="width: 13%;">Date &amp; Time</th>
+                            <th style="width: 15%;">User</th>
+                            <th style="width: 5%; text-align: center;">Action</th>
+                            <th style="width: 5%;">Print</th>
+                        </tr>
+                    </thead>
+                    <tbody id="notes">
+                        <tr>
+                            <td>
+                                <textarea name="vNote" cols="65" rows="3" class="form-control form-control-sm">test</textarea>
+                            </td>
+                            <td>
+                                27/03/2026 11:00:00
+                            </td>
+                            <td>
+                                Jack Chandler
+                            </td>
+                            <td>
+                                <input type="submit" id="" name="" value="EDIT" class="btn btn-xs btn-warning col-12">
+                            </td>
+                            <td>
+                                <input name="vPrintMe" type="checkbox" id="vPrintMe" onclick="addToPrint('1');" value="checkbox">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ab tempore accusamus fuga at porro delectus fugit, sed qui, alias dicta quis vero laudantium excepturi?
+                            </td>
+                            <td>
+                                02/03/2026 14:36:00
+                            </td>
+                            <td>
+                                Jack Chandler
+                            </td>
+                            <td>
+                                <input type="submit" id="" name="" value="ADD NOTE" class="btn btn-xs btn-danger col-12">
+                            </td>
+                            <td>
+                                <input name="vPrintMe" type="checkbox" id="vPrintMe" onclick="addToPrint('1');" value="checkbox">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Contractor (TBC) Marked Works Complete, note: Fumigation completed at time of repo.
+                            </td>
+                            <td>
+                                26/03/2026 17:00:00
+                            </td>
+                            <td>
+                                Walter White
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <input name="vPrintMe" type="checkbox" id="vPrintMe" onclick="addToPrint('1');" value="checkbox">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="row justify-content-between g-2">
+
+                    <div class="col-8 col-md-6 col-lg-4">
+
+                        <form name="printForm" method="post" action="010TalkSheetPrintOut.aspx" class="m-0">
+
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <button type="submit" class="btn btn-sm btn-primary col-12">Print</button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="010TalkSheetPrintOut.aspx?vID=" class="btn btn-sm btn-primary col-12">Print All</a>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <div class="col-4 col-md-3 col-lg-2">
+                        <a href="#" onclick="window.close()" class="btn btn-sm btn-secondary back-icon col-12">CLOSE</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchBox = document.getElementById("searchInput");
+            const rows = document.querySelectorAll("#notes tr");
+            if (!searchBox || !rows.length) return;
+
+            function highlightText(node, regex) {
+                if (node.nodeType === 3) { // If it's pure text
+                    const parts = node.nodeValue.split(regex);
+                    if (parts.length > 1) {
+                        const frag = document.createDocumentFragment();
+                        parts.forEach((text, i) => {
+                            if (!text) return;
+                            const el = i % 2 ? document.createElement("mark") : document.createTextNode(text);
+                            if (i % 2) { el.className = "bg-warning p-0"; el.textContent = text; }
+                            frag.append(el);
+                        });
+                        node.replaceWith(frag);
+                    }
+                } else if (node.nodeType === 1 && node.nodeName !== "MARK") {
+                    Array.from(node.childNodes).forEach(child => highlightText(child, regex));
+                }
+            }
+
+            searchBox.addEventListener("input", () => {
+                const term = searchBox.value.trim();
+
+                // Escape any special characters
+                const safeTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const regex = term ? new RegExp(`(${safeTerm})`, 'gi') : null;
+
+                rows.forEach(row => {
+
+                    row.querySelectorAll("mark.bg-warning").forEach(m => m.replaceWith(m.textContent));
+                    row.normalize();
+
+                    const isMatch = row.textContent.toLowerCase().includes(term.toLowerCase());
+                    row.style.display = (!term || isMatch) ? "" : "none";
+
+                    if (term && isMatch) highlightText(row, regex);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

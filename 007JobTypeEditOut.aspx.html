@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Job Type Edit</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid banner position-relative text-white p-3">
+
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+    </div>
+
+    <div class="container col-lg-8 col-xxl-4 mt-5">
+
+        <form name="form1" action="007DescEditIn.aspx" method="POST">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Add / Edit Items
+                </div>
+                <div class="card-body">
+
+                    <p class="section-banner p-1">
+                        Add New Item
+                    </p>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Item Name
+                                </th>
+                                <th class="text-center">
+                                    Code
+                                </th>
+                                <th class="text-center">
+                                    Order
+                                </th>
+                                <th class="text-center">
+                                    Type
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" name="vDesc" class="form-control form-control-sm" size="35" maxlength="255">
+                                </td>
+                                <td>
+                                    <input type="text" name="vCode" class="form-control form-control-sm" size="5" maxlength="5">
+                                </td>
+                                <td>
+                                    <input type="text" name="" class="form-control form-control-sm" size="5" maxlength="5">
+                                </td>
+                                <td class="text-center">
+                                    <select name="vType" class="form-select form-select-sm">
+                                        <option value="">Please Select</option>
+                                        <option value="1">Standard</option>
+                                        <option value="2">Repossession</option>
+                                        <option value="3">Quote</option>
+                                        <option value="4">Shuttering</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <hr>
+
+                    <p class="section-banner p-1">
+                        Existing Items
+                    </p>
+
+                    <table class="table table-striped mb-4">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Item Name
+                                </th>
+                                <th class="text-center">
+                                    Code
+                                </th>
+                                <th class="text-center">
+                                    Order
+                                </th>
+                                <th class="text-center">
+                                    Type
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" name="vDesc1" class="form-control form-control-sm" size="35" maxlength="255" value="Emergency">
+                                </td>
+                                <td>
+                                    <input type="text" name="vCode1" class="form-control form-control-sm" size="5" maxlength="5" value="X">
+                                </td>
+                                <td>
+                                    <input type="text" name="" class="form-control form-control-sm" size="5" maxlength="5">
+                                </td>
+                                <td class="text-center">
+                                    <select name="vType1" class="form-select form-select-sm">
+                                        <option value="1" selected>Standard</option>
+                                        <option value="2">Repossession</option>
+                                        <option value="3">Quote</option>
+                                        <option value="4">Shuttering</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-between">
+
+                            <a href="007DBMenu.aspx" class="btn btn-sm btn-secondary back-icon col-md-3">BACK</a>
+
+                            <button type="submit" class="btn btn-sm btn-success submit-icon col-md-3">
+                                SUBMIT
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

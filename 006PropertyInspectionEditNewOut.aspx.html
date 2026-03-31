@@ -4,12 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AMG OPERA - Keyholder Details</title>
+    <title>AMG OPERA - Property Inspection</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/flatpickr.min.css">
     <script src="assets/js/flatpickr.js" defer></script>
-
 </head>
 
 <body>
@@ -350,87 +349,266 @@
 
             <div class="col-lg-8">
 
-                <form name="form1" method="post" action="">
+                <form name="vJobDetails" method="post" action="006PropertyInspectionEditNewIn.aspx">
 
                     <div class="card shadow mb-3">
-                        <div class="card-header text-end">
-                            <span> Property Created 10/10/2025 10:24:48 by SH </span>
+                        <div class="card-header d-flex justify-content-between">
+                            <span> Property Audit Report </span>
+                            <span> 278271/3X () </span>
                         </div>
                         <div class="card-body">
 
-                            <div class="row g-3">
+                            <div class="row mb-3">
 
                                 <div class="col-md-5">
 
-                                    <div class="input-group mb-2">
-                                        <span class="input-group-text input-group-text-wrap w-25 me-2">Access via Agent</span>
-                                        <input type="checkbox" name="vAccessAgent" id="vAccessAgent">
-                                    </div>
-
-                                    <div class="input-group mb-2">
-                                        <span class="input-group-text input-group-text-wrap w-25">Estate Agent</span>
-                                        <input type="text" name="vAgentName" class="form-control form-control-sm" value="Scottish Property Centre" readonly>
-                                    </div>
-
-                                    <div class="input-group mb-2">
-                                        <span class="input-group-text input-group-text-wrap w-25">Address</span>
-                                        <input type="text" name="" class="form-control form-control-sm" value="157 Kilmarnock Road, Glasgow, G41 3JE" readonly>
-                                    </div>
-
-                                    <div class="input-group mb-2">
-                                        <span class="input-group-text input-group-text-wrap w-25">Tel</span>
-                                        <input type="text" name="textfield2" class="form-control form-control-sm" value="0141 649 7979" readonly>
-                                    </div>
-
-                                    <div class="input-group mb-2">
-                                        <span class="input-group-text input-group-text-wrap w-25">Email</span>
-                                        <input type="text" name="textfield23" class="form-control form-control-sm" value="" readonly>
-                                    </div>
-
-                                    <div class="input-group mb-2">
-                                        <span class="input-group-text input-group-text-wrap w-25">Website</span>
-                                        <input type="text" name="textfield24" class="form-control form-control-sm" value="" readonly>
-                                    </div>
-
-                                    <div class="input-group mb-2">
-                                        <span class="input-group-text input-group-text-wrap w-25">Contact</span>
-                                        <input type="text" id="vContact" name="vContact" class="form-control form-control-sm" value="">
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 100px;">Job Type:</span>
+                                        <select name="vJobType" id="vJobType" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
                                     </div>
 
                                 </div>
 
-                                <div class="col-md-6 offset-md-1">
+                                <div class="col-md-5">
 
-                                    <p class="card-header text-center p-1 fs-13">
-                                        Other Access / Special Entry Details
+                                    <div class="input-group">
+                                        <span class="input-group-text">Assessment Checked:</span>
+                                        <input type="checkbox" name="vAssessmentChecked" id="vAssessmentChecked" value="" class="ms-3">
+                                        <span class="my-auto ms-3"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="006EditStandardJobOut.aspx?vID=" class="btn btn-sm btn-primary back-icon col-12">
+                                        BACK
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <hr>
+
+                            <!-- EA AUDIT -->
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+
+                                    <p class="section-banner p-1">
+                                        Estate Agent Audit
                                     </p>
 
-                                    <textarea name="vSpecial" cols="80" rows="12s" class="form-control form-control-sm"></textarea>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">Is the agent suitable for this type of property? If not why?</span>
+                                        <textarea class="form-control form-control-sm" name="vT1" id="vT1" rows="3"></textarea>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">Approximate distance from the agent's office to the property?</span>
+                                        <input type="text" class="form-control form-control-sm" name="vT2" id="vT2" maxlength="12">
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">Colour property details available?</span>
+                                        <select class="form-select form-select-sm" name="v1" id="v1">
+                                            <option value="Yes" selected>Yes</option>
+                                            <option value="No" class="text-danger fw-bold">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">What is the current asking price?</span>
+                                        <input type="text" class="form-control form-control-sm" name="vT3" id="vT3" maxlength="10">
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">2 separate sets of keys available & coded? (check working)</span>
+                                        <select class="form-select form-select-sm" name="v2" id="v2">
+                                            <option value="Yes" selected>Yes</option>
+                                            <option value="No" class="text-danger fw-bold">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">ID requested and signature required?</span>
+                                        <select class="form-select form-select-sm" name="v3" id="v3">
+                                            <option value="Yes" selected>Yes</option>
+                                            <option value="No" class="text-danger fw-bold">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">Is the property displayed in the agents office?</span>
+                                        <select class="form-select form-select-sm" name="v4" id="v4">
+                                            <option value="Yes" selected>Yes</option>
+                                            <option value="No" class="text-danger fw-bold">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">'For Sale' board erected?</span>
+                                        <select class="form-select form-select-sm" name="v5" id="v5">
+                                            <option value="Yes" selected>Yes</option>
+                                            <option value="No" class="text-danger fw-bold">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">Evidence of weekly inspections</span>
+                                        <select class="form-select form-select-sm" name="v6" id="v6">
+                                            <option value="Yes" selected>Yes</option>
+                                            <option value="No" class="text-danger fw-bold">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">General Comments</span>
+                                        <textarea class="form-control form-control-sm" name="vT4" id="vT4" rows="3"></textarea>
+                                    </div>
+
+                                    <div class="alert alert-success mt-4 mb-0">
+                                        <strong>Estate Agent Audit Result:</strong> 100% PASS
+                                    </div>
+
+                                    <!-- IF FAIL -->
+                                    <div class="alert alert-danger mt-4 mb-0">
+                                        <strong>IF FAIL = Estate Agent Audit Result:</strong> 67% FAIL
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- END EA AUTIT -->
+
+                            <hr>
+
+                            <!-- CONTRACTOR AUDIT -->
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+
+                                    <p class="section-banner p-1">
+                                        Contractor Audit
+                                    </p>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">Access Points internally and externally, locked and secure?</span>
+                                        <select class="form-select form-select-sm" name="v7" id="v7">
+                                            <option value="Yes" selected>Yes</option>
+                                            <option value="No" class="text-danger fw-bold">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">All locks changed?</span>
+                                        <select class="form-select form-select-sm" name="v8" id="v8">
+                                            <option value="Yes" selected>Yes</option>
+                                            <option value="No" class="text-danger fw-bold">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">All outbuildings secure?</span>
+                                        <select class="form-select form-select-sm" name="v24" id="v24">
+                                            <option value="Yes" selected>Yes</option>
+                                            <option value="No" class="text-danger fw-bold">No</option>
+                                            <option value="N/A">N/A</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text input-group-text-wrap w-25">Issues affecting saleability?</span>
+                                        <textarea class="form-control form-control-sm text-danger fw-bold" name="vT5" id="vT5" rows="3"></textarea>
+                                    </div>
+
+                                    <div class="input-group mb-4">
+                                        <span class="input-group-text input-group-text-wrap w-25">General Comments:</span>
+                                        <textarea class="form-control form-control-sm" name="vT6" id="vT6" rows="3"></textarea>
+                                    </div>
+
+                                    <div class="alert alert-success mb-4">
+                                        <strong>Contractor Audit Result:</strong> 100% PASS
+                                    </div>
+
+                                    <!-- IF FAIL -->
+                                    <div class="alert alert-danger mt-4 mb-0">
+                                        <strong>IF FAIL = Contractor Audit Result:</strong> 94% FAIL
+                                    </div>
 
                                 </div>
 
                             </div>
 
-                            <div class="row mt-2">
+                            <!-- END CONTRACTOR AUDIT -->
+
+                            <hr>
+
+                            <!-- SIGN OFF and NOTES -->
+
+                            <p class="section-banner p-1">
+                                Audit Sign Off
+                            </p>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text w-25">Name of Auditor</span>
+                                        <input type="text" class="form-control form-control-sm" name="vAuditor" id="vAuditor" maxlength="50">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text w-25">Date of Audit</span>
+                                        <input type="text" class="datepicker form-control form-control-sm" name="vDate" id="vDate">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" style="width: 150px;">AMGM Notes</span>
+                                        <textarea name="vAMGNotes" cols="50" rows="5" class="form-control form-control-sm text-danger fw-bold"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- SIGN OFF and NOTES -->
+
+                            <div class="row ">
 
                                 <div class="col-md-12 d-flex justify-content-between">
 
-                                    <a href="006MainPropertyPageOut.aspx?vID=744a57514d493275755470372f6469557a67304963773d3d" class="btn btn-sm btn-secondary back-icon col-md-2">BACK</a>
-                                    <button class="btn btn-sm btn-success submit-icon col-md-2">SUBMIT</button>
+                                    <a href="006EditStandardJobOut.aspx?vID=" class="btn btn-secondary back-icon col-md-2">BACK</a>
+                                    <button class="btn btn-success submit-icon col-md-8">SUBMIT</button>
 
                                 </div>
 
                             </div>
 
-                        </div>
-                    </div>
 
-                </form>
+                        </div>
+
+                    </div>
 
             </div>
 
-
         </div>
+
+        </form>
+
+    </div>
+
+
+    </div>
     </div>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>

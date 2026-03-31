@@ -4,3 +4,5 @@
 template.html
 /.ignore/
 /Sent to TCG/
+*.docx
+*.txt
