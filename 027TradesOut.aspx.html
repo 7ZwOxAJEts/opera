@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Trades</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <form name="form1" method="post" action="027TradesEditIn.aspx">
+
+        <div class="container col-lg-3 mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Trades &amp; Skills
+                </div>
+                <div class="card-body">
+
+                    <table class="table table-sm table-striped">
+                        <thead>
+                            <tr>
+                                <th class="w-75">Trade or Skill</th>
+                                <th class="text-center">Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Repossession</td>
+                                <td>
+                                    <a href="027TradesEditOut.aspx?vCompanyID=44767a4f62395350363139345734705a6d384c476b673d3d&amp;vTradeID=70474748464b67454275544f77684e705077516758673d3d"
+                                        class="btn btn-xs btn-warning edit-icon col-12">
+                                        EDIT
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div class="row mt-4">
+
+                        <div class="col-12 d-flex flex-column flex-md-row d-md-flex justify-content-md-between">
+                            <a href="#" onclick="window.close();" class="btn btn-sm btn-secondary back-icon col-md-3">CLOSE</a>
+                            <a href="027TradesEditOut.aspx?vCompanyID=44767a4f62395350363139345734705a6d384c476b673d3d" class="btn btn-sm btn-success add-icon col-md-3">
+                                ADD
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

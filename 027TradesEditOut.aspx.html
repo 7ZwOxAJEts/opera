@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Trades</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <form name="form1" method="post" action="027TradesEditIn.aspx">
+
+        <div class="container col-lg-4 mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Add or Edit Trade
+                </div>
+                <div class="card-body">
+
+                    <div class="row gap-2">
+
+                        <div class="col-lg-12 d-flex flex-column gap-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text w-25">Trade or Skill</span>
+                                <select name="vTradeID" class="form-select form-select-sm">
+
+                                    <option value="">Please Select</option>
+
+                                    <option value="1">Repossession</option>
+
+                                    <option value="2">Locksmith</option>
+
+                                    <option value="3">Plumber</option>
+
+                                    <option value="4">Gardener</option>
+
+                                    <option value="5">Shuttering</option>
+
+                                    <option value="6">Dog Handler</option>
+
+                                    <option value="7">Pest Control</option>
+
+                                    <option value="8">Builder</option>
+
+                                    <option value="9">Specialist</option>
+
+                                </select>
+                            </div>
+
+                            <hr class="my-2">
+
+                            <div class="alert alert-danger d-flex align-items-center gap-3 py-2 mb-0">
+                                <i class="bi bi-exclamation-triangle-fill"></i>
+                                <div class="flex-grow-1 small">
+                                    <strong>Delete Record</strong> — checking this box will remove the trade from the contractor
+                                </div>
+                                <input class="mt-0" type="checkbox" name="vDelete" value="checkbox">
+                            </div>
+
+                            <hr class="my-2">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row mt-3">
+
+                        <div class="col-12 d-flex flex-column flex-md-row d-md-flex justify-content-md-between">
+                            <a href="#" onclick="window.close();" class="btn btn-sm btn-secondary back-icon col-md-4">CLOSE</a>
+                            <button type="submit" class="btn btn-sm btn-success submit-icon col-md-4">SUBMIT</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
