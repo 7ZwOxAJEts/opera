@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Postcode Edit</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <form name="form1" method="post" action="017PostCodeEditIn.aspx">
+
+        <div class="container col-md-6 col-lg-3 mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Current Postcodes (deselect to remove)
+                </div>
+                <div class="card-body">
+
+                    <div class="row gy-3">
+
+                        <div class="col-lg-12">
+
+                            <select name="vExisting" size="10" multiple class="form-control form-control-sm" id="vExisting">
+                                <option value=""></option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-4">
+
+                        <div class="col-12">
+
+                            <p class="card-header text-center p-1 fs-13">Add New Postcodes</p>
+
+                            <div class="row g-3">
+
+                                <div class="col-12 mt-4">
+                                    <div class="input-group">
+                                        <span class="input-group-text">National ?</span>
+                                        <input name="vNew10" type="checkbox" class="form-check-input ms-2 my-auto" id="vNew10" value="ALL">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <input name="vNew1" type="text" id="vNew1" class="form-control form-control-sm" maxlength="6">
+                                </div>
+                                <div class="col-md-4">
+                                    <input name="vNew2" type="text" id="vNew2" class="form-control form-control-sm" maxlength="6">
+                                </div>
+                                <div class="col-md-4">
+                                    <input name="vNew3" type="text" id="vNew3" class="form-control form-control-sm" maxlength="6">
+                                </div>
+                                <div class="col-md-4">
+                                    <input name="vNew4" type="text" id="vNew4" class="form-control form-control-sm" maxlength="6">
+                                </div>
+                                <div class="col-md-4">
+                                    <input name="vNew5" type="text" id="vNew5" class="form-control form-control-sm" maxlength="6">
+                                </div>
+                                <div class="col-md-4">
+                                    <input name="vNew6" type="text" id="vNew6" class="form-control form-control-sm" maxlength="6">
+                                </div>
+                                <div class="col-md-4">
+                                    <input name="vNew7" type="text" id="vNew7" class="form-control form-control-sm" maxlength="6">
+                                </div>
+                                <div class="col-md-4">
+                                    <input name="vNew8" type="text" id="vNew8" class="form-control form-control-sm" maxlength="6">
+                                </div>
+                                <div class="col-md-4">
+                                    <input name="vNew9" type="text" id="vNew9" class="form-control form-control-sm" maxlength="6">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-4">
+
+                        <div class="col-12 d-flex flex-column flex-md-row d-md-flex justify-content-md-between">
+                            <a href="#" onclick="window.close()" class="btn btn-sm btn-secondary back-icon col-md-4">CLOSE</a>
+                            <button type="submit" class="btn btn-sm btn-success submit-icon col-md-4">SUBMIT</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
