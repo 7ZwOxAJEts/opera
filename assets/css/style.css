@@ -11,6 +11,7 @@
      --amg-secondary: #337ab7;
      --amg-danger: #882121;
      --amg-warning: #e4954a;
+     --amg-success: #198754;
      --bs-tertiary-bg: rgba(219, 219, 219, 0.54);
      --bs-body-font-size: 12px;
      --input-font-size: 12px;
@@ -187,6 +188,13 @@
      background-color: var(--amg-primary) !important;
  }
 
+ .btn.back-icon {
+     background-color: var(--amg-primary);
+ }
+
+ .btn.add-icon {
+     background-color: var(--amg-success);
+ }
 
  .btn-secondary {
      background-color: var(--amg-secondary);
@@ -212,8 +220,8 @@
  }
 
  .btn-success {
-     background-color: #198754;
-     border: #198754;
+     background-color: var(--amg-success);
+     border: var(--amg-success);
      color: white;
  }
 
