@@ -10,6 +10,7 @@
      --amg-primary-lighter: rgba(53, 95, 145, 0.766);
      --amg-secondary: #337ab7;
      --amg-danger: #882121;
+     --amg-warning: #e4954a;
      --bs-tertiary-bg: rgba(219, 219, 219, 0.54);
      --bs-body-font-size: 12px;
      --input-font-size: 12px;
@@ -155,8 +156,8 @@
  }
 
  .btn-warning {
-     background-color: #e9a018;
-     border: #e9a018;
+     background-color: var(--amg-warning);
+     border: var(--amg-warning);
      color: white;
  }
 
@@ -164,8 +165,8 @@
  .btn-warning:active,
  .btn-warning:first-child:active,
  :not(.btn-check)+.btn-warning:active {
-     background-color: #e9a018;
-     border-color: #e9a018;
+     background-color: var(--amg-warning);
+     border-color: var(--amg-warning);
      color: white;
  }
 
