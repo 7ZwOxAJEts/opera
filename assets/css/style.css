@@ -192,9 +192,11 @@
      background-color: var(--amg-primary);
  }
 
+ /*
  .btn.add-icon {
      background-color: var(--amg-success);
  }
+ */
 
  .btn-secondary {
      background-color: var(--amg-secondary);
