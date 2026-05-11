@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Invoice</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+    </div>
+
+    <form action="99Invoice.aspx" method="post" name="form" onsubmit="return checkAlreadyDone();">
+
+        <div class="container col-lg-6 my-4">
+
+            <div class="card shadow mb-2">
+                <div class="card-header text-center">
+                    Invoice Details
+                </div>
+                <div class="card-body">
+
+                    <p class="text-center bg-light py-2 border fw-bold">
+                        Please fill in any unpopulated tags below
+                    </p>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Site Root</span>
+                                <input type="text" class="form-control form-control-sm" name="v1" id="v1" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">AMGLOGOIMG</span>
+                                <input type="text" class="form-control form-control-sm" name="v2" id="v2" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Raise Invoice To</span>
+                                <input type="text" class="form-control form-control-sm" name="v3" id="v3" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">INVOICE NUMBER</span>
+                                <input type="text" class="form-control form-control-sm" name="v4" id="v4" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Address</span>
+                                <input type="text" class="form-control form-control-sm" name="v5" id="v5" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Address 2</span>
+                                <input type="text" class="form-control form-control-sm" name="v6" id="v6" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Address 3</span>
+                                <input type="text" class="form-control form-control-sm" name="v7" id="v7" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Address 4</span>
+                                <input type="text" class="form-control form-control-sm" name="v8" id="v8" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Address 5</span>
+                                <input type="text" class="form-control form-control-sm" name="v9" id="v9" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Client Name</span>
+                                <input type="text" class="form-control form-control-sm" name="v10" id="v10" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Date Today</span>
+                                <input type="text" class="form-control form-control-sm datepicker" name="v11" id="v11" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Job Number</span>
+                                <input type="text" class="form-control form-control-sm" name="v12" id="v12" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Client Ref</span>
+                                <input type="text" class="form-control form-control-sm" name="v13" id="v13" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Borrower</span>
+                                <input type="text" class="form-control form-control-sm" name="v14" id="v14" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Account Ref</span>
+                                <input type="text" class="form-control form-control-sm" name="v15" id="v15" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Full Address</span>
+                                <input type="text" class="form-control form-control-sm" name="v16" id="v16" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">Works Complete Date</span>
+                                <input type="text" class="form-control form-control-sm datepicker" name="v17" id="v17" autocomplete="off">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">TESSA Ref</span>
+                                <input type="text" class="form-control form-control-sm" name="v18" id="v18" autocomplete="off">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                        <div class="col-md-12 d-flex justify-content-between">
+
+                            <a href="029InvoiceOut.aspx?vID=" class="btn btn-primary back-icon col-5 col-lg-2">Back</a>
+                            <button class="btn btn-success submit-icon col-5 col-lg-2">Submit</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Comms Log</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .table>tbody>*>* {
+            padding: .75rem .75rem
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+        <div id="banner_caseref_address">
+            AMGM/[Case ID] - <strong> [Address] </strong>
+        </div>
+
+    </div>
+
+    <div id="navlinks">
+        <a href="99Comms.aspx" target="_blank">Comms</a>
+        <a href="FaxOut.aspx" target="_blank">Direct Comms</a>
+        <a href="010TalkSheetOut.aspx" target="_blank">Talk Sheet</a>
+        <a href="006JobAudit.aspx" target="_blank">Audit</a>
+        <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
+    </div>
+
+    <form name="companysearch" method="post" action="005CompanySearchOutPop.aspx">
+
+        <div class="container-fluid col-12 col-lg-8">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Communications Log
+                </div>
+                <div class="card-body">
+
+                    <form name="form1" action="99Comms.aspx" method="POST">
+
+                        <div class="text-center py-4 mb-3 border fs-6 bg-light">
+
+                            <div class="d-inline-flex align-items-center gap-3">
+                                <a href="99Letters.aspx?vID=" target="_blank" rel="opener">Send New Standard Letter</a>
+                                <span>&vert;</span>
+                                <a href="99Upload.aspx?vID=" target="_blank" rel="opener">Send Letter &#47; File</a>
+                            </div>
+
+                        </div>
+
+                        <div class="row d-flex justify-content-between mb-3">
+
+                            <div class="col-12 col-lg-2">
+                                <a href="#" onclick="window.close();" class="btn btn-sm btn-primary back-icon col-12">Close</a>
+                            </div>
+
+                            <div class="col-12 col-lg-2">
+                                <button class="btn btn-sm btn-success submit-icon col-12">
+                                    Submit
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="table-responsive">
+
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th width="11%">Date</th>
+                                        <th class="text-center" width="5%">Job</th>
+                                        <th width="12%">Who</th>
+                                        <th width="15%">To</th>
+                                        <th width="22%">Description</th>
+                                        <th class="text-center" width="5%">Delivery</th>
+                                        <th class="text-center" width="12%">Action</th>
+                                        <th class="text-center" width="7%">Title Docs</th>
+                                        <th class="text-center" width="10%">Repo Instructions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            23/04/2026 12:23:33
+                                        </td>
+                                        <td class="text-center fw-bold">
+                                            2Q
+                                        </td>
+                                        <td>
+                                            Jack Chandler
+                                        </td>
+                                        <td>
+                                            Lock Safe Property Care Ltd
+                                        </td>
+                                        <td>
+                                            2Q - Clean, clear & garden tidy
+                                        </td>
+                                        <td class="text-center">
+                                            EMAIL
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="d-inline-flex align-items-center gap-2">
+                                                <a href="/comms/" target="_blank" rel="opener">View</a>
+                                                <span>&vert;</span>
+                                                <a href="99Uploaded.aspx?vDescription=" target="_blank" rel="opener">Redeliver</a>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <input type="checkbox" name="Export0" value="3393081">
+                                        </td>
+                                        <td class="text-center">
+                                            <input name="ExportSF0" type="checkbox" id="ExportSF0" value="3393081">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            23/04/2026 12:23:33
+                                        </td>
+                                        <td class="text-center fw-bold text-danger">
+                                            1E
+                                        </td>
+                                        <td>
+                                            Jack Chandler
+                                        </td>
+                                        <td>
+                                            Lock Safe Property Care Ltd
+                                        </td>
+                                        <td>
+                                            Additional possession details and costs
+                                        </td>
+                                        <td class="text-center">
+                                            EMAIL
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="d-inline-flex align-items-center gap-2">
+                                                <a href="/comms/" target="_blank" rel="opener">View</a>
+                                                <span>&vert;</span>
+                                                <a href="99Uploaded.aspx?vDescription=" target="_blank" rel="opener">Redeliver</a>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <input type="checkbox" name="Export0" value="3393081">
+                                        </td>
+                                        <td class="text-center">
+                                            <input name="ExportSF0" type="checkbox" id="ExportSF0" value="3393081">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

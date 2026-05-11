@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Send Comms</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <script language="JavaScript" type="text/JavaScript">
+
+        function removesemi(theobj) {
+            theobj.value = theobj.value.replace(/;/g, ",");
+        }
+
+        function hideMemo() {
+            if (document.Fax.vMethod[2].checked) {
+                document.Fax.vFaxMemo.disabled = false;
+            } else {
+                document.Fax.vFaxMemo.disabled = true;
+            }
+        }
+    
+        function OnSubmit() {
+
+            if (document.forms.Fax.vClicked.value == "SAVE") {
+                document.forms.Fax.action = 'FaxIn.aspx';
+                if (confirm("Do you want to save first?")) {
+                    document.forms.Fax.vClicked.value = "SAVE"
+                } else {
+                    document.forms.Fax.vClicked.value = "NOSAVE"
+                }
+                return true;
+            }
+
+
+            if (document.forms.Fax.vEmail.value == "" && document.forms.Fax.vMethod[0].checked == true) {
+                alert("Email address required.");
+                document.forms.Fax.vEmail.focus();
+                return false;
+            }
+
+            if (document.forms.Fax.Description.value.length < 2) {
+                alert("Please provide a subject for the communication.");
+                document.forms.Fax.Description.focus();
+                return false;
+            }
+
+            if (confirm("Are you sure you want to send this?")) {
+                document.forms.Fax.action = 'FaxIn.aspx';
+                return true;
+            } 
+            else {
+                return false;
+            }
+
+        }
+    </script>
+
+    <style>
+        .input-group-text {
+            width: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <form name="Fax" method="post" action="FaxOut.aspx" onsubmit="return OnSubmit();">
+
+        <div class="container mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Send Communication
+                </div>
+                <div class="card-body">
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6 mb-3">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Category</span>
+                                <select class="form-select form-select-sm" name="vNew" id="vNew" onchange="document.forms.Fax.submit()">
+                                    <option value="-1">-- Please Select --</option>
+                                    <option value="1">Client</option>
+                                    <option value="3">Solicitors</option>
+                                    <option value="21">Asset Manager</option>
+                                    <option value="2">Estate Agents</option>
+                                    <option value="20">Contractors</option>
+                                    <option value="999">AMGM</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">To</span>
+                                <select class="form-select form-select-sm" name="To" id="To" onchange="document.forms.Fax.submit()">
+                                    <option value="-1">-- Please Select --</option>
+                                    <option value="9000004">XYZ</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">To Extra</span>
+                                <input type="text" name="ToExtra" size="25" class="form-control form-control-sm" maxlength="255">
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Contact</span>
+                                <select class="form-select form-select-sm" name="vContact" id="vContact" onchange="document.Fax.vEmail.value=document.Fax.vContact.value; document.Fax.Attn.value=document.Fax.vContact.options[this.selectedIndex].text;">
+                                    <option value="">-- Please Select --</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Subject</span>
+                                <input type="text" class="form-control form-control-sm" name="Description" id="Description" value="">
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Attn</span>
+                                <input type="text" class="form-control form-control-sm" name="Attn" id="Attn" value="">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Email</span>
+                                <input type="email" class="form-control form-control-sm fw-bold" value="" name="vEmail" id="vEmail" multiple onchange="removesemi(this);">
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">From</span>
+                                <input type="text" class="form-control form-control-sm" name="From" id="FromField" value="IT Administrator">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+
+                        <div class="col-sm-6">
+
+                            <div class="input-group gap-2">
+                                <span class="input-group-text">Send Method</span>
+
+                                <input type="radio" name="vMethod" id="methodEmail" value="1" onclick="hideMemo();" class="mt-1 mx-1" checked>
+                                <label for="methodEmail" class="mt-2">Email</label>
+
+                                <span class="border-end mx-2"></span>
+
+                                <input type="radio" name="vMethod" id="methodView" value="3" onclick="hideMemo();" class="mt-1 mx-1">
+                                <label for="methodView" class="mt-2">View</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-3">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Date</span>
+                                <input type="text" class="form-control form-control-sm" value="28/04/2026" readonly>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-3">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Time</span>
+                                <input type="text" class="form-control form-control-sm" value="11:00" readonly>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-text">Address</span>
+                            <input type="text" name="" id="" value=" AMGM/281550 - 13-21 High Street" class="form-control form-control-sm" readonly>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="col-sm-12">
+
+                        <div class="input-group">
+                            <div class="d-flex flex-column w-100">
+                                <label class="input-group-text rounded-bottom-0 border-bottom-0 w-100">Email Content</label>
+                                <textarea class="form-control form-control-sm rounded-top-0 px-2" name="Text" id="Text" rows="10"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-4">
+
+                        <div class="col-12 d-flex justify-content-between gap-2">
+
+                            <button onclick="document.forms.Fax.vClicked.value = 'SAVE';" class="btn btn-sm btn-primary back-icon col-4 col-lg-2">
+                                Back
+                            </button>
+
+                            <button type="submit" class="btn btn-sm btn-success submit-icon col-4 col-lg-2">
+                                Send
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </form>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

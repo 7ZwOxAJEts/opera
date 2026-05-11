@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Send Comms</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+        <div id="banner_caseref_address">
+            AMGM/[Case ID] - <strong> [Address] </strong>
+        </div>
+
+    </div>
+
+    <div id="navlinks">
+        <a href="99Comms.aspx" target="_blank">Comms</a>
+        <a href="FaxOut.aspx" target="_blank">Direct Comms</a>
+        <a href="010TalkSheetOut.aspx" target="_blank">Talk Sheet</a>
+        <a href="006JobAudit.aspx" target="_blank">Audit</a>
+        <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
+    </div>
+
+    <form name="Send" method="post" action="99Uploaded.aspx">
+
+        <div class="container col-12 col-lg-7 col-xxl-4">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Send Letter &#47; File
+                </div>
+                <div class="card-body">
+
+                    <p class="text-center bg-light py-2 border fw-bold">
+                        Your Letter &#47; File is Ready. How would you like it transmitted?
+                    </p>
+
+                    <div class="row gap-3">
+
+                        <div class="col-sm-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Type</span>
+                                <select class="form-select form-select-sm" name="vType" id="vType" onchange="document.forms.Send.submit();">
+                                    <option value="-1">-- Please Select --</option>
+                                    <option value="1">Client</option>
+                                    <option value="3">Solicitors</option>
+                                    <option value="21">Asset Manager</option>
+                                    <option value="2">Estate Agents</option>
+                                    <option value="20">Contractors</option>
+                                    <option value="999">AMGM</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text">To</span>
+                                <select class="form-select form-select-sm" name="vTo" id="vTo" onchange="document.forms.Send.submit();">
+                                    <option value="">-- Please Select --</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Other</span>
+                                <input type="text" name="vTo2" class="form-control form-control-sm" size="50" maxlength="250">
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Contact</span>
+                                <select name="vContact" class="form-select form-select-sm" onchange="document.Send.vEmail.value=document.Send.vContact.value;">
+                                    <option value="">-- Please Select --</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="row gap-3">
+
+                        <div class="col-sm-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Email</span>
+                                <input type="radio" class="mx-3" name="vTrans" value="1" checked="" onclick="document.Send.target=''" ;="">
+                                <input class="form-control form-control-sm" id="vEmail" name="vEmail" type="email" multiple value="" size="40" onchange="removesemi(this);">
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text">View &#47; Print</span>
+                                <input type="radio" class="mx-3" name="vTrans" value="3" onclick="document.Send.target=''" ;="">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <hr>
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Description</span>
+                                <input type="text" class="form-control form-control-sm" name="vDescription" id="vDescription" size="50" maxlength="255" value=" ">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row d-flex justify-content-between">
+
+                        <div class="col-5 col-lg-4">
+                            <a href="#" onclick="window.close();" class="btn btn-sm btn-primary back-icon col-12">Close</a>
+                        </div>
+
+                        <div class="col-5 col-lg-4">
+                            <button class="btn btn-sm btn-success submit-icon col-12">
+                                Submit
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

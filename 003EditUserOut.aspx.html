@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Edit User</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 115px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <form name="form1" method="post" action="003EditUserIn.aspx">
+
+        <div class="container col-lg-4 mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Edit User Details
+                </div>
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-3">
+
+                            <div class="input-group">
+                                <span class="input-group-text">ID</span>
+                                <input type="text" name="infoonly" class="form-control form-control-sm" size="6" value="650" readonly>
+                            </div>
+
+                        </div>
+
+                        <!-- Keep to break columns -->
+                        <div></div>
+                        <!-- Keep to break columns -->
+
+                        <div class="col-lg-6 mb-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text">First Name</span>
+                                <input type="text" name="x01firstname" class="form-control form-control-sm" value="Jack">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6 mb-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Last Name</span>
+                                <input type="text" name="x01lastname" class="form-control form-control-sm" value="Chandler (AMG Guildford)">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6 mb-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Username</span>
+                                <input type="text" name="x01userid" class="form-control form-control-sm" value="jchandler" required>
+                            </div>
+
+                        </div>
+
+                        <div></div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Password</span>
+                                <input type="password" name="x01password" class="form-control form-control-sm" value="System.Byte[]">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group">
+                                <span class="input-group-text me-2">Change Password</span>
+                                <input type="checkbox" name="vPasswordC" id="vPasswordC" value="1">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Security Level</span>
+                                <select name="vSecurity" id="vSecurity" class="form-select form-select-sm" required>
+                                    <option value="">-- Please Select --</option>
+                                    <option value="1">Accounts</option>
+                                    <option value="-30">Asset Manager</option>
+                                    <option value="-5">Contractor</option>
+                                    <option value="0">Data Processor</option>
+                                    <option value="-10">External Client</option>
+                                    <option value="20">Power User</option>
+                                    <option value="-40">Solicitor</option>
+                                    <option value="10">User Admin</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- Hide for accounts etc. as currently the case -->
+                        <div class="col-lg-12 mt-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Works For</span>
+                                <select name="vWorkFor" size="5" class="form-select form-select-sm py-2" multiple>
+                                    <option value="">Test</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <!-- Hide for accounts etc. as currently the case -->
+
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Office</span>
+                                <select name="vOffice" id="vOffice" class="form-select form-select-sm">
+                                    <option value="">-- Please Select --</option>
+                                    <option value="M">Macclesfield</option>
+                                    <option value="G">Guildford</option>
+                                    <option value="N">Newcastle</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6 mb-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text me-2">Case Handler</span>
+                                <input type="checkbox" name="X01TYPE" value="1">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Email</span>
+                                <input type="email" name="vEmail" size="40" maxlength="255" value="jack.chandler@amgltd.co.uk" class="form-control form-control-sm">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text me-2">Account Active</span>
+                                <input type="checkbox" name="X01ACCOUNTACTIVE" value="5" checked>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6 mb-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text me-2">Monthly Expiry</span>
+                                <input name="vMonthlyExpire" type="checkbox" id="vMonthlyExpire" value="1">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12 mb-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text">IP Restriction</span>
+                                <input type="text" name="vIP" value="" maxlength="50" class="form-control form-control-sm" placeholder="Leave blank for no restriction">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12 mb-2">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Expiry Date</span>
+                                <input type="text" name="vExpiry" class="datepicker form-control form-control-sm" value="" readonly size="12" placeholder="Leave blank for no expiry">
+                                <button type="button" onclick="document.form1.vExpiry.value='';" class="btn btn-xs col-lg-2 btn-danger">
+                                    Reset
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+
+                            <div class="input-group">
+                                <span class="input-group-text w-auto me-2">Request Password Change on Next Logon</span>
+                                <input type="checkbox" name="X01FORCEPASSWORDCHANGE" value="1">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-4">
+
+                        <div class="col-12 d-flex flex-column flex-md-row d-md-flex justify-content-md-between">
+                            <a href="003UserSearchOut.aspx" class="btn btn-sm btn-primary back-icon col-md-3">Back</a>
+                            <button type="submit" class="btn btn-sm btn-success submit-icon col-md-3">Submit</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

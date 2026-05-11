@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Send Letter</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+    <style>
+        .input-group-text {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+        <div id="banner_caseref_address">
+            AMGM/[Case ID] - <strong> [Address] </strong>
+        </div>
+
+    </div>
+
+    <div id="navlinks">
+        <a href="99Comms.aspx" target="_blank">Comms</a>
+        <a href="FaxOut.aspx" target="_blank">Direct Comms</a>
+        <a href="010TalkSheetOut.aspx" target="_blank">Talk Sheet</a>
+        <a href="006JobAudit.aspx" target="_blank">Audit</a>
+        <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
+    </div>
+
+    <form action="99Letters.aspx" method="post" name="form">
+
+        <div class="container col-12 col-lg-7 col-xxl-4">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Send Letter
+                </div>
+                <div class="card-body">
+
+                    <p class="text-center bg-light py-2 border fw-bold">
+                        Select a Letter to Send
+                    </p>
+
+                    <div class="row">
+
+                        <div class="col-sm-12">
+
+                            <select name="vLetter" id="vLetter" class="form-select form-select-sm" size="10" required>
+                                <option value="182">Confirmation of On Hold Case (With Photos)</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="row gap-3 mb-3">
+
+                        <div class="col-sm-12">
+
+                            <div class="input-group gap-2">
+                                <span class="input-group-text">Send Method</span>
+
+                                <input type="radio" name="vMethod" id="methodEmail" value="1" class="mt-1 mx-1" checked>
+                                <label for="methodEmail" class="mt-2">Email</label>
+
+                                <span class="border-end mx-2"></span>
+
+                                <input type="radio" name="vMethod" id="methodView" value="3" class="mt-1 mx-1">
+                                <label for="methodView" class="mt-2">View</label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row d-flex justify-content-between">
+
+                        <div class="col-5 col-lg-3">
+                            <a href="#" onclick="window.close();" class="btn btn-sm btn-primary back-icon col-12">Close</a>
+                        </div>
+
+                        <div class="col-5 col-lg-3">
+                            <button class="btn btn-sm btn-success submit-icon col-12">
+                                Submit
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
