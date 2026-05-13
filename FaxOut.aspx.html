@@ -78,9 +78,11 @@
         <div id="banner_assetmanagementgroup">Asset Management Group</div>
     </div>
 
-    <form name="Fax" method="post" action="FaxOut.aspx" onsubmit="return OnSubmit();">
 
-        <div class="container mt-5">
+    <div class="container mt-5">
+
+        <form name="Fax" method="post" action="FaxOut.aspx">
+
 
             <div class="card shadow">
                 <div class="card-header text-center">
@@ -122,7 +124,7 @@
                         <div class="col-sm-6">
 
                             <div class="input-group">
-                                <span class="input-group-text">To Extra</span>
+                                <span class="input-group-text">Other</span>
                                 <input type="text" name="ToExtra" size="25" class="form-control form-control-sm" maxlength="255">
                             </div>
 
@@ -250,13 +252,14 @@
 
                         <div class="col-12 d-flex justify-content-between gap-2">
 
-                            <button onclick="document.forms.Fax.vClicked.value = 'SAVE';" class="btn btn-sm btn-primary back-icon col-4 col-lg-2">
+                            <button onclick="document.forms.Fax.vClicked.value = 'SAVE'; return OnSubmit();" type="submit" class="btn btn-sm btn-primary back-icon col-4 col-lg-2">
                                 Back
                             </button>
 
-                            <button type="submit" class="btn btn-sm btn-success submit-icon col-4 col-lg-2">
+                            <button onclick="return OnSubmit();" type="submit" class="btn btn-sm btn-success submit-icon col-4 col-lg-2">
                                 Send
                             </button>
+                            <input type="hidden" name="vClicked" id="vClicked" value="">
 
                         </div>
 
@@ -266,7 +269,9 @@
 
             </div>
 
-    </form>
+        </form>
+
+    </div>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
