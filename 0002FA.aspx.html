@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Authentication</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+        <a href="002MainMenu.aspx">
+            <img src="assets/img/AMG.png" alt="Menu" id="banner_logo" title="Return to Main Menu">
+        </a>
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+    </div>
+
+    <div class="container col-lg-6 mt-5">
+
+        <form action="0002FA.aspx" method="POST">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Please enter your verification code to continue
+                </div>
+                <div class="card-body text-center">
+                    A verification email has been sent to your registered email address as an additional security measure due to a login attempt from a remote location.
+                    <br>
+                    <br>
+                    Please enter the authentication code in the field below to proceed with your login request.
+                    <div class="d-flex justify-content-center my-4">
+                        <input
+                            type="text"
+                            name="vCode"
+                            placeholder="Code"
+                            value=""
+                            maxlength="6"
+                            class="form-control form-control-sm w-auto"
+                            required
+                            oninvalid="this.setCustomValidity('Please enter your code')"
+                            autofocus
+                            autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-success submit-icon col-12 col-lg-4">Submit</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
