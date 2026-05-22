@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Invoice Details</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+        <div id="banner_caseref_address">
+            AMGM/[Case ID] - <strong> [Address] </strong>
+        </div>
+
+    </div>
+
+    <div id="navlinks">
+        <a href="99Comms.aspx" target="_blank">Comms</a>
+        <a href="FaxOut.aspx" target="_blank">Direct Comms</a>
+        <a href="010TalkSheetOut.aspx" target="_blank">Talk Sheet</a>
+        <a href="006JobAudit.aspx" target="_blank">Audit</a>
+        <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
+    </div>
+
+    <div class="container-fluid col-12 col-md-12 col-lg-10 mt-4">
+
+        <form name="form1" method="post" action="029InvoiceIn.aspx" onsubmit="return confirmSubmit();">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    Invoice Details - 272087/1V
+                </div>
+                <div class="card-body text-center">
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th width="5%">Qty</th>
+                                    <th width="20%">Item</th>
+                                    <th width="15%">Supplier</th>
+                                    <th width="8%">Unit Cost</th>
+                                    <th width="8%">Unit Sale</th>
+                                    <th width="8%">Total Cost</th>
+                                    <th width="8%">Total Sale</th>
+                                    <th width="8%">Inv Received</th>
+                                    <th width="7%">Supplier Inv #</th>
+                                    <th>&nbsp;</th>
+                                    <th width="5%">ID</th>
+                                    <th width="10%">Invoice # / Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vQty1" maxlength="6" value="1" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vItem1" value="Initial Repossession Visit: Complete IRV" maxlength="55" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vSupplierName1" value="Maintenance Ltd" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vCost1" id="vCost1" value="300.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vReCharge1" id="vReCharge1" value="400.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vReChargeNet1" id="vReChargeNet1" value="300.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vReChargeVAT1" id="vReChargeVAT1" value="400.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm datepicker" name="vRecieved1" id="vRecieved1" value="" maxlength="10">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vSupNum1" id="vSupNum1" value="" maxlength="50">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" name="checkbox" value="628348" onclick="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="blank" value="AB" maxlength="5" readonly>
+                                    </td>
+                                    <td>
+                                        <strong>0412818</strong> &nbsp; 20/03/2025
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vQty2" maxlength="6" value="1" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vItem2" value="Clearance" maxlength="55" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vSupplierName2" value="AMG Guildford" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vCost2" id="vCost2" value="300.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vReCharge2" id="vReCharge2" value="400.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vReChargeNet2" id="vReChargeNet2" value="300.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vReChargeVAT2" id="vReChargeVAT2" value="400.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm datepicker" name="vRecieved2" id="vRecieved2" value="24/03/2025" maxlength="10">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vSupNum2" id="vSupNum2" value="123" maxlength="50">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" name="checkbox" value="628348" onclick="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="blank" value="AB" maxlength="5" readonly>
+                                    </td>
+                                    <td>
+                                        <strong>0412818</strong> &nbsp; 20/03/2025
+                                    </td>
+                                </tr>
+                                <!-- START NEW ENTRY -->
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vQty3" maxlength="6" placeholder="Qty">
+                                    </td>
+                                    <td>
+                                        <select class="form-select form-select-sm" name="vItem3">
+                                            <option value="">-- New Entry --</option>
+                                            <option value="Additional Clean">Additional Clean</option>
+                                            <option value="Additional Garden Works">Additional Garden Works</option>
+                                            <option value="Additional Labour">Additional Labour</option>
+                                            <option value="Additional Locks">Additional Locks</option>
+                                            <option value="Additional Rubbish Removal">Additional Rubbish Removal</option>
+                                            <option value="Additional Travel Costs">Additional Travel Costs</option>
+                                            <option value="Animal Handler Attendance">Animal Handler Attendance</option>
+                                            <option value="Boarding">Boarding</option>
+                                            <option value="Callout Charge">Callout Charge</option>
+                                            <option value="Cancelled Animal Handler Attendance">Cancelled Animal Handler Attendance</option>
+                                            <option value="Cancelled Possession">Cancelled Possession</option>
+                                            <option value="Cancelled Shuttering">Cancelled Shuttering</option>
+                                            <option value="Cap Gas Supply/Provide LGSR">Cap Gas Supply/Provide LGSR</option>
+                                            <option value="Chattel Clearance">Chattel Clearance</option>
+                                            <option value="Clean Air Zone Charge">Clean Air Zone Charge</option>
+                                            <option value="Clean/Clear All">Clean/Clear All</option>
+                                            <option value="Clean/Clear All &amp; Garden Tidy">Clean/Clear All &amp; Garden Tidy</option>
+                                            <option value="Clean/Stack Chattels">Clean/Stack Chattels</option>
+                                            <option value="Clean/Stack Chattels &amp; Garden Tidy">Clean/Stack Chattels &amp; Garden Tidy</option>
+                                            <option value="Congestion Charge">Congestion Charge</option>
+                                            <option value="Drain Down &amp; Service Shutdown">Drain Down &amp; Service Shutdown</option>
+                                            <option value="Fumigation">Fumigation</option>
+                                            <option value="Garden Maintenance">Garden Maintenance</option>
+                                            <option value="Guard on Site">Guard on Site</option>
+                                            <option value="House-Sitting">House-Sitting</option>
+                                            <option value="Initial Repossession Visit: Complete IRV">Initial Repossession Visit: Complete IRV</option>
+                                            <option value="Initial Repossession Visit: Drain Down/Initial Clean">Initial Repossession Visit: Drain Down/Initial Clean</option>
+                                            <option value="Initial Repossession Visit: Lock Change/Drain Down">Initial Repossession Visit: Lock Change/Drain Down</option>
+                                            <option value="Initial Repossession Visit: Lock Change Only">Initial Repossession Visit: Lock Change Only</option>
+                                            <option value="Lock Change">Lock Change</option>
+                                            <option value="Obtain Copy of Communal Door Key">Obtain Copy of Communal Door Key</option>
+                                            <option value="Occupancy Check">Occupancy Check</option>
+                                            <option value="PO-">PO-</option>
+                                            <option value="Property Inspection">Property Inspection</option>
+                                            <option value="Provide Asbestos Report">Provide Asbestos Report</option>
+                                            <option value="Provide Japanese Knotweed Report">Provide Japanese Knotweed Report</option>
+                                            <option value="Provide Structural Engineer's Report">Provide Structural Engineer's Report</option>
+                                            <option value="Provide Timber &amp; Damp Report">Provide Timber &amp; Damp Report</option>
+                                            <option value="Remove Car Batteries">Remove Car Batteries</option>
+                                            <option value="Remove Fire Extinguishers">Remove Fire Extinguishers</option>
+                                            <option value="Remove Gas Bottles">Remove Gas Bottles</option>
+                                            <option value="Remove Oil">Remove Oil</option>
+                                            <option value="Remove Paint">Remove Paint</option>
+                                            <option value="Remove Petrol">Remove Petrol</option>
+                                            <option value="Remove Tyres">Remove Tyres</option>
+                                            <option value="Remove White Spirit">Remove White Spirit</option>
+                                            <option value="Re-Secure">Re-Secure</option>
+                                            <option value="Rodent Treatment">Rodent Treatment</option>
+                                            <option value="Sharps Removal">Sharps Removal</option>
+                                            <option value="Storage">Storage</option>
+                                            <option value="Supply/Fit">Supply/Fit</option>
+                                            <option value="ULEZ Charge">ULEZ Charge</option>
+                                            <option value="VAT BLOCKED">VAT BLOCKED</option>
+                                            <option value="Waiting Time">Waiting Time</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="form-select form-select-sm" name="vSupplier3">
+                                            <option value="">-- New Entry --</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vCost3" id="vCost3" value="0.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" name="vReCharge3" id="vReCharge3" value="0.00" maxlength="10" onchange="AddupTotals();">
+                                    </td>
+                                </tr>
+                                <!-- END NEW ENTRY -->
+
+                                <!-- START TOTAL ROW -->
+                                <tr class="table-success border-2">
+                                    <td colspan="3" class="text-start">
+                                        <button type="submit" class="btn btn-sm btn-success submit-icon col-lg-5" onclick="document.form1.Raise.value='';document.form1.Save.value='Save';document.form1.target='';">
+                                            Update
+                                        </button>
+                                        <input type="hidden" name="Save" value="">
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold small">MARGIN (&pound;)</div>
+                                        <input type="text" class="form-control form-control-sm text-danger fw-bold text-center" name="vITotal2" id="vITotal2" maxlength="10" readonly>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold small">MARGIN (&percnt;)</div>
+                                        <input type="text" class="form-control form-control-sm text-danger fw-bold text-center" name="vITotal" id="vITotal" maxlength="10" readonly>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="fw-bold small">Total Cost (&pound;)</div>
+                                        <input type="text" class="form-control form-control-sm text-danger fw-bold text-center" name="vRTotal" id="vRTotal" maxlength="10" readonly>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold small">Total Sale (&pound;)</div>
+                                        <input type="text" class="form-control form-control-sm text-danger fw-bold text-center" name="vCTotal" id="vCTotal" maxlength="10" readonly>
+                                    </td>
+                                    <td colspan="2"></td>
+                                    <td colspan="4" class="text-start">
+                                        <input type="checkbox" name="SelectAll" value="checkbox" onclick="Selectbox();">
+                                        <span class="small fw-semibold ms-2">Select All</span>
+                                    </td>
+                                </tr>
+                                <!-- END TOTAL ROW -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card-footer d-flex justify-content-center p-3 align-items-center gap-4">
+                    <input type="hidden" name="Raise" value="">
+                    <span>Raise Sales Invoice to:</span>
+                    <button type="submit" class="btn btn-sm btn-secondary col-lg-1" onclick="document.form1.Raise.value='Client';">
+                        Client
+                    </button>
+                    <button type="submit" class="btn btn-sm btn-secondary col-lg-1" onclick="document.form1.Raise.value='InsSource';">
+                        Asset Manager
+                    </button>
+                    <button type="submit" class="btn btn-sm btn-secondary col-lg-1" onclick="document.form1.Raise.value='Solicitor';">
+                        Solicitor
+                    </button>
+                    <button type="submit" class="btn btn-sm btn-secondary col-lg-1" onclick="document.form1.Raise.value='General';">
+                        General
+                    </button>
+                    <div class="mt-2">
+                        <input type="checkbox" name="WithLogo" value="1" id="withLogo" checked>
+                        <label for="withLogo">With logo</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invoices Raised Card -->
+            <div class="card shadow mt-4">
+                <div class="card-header text-center">
+                    Raised Invoices
+                </div>
+
+                <div class="card-body text-center">
+
+                    <div class="table-responsive">
+                        <table class="table table-sm table-striped">
+                            <thead>
+                                <tr>
+                                    <th width="10%">
+                                        Invoice Number
+                                        <input type="hidden" name="Credit" value="">
+                                    </th>
+                                    <th width="10%">Date</th>
+                                    <th width="10%">To</th>
+                                    <th width="10%">Total</th>
+                                    <th width="10%">Paid</th>
+                                    <th width="10%">View</th>
+                                    <th width="10%">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0426582</td>
+                                    <td>20 Mar 2025, 3:00 PM</td>
+                                    <td>Client Department</td>
+                                    <td>£400.00</td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <a href="#" target="_blank" rel="opener" class="btn btn-sm btn-success col-lg-8">
+                                            View
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <button type="submit" class="btn btn-sm btn-danger col-lg-8" onclick="document.form1.Raise.value=''; document.form1.Credit.value='';">
+                                            Credit Note
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <hr>
+
+                    <a href="006EditStandardJobOut.aspx?vID=&amp;vJobID=" class="btn btn-primary back-icon col-12 col-lg-3">
+                        Back
+                    </a>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        function cent(amount) {
+            // returns the amount in the .99 format 
+            amount -= 0;
+            amount = (Math.round(amount * 100)) / 100;
+            return (amount == Math.floor(amount)) ? amount + '.00' : ((amount * 10 == Math.floor(amount * 10)) ? amount + '0' : amount);
+        }
+
+
+        function AddupTotals() {
+            var CTotal = 0.00;
+            var RTotal = 0.00;
+            var tmp1;
+            var tmp2;
+
+            for (var i = 1; i <= 2; i++) {
+                tmp1 = eval("document.form1.vReChargeNet" + i + ".value");
+                tmp1 = tmp1.replace(',', '');
+                RTotal = RTotal + parseFloat(tmp1);
+
+                tmp2 = eval("document.form1.vReChargeVAT" + i + ".value");
+                tmp2 = tmp2.replace(',', '');
+                CTotal = CTotal + parseFloat(tmp2);
+
+            }
+
+            var ITotal2 = cent((CTotal - RTotal));
+            var ITotal = cent((CTotal / RTotal) * 100);
+            document.form1.vCTotal.value = cent(Math.round(CTotal * 100) / 100);
+            document.form1.vITotal.value = cent(Math.round(ITotal * 100) / 100);
+            document.form1.vITotal2.value = cent(Math.round(ITotal2 * 100) / 100);
+            document.form1.vRTotal.value = cent(Math.round(RTotal * 100) / 100);
+
+        }
+
+        function Selectbox() {
+            for (var i = 0; i < document.form1.checkbox.length; i++) {
+                if (!document.form1.checkbox[i].disabled) {
+                    if (document.form1.SelectAll.checked) {
+                        document.form1.checkbox[i].checked = true;
+                    } else {
+                        document.form1.checkbox[i].checked = false;
+                    }
+                }
+            }
+            AddupTotals();
+        }
+
+        AddupTotals();
+
+    </script>
+    <script>
+
+        function confirmSubmit() {
+
+
+            if (document.form1.Raise.value == 'General' || document.form1.Raise.value == 'Sol(Con)'
+                || document.form1.Raise.value == 'Sol(Lit)' || document.form1.Raise.value == 'Client') {
+
+
+                var ticked;
+                ticked = false
+                for (var i = 0; i < document.form1.checkbox.length; i++) {
+                    if (document.form1.checkbox[i].checked) {
+                        ticked = true;
+                    }
+                }
+
+                if (ticked == false) {
+                    alert("Please select items to be invoiced");
+                    return false;
+                }
+
+
+            }
+
+            for (var i = 1; i < document.form1.checkbox.length; i++) {
+                if ((eval("document.form1.vSupNum" + i + ".value") != '') || (eval("document.form1.vRecieved" + i + ".value") != '')) {
+                    if (!((eval("document.form1.vSupNum" + i + ".value") != '') && (eval("document.form1.vRecieved" + i + ".value") != ''))) {
+                        alert("You must supply both the 'Invoice Received' and 'Supplier Invoice Number' together");
+                        return false;
+                    }
+                }
+            }
+
+
+            if (document.form1.Credit.value == "") {
+                var agree = confirm("Are you sure you wish to continue?");
+                if (agree)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
