@@ -343,10 +343,12 @@
 
         function confirmSubmit() {
 
-
-            if (document.form1.Raise.value == 'General' || document.form1.Raise.value == 'Sol(Con)'
-                || document.form1.Raise.value == 'Sol(Lit)' || document.form1.Raise.value == 'Client') {
-
+            if (
+                document.form1.Raise.value == 'General' ||
+                document.form1.Raise.value == 'InsSource' ||
+                document.form1.Raise.value == 'Solicitor' ||
+                document.form1.Raise.value == 'Client'
+            ) {
 
                 var ticked;
                 ticked = false
@@ -381,8 +383,8 @@
                 else
                     return false;
             }
-        }
 
+        }
 
     </script>
 
