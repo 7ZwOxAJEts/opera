@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMG OPERA - Lock List</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <script src="assets/js/flatpickr.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container-fluid banner">
+
+        <a href="002MainMenu.aspx" id="banner_logo" class="">
+            <img src="assets/img/AMG.png" alt="AMG" id="banner_logo" title="Return to Main Menu">
+        </a>
+
+        <div id="banner_assetmanagementgroup">Asset Management Group</div>
+
+        <div id="banner_caseref_address">
+            AMGM/[Case ID] - <strong> [Address] </strong>
+        </div>
+
+    </div>
+
+    <div id="navlinks">
+        <a href="99Comms.aspx" target="_blank">Comms</a>
+        <a href="FaxOut.aspx" target="_blank">Direct Comms</a>
+        <a href="010TalkSheetOut.aspx" target="_blank">Talk Sheet</a>
+        <a href="006JobAudit.aspx" target="_blank">Audit</a>
+        <a href="029InvoiceSummary.aspx" target="_blank">Invoice History</a>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-lg-4"> <!--Property Details-->
+
+                <form action="propdetailsin.aspx" method="post">
+
+                    <div class="card shadow">
+
+                        <div class="card-header text-center">
+                            Property Details - AMGM/[Case ID]
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="row g-3 mb-2">
+
+                                <div class="col-12 col-sm-4">
+                                    <a href="002MainMenu.aspx" class="btn btn-sm btn-primary back-icon col-12">
+                                        Back to Menu
+                                    </a>
+                                </div>
+
+                                <div class="col-12 col-sm-4">
+                                    <a href="050DeleteThings.aspx" class="btn btn-sm btn-danger delete-icon col-12">
+                                        Delete Things
+                                    </a>
+                                </div>
+
+                                <div class="col-12 col-sm-4">
+                                    <a href="006AddJobPageOut.aspx" class="btn btn-sm btn-success add-icon col-12">
+                                        Add New Job
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="row gy-1">
+
+                                <div class="col-md-12">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Client:</span>
+                                        <select name="vClient" id="vClient" class="form-select form-select-sm" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Contact:</span>
+                                        <select name="vClientContact" id="vClientContact" class="form-select form-select-sm">
+                                            <option value="">-- Select --</option>
+                                            <option value="">Confirmations & Reports (All Clients)</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Tel:</span>
+                                        <a href="tel:" class="form-control form-control-sm">
+                                            [Tel]
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <hr>
+
+                            <div class="row gy-2">
+
+                                <div class="col-md-12">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 95px;">Asset Manager:</span>
+                                        <select name="vInsSource" id="vInsSource" class="form-select form-select-sm">
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 95px;">Contact:</span>
+                                        <select name="vInsSourceContact" id="vInsSourceContact" class="form-select form-select-sm">
+                                            <option value="">-- Select --</option>
+                                            <option value="">Confirmations & Reports (All Clients)</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 115px;">Asset Manager Ref:</span>
+                                        <input name="vTessaRef" id="vTessaRef" type="text" class="form-control form-control-sm fw-bold" value="">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <hr>
+
+                            <div class="row gy-1">
+
+                                <div class="col-md-12">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Solictor:</span>
+                                        <select name="vSolicitor" id="vSolicitor" class="form-select form-select-sm">
+                                            <option value="">-- Select --</option>
+                                            <option value="">Confirmations & Reports (All Clients)</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Contact:</span>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value="">-- Select --</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Tel:</span>
+                                        <a href="tel:" class="form-control form-control-sm">
+                                            [Tel]
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <hr>
+
+                            <div class="row gy-1">
+
+                                <div class="col-md-12">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Address:</span>
+                                        <input name="vAddress1" id="vAddress1" type="text" class="form-control form-control-sm" value="">
+
+                                        <a href="http://maps.google.co.uk/maps?" class="btn btn-xs border fs-12" target="_blank">
+                                            Map
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <input name="vAddress2" id="vAddress2" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <input name="vAddress3" id="vAddress3" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Town:</span>
+                                        <input name="vAddress4" id="vAddress4" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">County:</span>
+                                        <input name="vAddress5" id="vAddress5" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">Postcode:</span>
+                                        <input name="vAddress6" id="vAddress6" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 mt-2">
+                                    <a href="" class="btn btn-sm btn-primary search-icon fs-10 col-12">
+                                        POSTCODE LOOKUP
+                                    </a>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 75px;">High Risk:</span>
+                                        <input type="checkbox" name="vHighRisk" id="vHighRisk" value="" class="ms-2">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <hr>
+
+                            <div class="row gy-1">
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 85px;">Source Ref:</span>
+                                        <input name="vClientRef" id="vClientRef" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="width: 85px;">Account No.:</span>
+                                        <input name="vAccountRef" id="vAccountRef" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group mb-1">
+                                        <span class="input-group-text" style="width: 85px;">Customer 1:</span>
+                                        <input name="vBorrower1" id="vBorrower1" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="input-group mb-1">
+                                        <span class="input-group-text" style="width: 85px;">Customer 2:</span>
+                                        <input name="vBorrower2" id="vBorrower2" type="text" class="form-control form-control-sm" value="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12">
+
+                                    <div class="input-group">
+                                        <span class="input-group-text">Important Information:</span>
+                                        <textarea name="vImportantInfo" id="vImportantInfo" class="form-control form-control-sm"></textarea>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <hr class="m-2">
+
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <button class="btn btn-success submit-icon col-12">SUBMIT</button>
+                                </div>
+
+                            </div>
+
+                            <div class="row mt-2">
+
+                                <div class="col-md-12">
+
+                                    <div class="input-group mb-3">
+                                        <a href="" class="input-group-text">Keyholder:</a>
+                                        <input type="text" class="form-control form-control-sm" value="[Keybolding EA] - Tel: [Keyholder Tel] , Postcode: [Keyholder Postcode]" readonly>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div> <!--Card Body-->
+                    </div>
+
+                </form>
+
+            </div> <!--Property Details-->
+
+
+            <div class="col-lg-8">
+
+                <form name="vJobDetails" method="post" action="006LockEditIn.aspx" onSubmit="return checkvals();">
+
+                    <div class="card shadow mb-3">
+                        <div class="card-header d-flex justify-content-between">
+                            <span> 278713/1E </span>
+                            <span> In Possession (03/07/2026 11:09:43) </span>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="row mb-2">
+
+                                <div class="col-md-5">
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" style="width: 100px;">Job Type:</span>
+                                        <select name="vJobType" id="vJobType" class="form-select form-select-sm" required="">
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-5">
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Lock List Checked</span>
+                                        <input type="checkbox" name="vLocksChecked" id="vLocksChecked" value="" class="ms-3">
+                                        <span class="my-auto ms-3">03/11/2025 - ADM</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="006EditStandardJobOut.aspx?vID=" class="btn btn-sm btn-primary back-icon w-100">
+                                        BACK
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+
+                                    <p class="section-banner p-2">Add Lock</p>
+
+                                    <div class="table-responsive">
+
+                                        <table class="table table-sm table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Type
+                                                    </th>
+                                                    <th>
+                                                        Description (if other)
+                                                    </th>
+                                                    <th>
+                                                        Location
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <select name="vType1" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Rim Cylinder</option>
+
+                                                            <option value="2">Europrofile Cylinder</option>
+
+                                                            <option value="3">Oval Cylinder</option>
+
+                                                            <option value="4">BS Cylinder</option>
+
+                                                            <option value="5">Nightlatch Set</option>
+
+                                                            <option value="6">3 Lever Deadlock</option>
+
+                                                            <option value="7">3 Lever Sashlock</option>
+
+                                                            <option value="8">5 Lever Deadlock</option>
+
+                                                            <option value="9">5 Lever Sashlock</option>
+
+                                                            <option value="10">BS 5 Lever Deadlock</option>
+
+                                                            <option value="11">BS 5 Lever Sashlock</option>
+
+                                                            <option value="12">Rebated Sashlock</option>
+
+                                                            <option value="13">Patio Door Lock</option>
+
+                                                            <option value="14">Window Lock</option>
+
+                                                            <option value="15">Padbolt &amp; Padlock</option>
+
+                                                            <option value="16">Hasp, Staple &amp; Padlock</option>
+
+                                                            <option value="17">Padlock</option>
+
+                                                            <option value="18">Garage Door Lock</option>
+
+                                                            <option value="19">Garage Locking Handle</option>
+
+                                                            <option value="20">Rim Mortice Lock</option>
+
+                                                            <option value="21">Sash Jammer</option>
+
+                                                            <option value="22">Other</option>
+
+
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="vDesc1" class="form-control form-control-sm" size="30" maxlength="255">
+                                                    </td>
+                                                    <td>
+                                                        <select name="vLocation1" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Front Door</option>
+
+                                                            <option value="2">Front Porch Door</option>
+
+                                                            <option value="3">Rear Door</option>
+
+                                                            <option value="4">Rear Porch Door</option>
+
+                                                            <option value="5">Side Door</option>
+
+                                                            <option value="6">Side Porch Door</option>
+
+                                                            <option value="7">Patio Door</option>
+
+                                                            <option value="8">Conservatory Door</option>
+
+                                                            <option value="9">Cellar Door</option>
+
+                                                            <option value="10">Balcony Door</option>
+
+                                                            <option value="11">Window</option>
+
+                                                            <option value="12">Lofthatch</option>
+
+                                                            <option value="13">Skylight</option>
+
+                                                            <option value="14">Garage Door</option>
+
+                                                            <option value="15">Garage Rear Door</option>
+
+                                                            <option value="16">Garage Side Door</option>
+
+                                                            <option value="17">Meter Cupboard</option>
+
+                                                            <option value="18">Storage Cupboard</option>
+
+                                                            <option value="19">Shed Door</option>
+
+                                                            <option value="20">Outbuilding Door</option>
+
+                                                            <option value="21">Front Gate</option>
+
+                                                            <option value="22">Side Gate</option>
+
+                                                            <option value="23">Rear Gate</option>
+
+                                                            <option value="24">Other</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select name="vType2" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Rim Cylinder</option>
+
+                                                            <option value="2">Europrofile Cylinder</option>
+
+                                                            <option value="3">Oval Cylinder</option>
+
+                                                            <option value="4">BS Cylinder</option>
+
+                                                            <option value="5">Nightlatch Set</option>
+
+                                                            <option value="6">3 Lever Deadlock</option>
+
+                                                            <option value="7">3 Lever Sashlock</option>
+
+                                                            <option value="8">5 Lever Deadlock</option>
+
+                                                            <option value="9">5 Lever Sashlock</option>
+
+                                                            <option value="10">BS 5 Lever Deadlock</option>
+
+                                                            <option value="11">BS 5 Lever Sashlock</option>
+
+                                                            <option value="12">Rebated Sashlock</option>
+
+                                                            <option value="13">Patio Door Lock</option>
+
+                                                            <option value="14">Window Lock</option>
+
+                                                            <option value="15">Padbolt &amp; Padlock</option>
+
+                                                            <option value="16">Hasp, Staple &amp; Padlock</option>
+
+                                                            <option value="17">Padlock</option>
+
+                                                            <option value="18">Garage Door Lock</option>
+
+                                                            <option value="19">Garage Locking Handle</option>
+
+                                                            <option value="20">Rim Mortice Lock</option>
+
+                                                            <option value="21">Sash Jammer</option>
+
+                                                            <option value="22">Other</option>
+
+
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="vDesc2" class="form-control form-control-sm" size="30" maxlength="255">
+                                                    </td>
+                                                    <td>
+                                                        <select name="vLocation2" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Front Door</option>
+
+                                                            <option value="2">Front Porch Door</option>
+
+                                                            <option value="3">Rear Door</option>
+
+                                                            <option value="4">Rear Porch Door</option>
+
+                                                            <option value="5">Side Door</option>
+
+                                                            <option value="6">Side Porch Door</option>
+
+                                                            <option value="7">Patio Door</option>
+
+                                                            <option value="8">Conservatory Door</option>
+
+                                                            <option value="9">Cellar Door</option>
+
+                                                            <option value="10">Balcony Door</option>
+
+                                                            <option value="11">Window</option>
+
+                                                            <option value="12">Lofthatch</option>
+
+                                                            <option value="13">Skylight</option>
+
+                                                            <option value="14">Garage Door</option>
+
+                                                            <option value="15">Garage Rear Door</option>
+
+                                                            <option value="16">Garage Side Door</option>
+
+                                                            <option value="17">Meter Cupboard</option>
+
+                                                            <option value="18">Storage Cupboard</option>
+
+                                                            <option value="19">Shed Door</option>
+
+                                                            <option value="20">Outbuilding Door</option>
+
+                                                            <option value="21">Front Gate</option>
+
+                                                            <option value="22">Side Gate</option>
+
+                                                            <option value="23">Rear Gate</option>
+
+                                                            <option value="24">Other</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select name="vType3" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Rim Cylinder</option>
+
+                                                            <option value="2">Europrofile Cylinder</option>
+
+                                                            <option value="3">Oval Cylinder</option>
+
+                                                            <option value="4">BS Cylinder</option>
+
+                                                            <option value="5">Nightlatch Set</option>
+
+                                                            <option value="6">3 Lever Deadlock</option>
+
+                                                            <option value="7">3 Lever Sashlock</option>
+
+                                                            <option value="8">5 Lever Deadlock</option>
+
+                                                            <option value="9">5 Lever Sashlock</option>
+
+                                                            <option value="10">BS 5 Lever Deadlock</option>
+
+                                                            <option value="11">BS 5 Lever Sashlock</option>
+
+                                                            <option value="12">Rebated Sashlock</option>
+
+                                                            <option value="13">Patio Door Lock</option>
+
+                                                            <option value="14">Window Lock</option>
+
+                                                            <option value="15">Padbolt &amp; Padlock</option>
+
+                                                            <option value="16">Hasp, Staple &amp; Padlock</option>
+
+                                                            <option value="17">Padlock</option>
+
+                                                            <option value="18">Garage Door Lock</option>
+
+                                                            <option value="19">Garage Locking Handle</option>
+
+                                                            <option value="20">Rim Mortice Lock</option>
+
+                                                            <option value="21">Sash Jammer</option>
+
+                                                            <option value="22">Other</option>
+
+
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="vDesc3" class="form-control form-control-sm" size="30" maxlength="255">
+                                                    </td>
+                                                    <td>
+                                                        <select name="vLocation3" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Front Door</option>
+
+                                                            <option value="2">Front Porch Door</option>
+
+                                                            <option value="3">Rear Door</option>
+
+                                                            <option value="4">Rear Porch Door</option>
+
+                                                            <option value="5">Side Door</option>
+
+                                                            <option value="6">Side Porch Door</option>
+
+                                                            <option value="7">Patio Door</option>
+
+                                                            <option value="8">Conservatory Door</option>
+
+                                                            <option value="9">Cellar Door</option>
+
+                                                            <option value="10">Balcony Door</option>
+
+                                                            <option value="11">Window</option>
+
+                                                            <option value="12">Lofthatch</option>
+
+                                                            <option value="13">Skylight</option>
+
+                                                            <option value="14">Garage Door</option>
+
+                                                            <option value="15">Garage Rear Door</option>
+
+                                                            <option value="16">Garage Side Door</option>
+
+                                                            <option value="17">Meter Cupboard</option>
+
+                                                            <option value="18">Storage Cupboard</option>
+
+                                                            <option value="19">Shed Door</option>
+
+                                                            <option value="20">Outbuilding Door</option>
+
+                                                            <option value="21">Front Gate</option>
+
+                                                            <option value="22">Side Gate</option>
+
+                                                            <option value="23">Rear Gate</option>
+
+                                                            <option value="24">Other</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select name="vType4" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Rim Cylinder</option>
+
+                                                            <option value="2">Europrofile Cylinder</option>
+
+                                                            <option value="3">Oval Cylinder</option>
+
+                                                            <option value="4">BS Cylinder</option>
+
+                                                            <option value="5">Nightlatch Set</option>
+
+                                                            <option value="6">3 Lever Deadlock</option>
+
+                                                            <option value="7">3 Lever Sashlock</option>
+
+                                                            <option value="8">5 Lever Deadlock</option>
+
+                                                            <option value="9">5 Lever Sashlock</option>
+
+                                                            <option value="10">BS 5 Lever Deadlock</option>
+
+                                                            <option value="11">BS 5 Lever Sashlock</option>
+
+                                                            <option value="12">Rebated Sashlock</option>
+
+                                                            <option value="13">Patio Door Lock</option>
+
+                                                            <option value="14">Window Lock</option>
+
+                                                            <option value="15">Padbolt &amp; Padlock</option>
+
+                                                            <option value="16">Hasp, Staple &amp; Padlock</option>
+
+                                                            <option value="17">Padlock</option>
+
+                                                            <option value="18">Garage Door Lock</option>
+
+                                                            <option value="19">Garage Locking Handle</option>
+
+                                                            <option value="20">Rim Mortice Lock</option>
+
+                                                            <option value="21">Sash Jammer</option>
+
+                                                            <option value="22">Other</option>
+
+
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="vDesc4" class="form-control form-control-sm" size="30" maxlength="255">
+                                                    </td>
+                                                    <td>
+                                                        <select name="vLocation4" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Front Door</option>
+
+                                                            <option value="2">Front Porch Door</option>
+
+                                                            <option value="3">Rear Door</option>
+
+                                                            <option value="4">Rear Porch Door</option>
+
+                                                            <option value="5">Side Door</option>
+
+                                                            <option value="6">Side Porch Door</option>
+
+                                                            <option value="7">Patio Door</option>
+
+                                                            <option value="8">Conservatory Door</option>
+
+                                                            <option value="9">Cellar Door</option>
+
+                                                            <option value="10">Balcony Door</option>
+
+                                                            <option value="11">Window</option>
+
+                                                            <option value="12">Lofthatch</option>
+
+                                                            <option value="13">Skylight</option>
+
+                                                            <option value="14">Garage Door</option>
+
+                                                            <option value="15">Garage Rear Door</option>
+
+                                                            <option value="16">Garage Side Door</option>
+
+                                                            <option value="17">Meter Cupboard</option>
+
+                                                            <option value="18">Storage Cupboard</option>
+
+                                                            <option value="19">Shed Door</option>
+
+                                                            <option value="20">Outbuilding Door</option>
+
+                                                            <option value="21">Front Gate</option>
+
+                                                            <option value="22">Side Gate</option>
+
+                                                            <option value="23">Rear Gate</option>
+
+                                                            <option value="24">Other</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select name="vType5" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Rim Cylinder</option>
+
+                                                            <option value="2">Europrofile Cylinder</option>
+
+                                                            <option value="3">Oval Cylinder</option>
+
+                                                            <option value="4">BS Cylinder</option>
+
+                                                            <option value="5">Nightlatch Set</option>
+
+                                                            <option value="6">3 Lever Deadlock</option>
+
+                                                            <option value="7">3 Lever Sashlock</option>
+
+                                                            <option value="8">5 Lever Deadlock</option>
+
+                                                            <option value="9">5 Lever Sashlock</option>
+
+                                                            <option value="10">BS 5 Lever Deadlock</option>
+
+                                                            <option value="11">BS 5 Lever Sashlock</option>
+
+                                                            <option value="12">Rebated Sashlock</option>
+
+                                                            <option value="13">Patio Door Lock</option>
+
+                                                            <option value="14">Window Lock</option>
+
+                                                            <option value="15">Padbolt &amp; Padlock</option>
+
+                                                            <option value="16">Hasp, Staple &amp; Padlock</option>
+
+                                                            <option value="17">Padlock</option>
+
+                                                            <option value="18">Garage Door Lock</option>
+
+                                                            <option value="19">Garage Locking Handle</option>
+
+                                                            <option value="20">Rim Mortice Lock</option>
+
+                                                            <option value="21">Sash Jammer</option>
+
+                                                            <option value="22">Other</option>
+
+
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="vDesc5" class="form-control form-control-sm" size="30" maxlength="255">
+                                                    </td>
+                                                    <td>
+                                                        <select name="vLocation5" class="form-select form-select-sm w-auto">
+                                                            <option value=" "> </option>
+
+                                                            <option value="1">Front Door</option>
+
+                                                            <option value="2">Front Porch Door</option>
+
+                                                            <option value="3">Rear Door</option>
+
+                                                            <option value="4">Rear Porch Door</option>
+
+                                                            <option value="5">Side Door</option>
+
+                                                            <option value="6">Side Porch Door</option>
+
+                                                            <option value="7">Patio Door</option>
+
+                                                            <option value="8">Conservatory Door</option>
+
+                                                            <option value="9">Cellar Door</option>
+
+                                                            <option value="10">Balcony Door</option>
+
+                                                            <option value="11">Window</option>
+
+                                                            <option value="12">Lofthatch</option>
+
+                                                            <option value="13">Skylight</option>
+
+                                                            <option value="14">Garage Door</option>
+
+                                                            <option value="15">Garage Rear Door</option>
+
+                                                            <option value="16">Garage Side Door</option>
+
+                                                            <option value="17">Meter Cupboard</option>
+
+                                                            <option value="18">Storage Cupboard</option>
+
+                                                            <option value="19">Shed Door</option>
+
+                                                            <option value="20">Outbuilding Door</option>
+
+                                                            <option value="21">Front Gate</option>
+
+                                                            <option value="22">Side Gate</option>
+
+                                                            <option value="23">Rear Gate</option>
+
+                                                            <option value="24">Other</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <p class="section-banner p-2 mt-3 mt-lg-0">Saved Lock List</p>
+
+
+                                    <div class="table-responsive">
+
+                                        <table class="table table-sm table-borderless table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Type
+                                                    </th>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Location
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Remove
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Rim Cylinder</td>
+                                                    <td>Emergency</td>
+                                                    <td>Front Door</td>
+                                                    <td class="text-center">
+                                                        <a href="006LockEditIn.aspx?vID=" class="btn btn-xs btn-danger delete-icon w-auto">
+                                                            REMOVE
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <hr class="mt-0">
+
+                                    <div class="row g-2">
+
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text" style="width: 120px;">No. of Keys to Agent:</span>
+                                                <input type="text" name="agentkeys" size="10" maxlength="10" class="form-control form-control-sm" value="">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text" style="width: 120px;">Agent Name:</span>
+                                                <input type="text" name="agentname" size="20" maxlength="100" class="form-control form-control-sm" value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text" style="width: 120px;">Selling Agent:</span>
+                                                <input type="text" name="sellingagent" size="20" maxlength="100" class="form-control form-control-sm" value="">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text" style="width: 120px;">Delivered to Agents:</span>
+                                                <input type="text" value="" name="keysdelivered" size="9" maxlength="10" class="form-control form-control-sm datepicker" readonly>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-sm btn-success submit-icon col-lg-12">
+                                        SUBMIT
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
